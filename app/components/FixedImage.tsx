@@ -1,9 +1,16 @@
-import { Box, Stack, Typography } from "@mui/material";
+"use client";
+
+import { Box, Typography } from "@mui/material";
+
 import Image from "next/image";
-import image from "@/public/4.png";
 import decor1 from "@/public/decor-4.svg";
+import image1 from "@/public/fixed-1.png";
+import image2 from "@/public/fixed-2.png";
+import { useBreakpoints } from "../utils/useBreakpoints";
 
 export default function FixedImage(): JSX.Element {
+  const { mobile } = useBreakpoints();
+
   return (
     <>
       <Box position="relative" marginLeft="auto" width={0} height={0}>
@@ -11,7 +18,7 @@ export default function FixedImage(): JSX.Element {
           width={229}
           src={decor1}
           alt="Logo decor"
-          style={{ position: "absolute", top: "-0", right: 0 }}
+          style={{ position: "absolute", top: "3em", right: 0 }}
         />
       </Box>
       <Box
@@ -33,7 +40,10 @@ export default function FixedImage(): JSX.Element {
             left: 0,
             width: "100%",
             height: "100%",
-            background: `url(${image.src}) center/100% no-repeat fixed`,
+            // background: `url(${image.src}) center/100% no-repeat fixed`,
+            background: mobile
+              ? `url(${image2.src}) center/100% no-repeat`
+              : `url(${image1.src}) center/100% no-repeat fixed`,
             //             backgroundPosition: "center",
             //   backgroundSize: "100%",
             //   backgroundRepeat: "no-repeat",
@@ -43,30 +53,15 @@ export default function FixedImage(): JSX.Element {
           },
         }}
       >
-        {/* <Box position="relative" width={0} height={0}>
-        <Image
-          width={229}
-          src={decor1}
-          alt="Logo decor"
-          style={{ position: "absolute", top: "-26em", right: 0 }}
-        />
-      </Box> */}
         <Box>
-          {/* <Box position="relative" width={0} height={0}>
-            <Image
-              width={560}
-              src={decor2}
-              alt="Square decor"
-              style={{ position: "absolute", top: "-8em", left: "-1.5em" }}
-            />
-          </Box> */}
           <Box>
             <Typography
-              width={520}
+              width={{ xs: 300, lg: 520 }}
               variant="h5"
               textAlign="center"
               border="1px solid black"
               padding="60px 20px"
+              sx={{ fontSize: { xs: "16px", lg: "24px" } }}
             >
               Отдай се на специалните моменти в С.И.П.И. и се забавлявай с
               твоите хора в компанията на най-добрата музика от любимите ти

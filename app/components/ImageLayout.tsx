@@ -1,13 +1,36 @@
-import { Box } from "@mui/material";
-import image1 from "@/public/1.png";
-import image2 from "@/public/2.png";
-import image3 from "@/public/3.png";
-import decor from "@/public/decor-2.svg";
-import Image from "next/image";
+"use client";
 
-export default function ImageLayout(): JSX.Element {
+import Image, { StaticImageData } from "next/image";
+
+import { Box } from "@mui/material";
+import { StaticImport } from "next/dist/shared/lib/get-img-props";
+import decor from "@/public/decor-2.svg";
+import { useBreakpoints } from "../utils/useBreakpoints";
+
+// import image1 from "@/public/1.png";
+// import image2 from "@/public/2.png";
+// import image3 from "@/public/3.png";
+
+interface ImageLayoutProps {
+  styleProp?: string;
+  image1: StaticImport;
+  image2: StaticImport;
+  image3: StaticImport;
+}
+
+export default function ImageLayout({
+  styleProp,
+  image1,
+  image2,
+  image3,
+}: ImageLayoutProps): JSX.Element {
+  const { mobile } = useBreakpoints();
+
   return (
-    <Box width={492}>
+    <Box
+      width={492}
+      sx={{ scale: mobile ? "0.7" : "1", transform: `${styleProp}` }}
+    >
       <Image
         src={decor}
         width={25}
@@ -17,13 +40,21 @@ export default function ImageLayout(): JSX.Element {
       <Image
         src={image1}
         width={288}
-        style={{ borderRadius: "50%", marginLeft: 160 }}
+        style={{
+          borderRadius: "50%",
+          marginLeft: 160,
+          transform: `${styleProp}`,
+        }}
         alt="Party people"
       />
       <Image
         src={image2}
         width={232}
-        style={{ borderRadius: "50%", marginTop: -40 }}
+        style={{
+          borderRadius: "50%",
+          marginTop: -40,
+          transform: `${styleProp}`,
+        }}
         alt="Party people"
       />
       <Image
@@ -33,6 +64,7 @@ export default function ImageLayout(): JSX.Element {
           borderRadius: "50%",
           marginBottom: 30,
           marginLeft: 40,
+          transform: `${styleProp}`,
         }}
         alt="Party people"
       />

@@ -1,10 +1,11 @@
 import { Box, Grid, Stack, Typography } from "@mui/material";
-import image1 from "@/public/event-1.jpg";
+
+import Divider from "./Divider";
+import Image from "next/image";
 import decor1 from "@/public/decor-6.svg";
 import decor2 from "@/public/decor-7.svg";
 import decor3 from "@/public/decor-8.svg";
-import Image from "next/image";
-import divider from "@/public/divider.svg";
+import image1 from "@/public/event-1.jpg";
 
 export default function Events(): JSX.Element {
   return (
@@ -15,8 +16,17 @@ export default function Events(): JSX.Element {
         spacing={{ xs: 12, lg: 2 }}
         justifyContent="center"
       >
-        <Grid item xs={9} marginY={21} textAlign="center">
-          <Typography variant="h4">
+        <Grid
+          item
+          xs={11}
+          lg={9}
+          marginY={{ xs: 6, lg: 21 }}
+          textAlign="center"
+        >
+          <Typography
+            variant="h4"
+            sx={{ fontSize: { xs: "20px", lg: "34px" } }}
+          >
             Всяка седмица се наслаждаваме на гостувания от известни диджеи от
             Hip Hop сцената на България, както и на тематични партита, които
             трансформират клуба в сцена с разнообразни концепции.
@@ -33,10 +43,10 @@ export default function Events(): JSX.Element {
               "&::before": {
                 content: '""',
                 position: "absolute",
-                top: 0,
+                top: "-0.5em",
                 left: 0,
                 width: "100%",
-                height: "100%",
+                height: "110%",
                 background: `url(${decor1.src}) center no-repeat`,
                 borderRadius: "50%",
                 filter: "drop-shadow(0px 2px 2px #CCCCCC)",
@@ -44,7 +54,12 @@ export default function Events(): JSX.Element {
               },
             }}
           >
-            <Typography variant="h4">UPCOMING EVENTS</Typography>
+            <Typography
+              variant="h4"
+              sx={{ fontSize: { xs: "24px", lg: "34px" } }}
+            >
+              UPCOMING EVENTS
+            </Typography>
           </Box>
         </Grid>
 
@@ -74,8 +89,18 @@ export default function Events(): JSX.Element {
               marginX="auto"
               marginBottom={4}
             >
-              <Typography variant="h4">31/05</Typography>
-              <Typography variant="h4">Lil Patriarch</Typography>
+              <Typography
+                variant="h4"
+                sx={{ fontSize: { xs: "24px", lg: "34px" } }}
+              >
+                31/05
+              </Typography>
+              <Typography
+                variant="h4"
+                sx={{ fontSize: { xs: "24px", lg: "34px" } }}
+              >
+                Lil Patriarch
+              </Typography>
             </Stack>
             <Stack alignItems="center">
               <Image
@@ -122,8 +147,18 @@ export default function Events(): JSX.Element {
                 order: { xs: 1, lg: 2 },
               }}
             >
-              <Typography variant="h4">31/05</Typography>
-              <Typography variant="h4">Lil Patriarch</Typography>
+              <Typography
+                variant="h4"
+                sx={{ fontSize: { xs: "24px", lg: "34px" } }}
+              >
+                31/05
+              </Typography>
+              <Typography
+                variant="h4"
+                sx={{ fontSize: { xs: "24px", lg: "34px" } }}
+              >
+                Lil Patriarch
+              </Typography>
             </Stack>
           </Box>
         </Grid>
@@ -153,8 +188,18 @@ export default function Events(): JSX.Element {
               marginX="auto"
               marginBottom={4}
             >
-              <Typography variant="h4">31/05</Typography>
-              <Typography variant="h4">Lil Patriarch</Typography>
+              <Typography
+                variant="h4"
+                sx={{ fontSize: { xs: "24px", lg: "34px" } }}
+              >
+                31/05
+              </Typography>
+              <Typography
+                variant="h4"
+                sx={{ fontSize: { xs: "24px", lg: "34px" } }}
+              >
+                Lil Patriarch
+              </Typography>
             </Stack>
             <Stack alignItems="center">
               <Image
@@ -167,14 +212,7 @@ export default function Events(): JSX.Element {
           </Box>
         </Grid>
       </Grid>
-      <Box marginY={21}>
-        <Image
-          width={400}
-          src={divider}
-          alt="Divider"
-          style={{ transform: "scaleY(-1)" }}
-        />
-      </Box>
+      <Divider styleProp={{ transform: "scaleY(-1)" }} />
     </>
   );
 }

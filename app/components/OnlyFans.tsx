@@ -1,8 +1,13 @@
-import { Box, Grid, Typography } from "@mui/material";
+import { Box, Grid, IconButton, Typography } from "@mui/material";
+
+import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
+import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
+import Divider from "./Divider";
 import Image from "next/image";
-import image from "@/public/murch-1.png";
+import ImageChange from "./ImageChange";
 import decor1 from "@/public/decor-13.svg";
 import decor2 from "@/public/decor-6.svg";
+import decor3 from "@/public/decor-14.svg";
 
 export default function OnlyFans(): JSX.Element {
   return (
@@ -34,7 +39,6 @@ export default function OnlyFans(): JSX.Element {
             background: `url(${decor2.src}) center no-repeat`,
             borderRadius: "50%",
             filter: "drop-shadow(0px 2px 2px #CCCCCC)",
-            zIndex: "-1",
           },
         }}
       >
@@ -47,7 +51,6 @@ export default function OnlyFans(): JSX.Element {
         display="flex"
         justifyContent="center"
         alignItems="center"
-        zIndex="-50"
       >
         <Grid
           container
@@ -58,11 +61,11 @@ export default function OnlyFans(): JSX.Element {
           alignItems="center"
           //   bgcolor="#2E2E2E"
         >
-          <Grid item xs={12} lg={6}>
+          <Grid item xs={11} lg={6}>
             <Typography
               variant="h5"
               lineHeight={1}
-              width={400}
+              width={{ xs: "auto", lg: 400 }}
               textAlign="center"
               color="white"
               marginX="auto"
@@ -75,23 +78,49 @@ export default function OnlyFans(): JSX.Element {
               бъдете стилни.
             </Typography>
           </Grid>
-          <Grid item xs={12} lg={6}>
+          <Grid item xs={11} lg={6}>
             <Box
-              width={528}
-              height={680}
-              bgcolor="white"
-              sx={{ opacity: "0.8" }}
-              display="flex"
-              justifyContent="center"
-              alignItems="center"
-              borderRadius="40px 0 40px 0"
-              marginX={{ xs: "auto", lg: 0 }}
+              sx={{
+                position: "relative",
+                width: "100%",
+                height: "100%",
+                "&::before": {
+                  content: '""',
+                  position: "absolute",
+                  top: "-3.5em",
+                  left: "-9.5em",
+                  width: "100%",
+                  height: "100%",
+                  background: `url(${decor3.src}) center no-repeat`,
+                  display: { xs: "none", sm: "none", md: "none", lg: "block" },
+                },
+              }}
             >
-              <Image width={464} src={image} alt="T-shirt" />
+              <ImageChange />
+              {/* <Box
+                width={528}
+                height={680}
+                bgcolor="white"
+                sx={{ opacity: "0.8" }}
+                display="flex"
+                justifyContent="center"
+                alignItems="center"
+                borderRadius="40px 0 40px 0"
+                marginX={{ xs: "auto", lg: 0 }}
+              >
+                <IconButton>
+                  <ArrowBackIosNewIcon />
+                </IconButton>
+                <Image width={452} src={image1} alt="T-shirt" />
+                <IconButton>
+                  <ArrowForwardIosIcon />
+                </IconButton>
+              </Box> */}
             </Box>
           </Grid>
         </Grid>
       </Box>
+      <Divider styleProp={{ transform: "scaleY(-1)" }} />
     </>
   );
 }
