@@ -1,7 +1,9 @@
+import "./globals.css";
+
+import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import type { Metadata } from "next";
 import { Poiret_One } from "next/font/google";
-import "./globals.css";
-import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
+import Script from "next/script";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "./theme";
 
@@ -27,6 +29,11 @@ export default function RootLayout({
           <ThemeProvider theme={theme}>{children}</ThemeProvider>
         </AppRouterCacheProvider>
       </body>
+      {/* <Script
+        type="text/javascript"
+        charset="UTF-8"
+        src="//cdn.cookie-script.com/s/573dfe802bd14402d4b50415b57497c6.js"
+      ></Script> */}
     </html>
   );
 }
