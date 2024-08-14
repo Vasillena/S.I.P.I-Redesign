@@ -3,17 +3,14 @@ import "./globals.css";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import type { Metadata } from "next";
 import { Poiret_One } from "next/font/google";
-import Script from "next/script";
+// import Script from "next/script";
 import { ThemeProvider } from "@mui/material";
-// import poiretOne from "next/font/local";
 import { theme } from "./theme";
 
 const poiretOneFont = Poiret_One({
   subsets: ["latin", "cyrillic"],
   weight: "400",
 });
-
-// const poiretOneFont = poiretOne({ src: "../public/PoiretOne.ttf" });
 
 export const metadata: Metadata = {
   title: "Create Next App",
