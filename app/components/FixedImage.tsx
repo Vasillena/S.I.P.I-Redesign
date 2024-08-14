@@ -56,12 +56,12 @@ export default function FixedImage(): JSX.Element {
         <Box>
           <Box>
             <Typography
-              width={{ xs: 300, lg: 520 }}
+              width={{ xs: 300, sm: 520 }}
               variant="h5"
               textAlign="center"
               border="1px solid black"
               padding="60px 20px"
-              sx={{ fontSize: { xs: "16px", lg: "24px" } }}
+              sx={{ fontSize: { xs: "16px", sm: "24px" } }}
             >
               Отдай се на специалните моменти в С.И.П.И. и се забавлявай с
               твоите хора в компанията на най-добрата музика от любимите ти

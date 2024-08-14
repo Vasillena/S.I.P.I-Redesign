@@ -5,12 +5,15 @@ import type { Metadata } from "next";
 import { Poiret_One } from "next/font/google";
 import Script from "next/script";
 import { ThemeProvider } from "@mui/material";
+// import poiretOne from "next/font/local";
 import { theme } from "./theme";
 
-const poiretOne = Poiret_One({
+const poiretOneFont = Poiret_One({
   subsets: ["latin", "cyrillic"],
   weight: "400",
 });
+
+// const poiretOneFont = poiretOne({ src: "../public/PoiretOne.ttf" });
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -24,7 +27,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={poiretOne.className}>
+      <body className={poiretOneFont.className}>
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>{children}</ThemeProvider>
         </AppRouterCacheProvider>

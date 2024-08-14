@@ -20,11 +20,11 @@ export default function Cards(): JSX.Element {
           sx={{
             position: "relative",
             width: "100%",
-            height: "100%",
+            height: "188px",
             "&::after": {
               content: '""',
               position: "absolute",
-              top: "-4em",
+              top: { xs: "-3em", lg: "-4em" },
               left: 0,
               width: "100%",
               height: "100%",
@@ -55,11 +55,11 @@ export default function Cards(): JSX.Element {
           sx={{
             position: "relative",
             width: "100%",
-            height: "100%",
+            height: "188px",
             "&::after": {
               content: '""',
               position: "absolute",
-              top: "-4em",
+              top: { xs: "-3em", lg: "-4em" },
               left: 0,
               width: "100%",
               height: "100%",
