@@ -2,7 +2,9 @@
 
 import Image, { StaticImageData } from "next/image";
 
+import Bounce from "./Bounce";
 import { Box } from "@mui/material";
+import Reveal from "./Reveal";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import decor from "@/public/decor-2.svg";
 import { useBreakpoints } from "../utils/useBreakpoints";
@@ -31,44 +33,60 @@ export default function ImageLayout({
       width={492}
       sx={{ scale: mobile ? "0.7" : "1", transform: `${styleProp}` }}
     >
-      <Image
-        src={decor}
-        width={25}
-        style={{ marginBottom: 30, marginLeft: 9 }}
-        alt="Decor"
-      />
-      <Image
-        src={image1}
-        width={288}
-        style={{
-          borderRadius: "50%",
-          marginLeft: 160,
-          transform: `${styleProp}`,
-        }}
-        alt="Party people"
-      />
-      <Image
-        src={image2}
-        width={232}
-        style={{
-          borderRadius: "50%",
-          marginTop: -40,
-          transform: `${styleProp}`,
-        }}
-        alt="Party people"
-      />
-      <Image
-        src={image3}
-        width={120}
-        style={{
-          borderRadius: "50%",
-          marginBottom: 30,
-          marginLeft: 40,
-          transform: `${styleProp}`,
-        }}
-        alt="Party people"
-      />
-      <Image src={decor} width={25} alt="Decor" style={{ marginBottom: 150 }} />
+      <Bounce>
+        <Image
+          src={decor}
+          width={25}
+          style={{ marginBottom: 30, marginLeft: 9 }}
+          alt="Decor"
+        />
+      </Bounce>
+      <Bounce>
+        <Image
+          src={image1}
+          width={288}
+          style={{
+            borderRadius: "50%",
+            marginLeft: 160,
+            transform: `${styleProp}`,
+          }}
+          alt="Party people"
+        />
+      </Bounce>
+      <Bounce>
+        <Image
+          src={image2}
+          width={232}
+          style={{
+            borderRadius: "50%",
+            marginTop: -40,
+            transform: `${styleProp}`,
+          }}
+          alt="Party people"
+        />
+      </Bounce>
+      <Bounce>
+        <Image
+          src={image3}
+          width={120}
+          style={{
+            borderRadius: "50%",
+            marginBottom: 30,
+            marginLeft: 40,
+            transform: `${styleProp}`,
+          }}
+          alt="Party people"
+        />
+      </Bounce>
+
+      <Bounce>
+        <Image
+          src={decor}
+          width={25}
+          alt="Decor"
+          style={{ marginBottom: 150 }}
+        />
+      </Bounce>
     </Box>
   );
 }

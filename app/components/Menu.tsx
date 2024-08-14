@@ -82,7 +82,7 @@ export default function Menu(): JSX.Element {
                     height: "100%",
                     background: `url(${decor3.src}) center no-repeat`,
                     borderRadius: "50%",
-                    filter: "drop-shadow(0px 2px 2px #CCCCCC)",
+                    filter: "drop-shadow(0px 2px 2px #2E2E2E)",
                   },
                 }}
               >

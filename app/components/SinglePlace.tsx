@@ -26,7 +26,7 @@ export default function SinglePlace({
         variant="h5"
         width={{ xs: "100%", lg: 520 }}
         lineHeight={1}
-        marginBottom={2}
+        marginBottom={4}
         marginX="auto"
         textAlign="center"
         sx={{ fontSize: { xs: "16px", lg: "24px" } }}

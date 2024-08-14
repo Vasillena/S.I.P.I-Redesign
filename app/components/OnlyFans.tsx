@@ -38,11 +38,13 @@ export default function OnlyFans(): JSX.Element {
             height: "100%",
             background: `url(${decor2.src}) center no-repeat`,
             borderRadius: "50%",
-            filter: "drop-shadow(0px 2px 2px #CCCCCC)",
+            filter: "drop-shadow(0px 2px 2px #2E2E2E)",
           },
         }}
       >
-        <Typography variant="h4">!!ONLY FANS!!</Typography>
+        <Typography variant="h4" position="relative" zIndex={100}>
+          !!ONLY FANS!!
+        </Typography>
       </Box>
       <Box
         width="100vw"

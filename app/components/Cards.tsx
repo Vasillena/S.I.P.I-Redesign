@@ -24,7 +24,7 @@ export default function Cards(): JSX.Element {
             "&::after": {
               content: '""',
               position: "absolute",
-              top: { xs: "-3em", lg: "-4em" },
+              top: { xs: "-3em", md: "-3em", lg: "-3em", xl: "-3em" },
               left: 0,
               width: "100%",
               height: "100%",
@@ -59,7 +59,7 @@ export default function Cards(): JSX.Element {
             "&::after": {
               content: '""',
               position: "absolute",
-              top: { xs: "-3em", lg: "-4em" },
+              top: { xs: "-3em", md: "-3em", lg: "-3em", xl: "-3em" },
               left: 0,
               width: "100%",
               height: "100%",
