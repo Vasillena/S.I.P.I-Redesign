@@ -5,7 +5,7 @@ import Final from "../components/Final";
 import FixedImage from "../components/FixedImage";
 import FollowPointer from "../components/FollowPointer";
 import Footer from "../components/Footer";
-// import GoogleMaps from "./components/Map";
+// import GoogleMaps from "../components/Map";
 import Image from "next/image";
 import Menu from "../components/Menu";
 import OnlyFans from "../components/OnlyFans";
@@ -66,6 +66,12 @@ export default async function Home() {
         <Final />
         <Slider />
         {/* <GoogleMaps /> */}
+        <iframe
+          src="https://snazzymaps.com/embed/632466"
+          width="100%"
+          height="500px"
+          style={{ border: "none" }}
+        />
         <Footer />
       </main>
     </TransitionProvider>

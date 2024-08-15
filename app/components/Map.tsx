@@ -17,7 +17,8 @@
 
 //       const { Map } = await loader.importLibrary("maps");
 
-//       const { Marker } = await loader.importLibrary("marker");
+//       const { AdvancedMarkerElement } = await loader.importLibrary("marker");
+//       // const { AdvancedMarkerElement } = await loader.importLibrary("marker");
 
 //       const position = {
 //         lat: 42.150092922599434,
@@ -28,6 +29,7 @@
 //         center: position,
 //         zoom: 14,
 //         disableDefaultUI: true,
+//         mapId: "feb336c54998443a",
 //         styles: [
 //           {
 //             featureType: "water",
@@ -208,11 +210,18 @@
 
 //       const map = new Map(mapRef.current, mapOptions);
 
-//       const marker = new Marker({
+//       const marker = new AdvancedMarkerElement({
 //         map: map,
 //         position: position,
+//         title: "SIPI",
 //       });
 //     };
+//     //   const marker = new AdvancedMarkerElement({
+//     //     map: map,
+//     //     position: position,
+//     //     title: "SIPI",
+//     //   });
+//     // };
 
 //     initMap();
 //   }, []);

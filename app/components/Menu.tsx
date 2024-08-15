@@ -7,10 +7,9 @@ import decor2 from "@/public/decor-16.svg";
 import decor3 from "@/public/decor-6.svg";
 import decor4 from "@/public/decor-17.svg";
 import image1 from "@/public/menu-1.jpg";
-
-// import image2 from "@/public/menu-2.png";
-// import image3 from "@/public/menu-3.png";
-// import image4 from "@/public/menu-4.png";
+import image2 from "@/public/menu-2.png";
+import image3 from "@/public/menu-3.png";
+import image4 from "@/public/menu-4.png";
 
 export default function Menu(): JSX.Element {
   return (
@@ -156,7 +155,7 @@ export default function Menu(): JSX.Element {
             justifyContent="flex-end"
             alignItems="center"
           >
-            {/* <Box
+            <Box
               width="80%"
               display="flex"
               flexDirection={{
@@ -201,7 +200,7 @@ export default function Menu(): JSX.Element {
                   borderRadius: "50%",
                 }}
               />
-            </Box> */}
+            </Box>
             <Box
               sx={{
                 position: "relative",
