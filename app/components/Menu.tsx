@@ -24,7 +24,7 @@ export default function Menu(): JSX.Element {
         <Grid item xs={10} textAlign="center" marginBottom={5}>
           <Typography
             variant="h4"
-            sx={{ fontSize: { xs: "20px", lg: "34px" } }}
+            sx={{ fontSize: { xs: "24px", lg: "34px" } }}
           >
             Ние се грижим за музиката, храната и напитките според твоите
             предпочитания, а ти се наслаждаваш на доброто настроение и
@@ -82,6 +82,7 @@ export default function Menu(): JSX.Element {
                     background: `url(${decor3.src}) center no-repeat`,
                     borderRadius: "50%",
                     filter: "drop-shadow(0px 2px 2px #2E2E2E)",
+                    transform: { xs: "scale(0.8)", lg: "scale(1)" },
                   },
                 }}
               >
@@ -90,15 +91,19 @@ export default function Menu(): JSX.Element {
                   position="relative"
                   top="6.2em"
                   left="-3.9em"
+                  sx={{ fontSize: { xs: "24px", lg: "34px" } }}
                 >
                   МЕНЮ
                 </Typography>
-                <Image
-                  width={600}
-                  src={image1}
-                  alt="Bartender image"
-                  style={{ marginTop: "148px" }}
-                />
+                <Box display={{ xs: "hidden", md: "block" }}>
+                  <Image
+                    width={600}
+                    src={image1}
+                    alt="Bartender image"
+                    style={{ marginTop: "148px" }}
+                  />
+                </Box>
+
                 {/* <Box
                   width={{ sm: "400px", md: "500px", lg: "600px" }}
                   height={{ sm: "200px", md: "300px", lg: "400px" }}
@@ -143,7 +148,12 @@ export default function Menu(): JSX.Element {
             justifyContent="center"
             alignItems="center"
           >
-            <Typography variant="h5" textAlign="center" color="white">
+            <Typography
+              variant="h5"
+              textAlign="center"
+              color="white"
+              sx={{ fontSize: { xs: "16px", lg: "24px" } }}
+            >
               Cocktail’s first, because no great story ever started with a glass
               of water 
             </Typography>

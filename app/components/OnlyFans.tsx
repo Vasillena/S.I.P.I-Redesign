@@ -32,17 +32,23 @@ export default function OnlyFans(): JSX.Element {
           "&::before": {
             content: '""',
             position: "absolute",
-            top: 0,
+            top: "-0.5em",
             left: 0,
             width: "100%",
-            height: "100%",
+            height: "110%",
             background: `url(${decor2.src}) center no-repeat`,
             borderRadius: "50%",
             filter: "drop-shadow(0px 2px 2px #2E2E2E)",
+            transform: { xs: "scale(0.8)", lg: "scale(1)" },
           },
         }}
       >
-        <Typography variant="h4" position="relative" zIndex={100}>
+        <Typography
+          variant="h4"
+          sx={{ fontSize: { xs: "24px", lg: "34px" } }}
+          position="relative"
+          zIndex={100}
+        >
           !!ONLY FANS!!
         </Typography>
       </Box>
@@ -72,6 +78,7 @@ export default function OnlyFans(): JSX.Element {
               color="white"
               marginX="auto"
               marginTop={{ xs: 12, lg: 0 }}
+              sx={{ fontSize: { xs: "16px", lg: "24px" } }}
             >
               За истинските ентусиасти, които искат да носят частица от нашата
               жизнена атмосфера със себе си, където и да отидат. Посетете нашия

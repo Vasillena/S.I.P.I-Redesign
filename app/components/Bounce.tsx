@@ -17,7 +17,7 @@ export default function Bounce({ children }: MotionPageWrapperProps) {
     type: "spring",
     stiffness: 100,
     damping: 10,
-    delay: 1,
+    delay: 0.4,
     // repeat: Infinity,
   };
 

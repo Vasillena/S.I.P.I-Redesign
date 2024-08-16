@@ -11,7 +11,7 @@ export default function Footer(): JSX.Element {
   return (
     <Box
       width="100%"
-      height="556px"
+      height={{ xs: "400px", lg: "556px" }}
       bgcolor="#2E2E2E"
       display="flex"
       flexDirection="column"
@@ -33,20 +33,33 @@ export default function Footer(): JSX.Element {
             height: "100%",
             background: `url(${logo.src}) center no-repeat`,
             opacity: 0.1,
+            transform: { xs: "scale(0.5)", lg: "scale(1)" },
             // backgroundSize: "200px",
             // zIndex: "-50",
             // display: { xs: "none", sm: "none", md: "block", lg: "block" },
           },
         }}
       >
-        <Box marginTop="18em">
-          <Typography variant="h5" textAlign="center">
+        <Box marginTop={{ xs: "12em", lg: "18em" }}>
+          <Typography
+            variant="h5"
+            textAlign="center"
+            sx={{ fontSize: { xs: "16px", lg: "24px" } }}
+          >
             Капана / Братя Пулиеви 1
           </Typography>
-          <Typography variant="h5" textAlign="center">
+          <Typography
+            variant="h5"
+            textAlign="center"
+            sx={{ fontSize: { xs: "16px", lg: "24px" } }}
+          >
             0885 67 33 37
           </Typography>
-          <Typography variant="h5" textAlign="center">
+          <Typography
+            variant="h5"
+            textAlign="center"
+            sx={{ fontSize: { xs: "16px", lg: "24px" } }}
+          >
             Вторник - Неделя: 18:00 - 03:00ч
           </Typography>
         </Box>
@@ -61,7 +74,7 @@ export default function Footer(): JSX.Element {
         </Link>
       </Box>
       <Box>
-        <Typography variant="h6">
+        <Typography variant="h6" sx={{ fontSize: { xs: "16px", lg: "20px" } }}>
           Copyright © 2024 С.И.П.И. Всички права запазени | Създадено от
           <Link href="https://github.com/Vasillena" target="_blank">
             {" "}

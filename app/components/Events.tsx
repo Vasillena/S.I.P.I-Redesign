@@ -25,7 +25,7 @@ export default function Events(): JSX.Element {
         >
           <Typography
             variant="h4"
-            sx={{ fontSize: { xs: "20px", md: "34px" } }}
+            sx={{ fontSize: { xs: "24px", md: "34px" } }}
           >
             Всяка седмица се наслаждаваме на гостувания от известни диджеи от
             Hip Hop сцената на България, както и на тематични партита, които
@@ -51,6 +51,7 @@ export default function Events(): JSX.Element {
                 borderRadius: "50%",
                 filter: "drop-shadow(0px 2px 2px #CCCCCC)",
                 zIndex: "-50",
+                transform: { xs: "scale(0.8)", lg: "scale(1)" },
               },
             }}
           >

@@ -41,32 +41,30 @@ export default function Welcome(): JSX.Element {
               },
             }}
           >
-            <Reveal>
-              <Typography
-                width={432}
-                variant="h2"
-                marginBottom={8}
-                sx={{ fontSize: { xs: "40px", sm: "60px" } }}
-                textAlign={{ xs: "center", md: "left" }}
-              >
-                Добре дошли <br />в Бар С.И.П.И.
-              </Typography>
-              <Typography
-                width={{ xs: 300, sm: 472 }}
-                variant="h5"
-                lineHeight={1}
-                paddingLeft={{ xs: 0, md: 5 }}
-                textAlign={{ xs: "center", md: "left" }}
-                sx={{ fontSize: { xs: "16px", sm: "24px" } }}
-              >
-                Oазисът на Hip Hop музиката в сърцето на Капана. Ние сме
-                вдъхновени от енергията и неповторимия стил на Hip Hop сцената.
-                При нас ще се наслаждавате на авторски коктейли, парти
-                обстановка и музикални изживявания. Бар С.И.П.И. е повече от
-                място за напитки; това е преживяване, където парти хората се
-                събират всеки уикенд, за да споделят обичта си към музиката.
-              </Typography>
-            </Reveal>
+            <Typography
+              width={432}
+              variant="h2"
+              marginBottom={8}
+              sx={{ fontSize: { xs: "40px", sm: "60px" } }}
+              textAlign={{ xs: "center", md: "left" }}
+            >
+              Добре дошли <br />в Бар С.И.П.И.
+            </Typography>
+            <Typography
+              width={{ xs: 300, sm: 472 }}
+              variant="h5"
+              lineHeight={1}
+              paddingLeft={{ xs: 0, md: 5 }}
+              textAlign={{ xs: "center", md: "left" }}
+              sx={{ fontSize: { xs: "16px", sm: "24px" } }}
+            >
+              Oазисът на Hip Hop музиката в сърцето на Капана. Ние сме
+              вдъхновени от енергията и неповторимия стил на Hip Hop сцената.
+              При нас ще се наслаждавате на авторски коктейли, парти обстановка
+              и музикални изживявания. Бар С.И.П.И. е повече от място за
+              напитки; това е преживяване, където парти хората се събират всеки
+              уикенд, за да споделят обичта си към музиката.
+            </Typography>
           </Box>
         </Grid>
         <Grid

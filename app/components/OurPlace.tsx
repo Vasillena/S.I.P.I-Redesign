@@ -34,7 +34,7 @@ export default function OurPlace(): JSX.Element {
         <Grid item xs={10} lg={6} textAlign="center" marginBottom={5}>
           <Typography
             variant="h4"
-            sx={{ fontSize: { xs: "20px", lg: "34px" } }}
+            sx={{ fontSize: { xs: "24px", lg: "34px" } }}
           >
             Имаш фирмено или специално събитие и не знаеш къде да отидеш
           </Typography>

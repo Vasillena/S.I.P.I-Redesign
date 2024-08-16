@@ -21,7 +21,7 @@ export default function Final(): JSX.Element {
         <Grid item xs={10} lg={6} textAlign="center" marginBottom={5}>
           <Typography
             variant="h4"
-            sx={{ fontSize: { xs: "20px", lg: "34px" } }}
+            sx={{ fontSize: { xs: "24px", lg: "34px" } }}
           >
             Ние вярваме, че музиката е езикът, който ни обединява, и затова не
             просто сме създали място за срещи и напитки - създали сме истински
@@ -46,6 +46,7 @@ export default function Final(): JSX.Element {
               background: `url(${logo.src}) center no-repeat`,
               // backgroundSize: "200px",
               zIndex: "-50",
+              transform: { xs: "scale(0.5)", lg: "scale(1)" },
               // display: { xs: "none", sm: "none", md: "block", lg: "block" },
               animation: "rotate 10s linear infinite", // Adding the animation here
             },
@@ -68,6 +69,7 @@ export default function Final(): JSX.Element {
             top="3.8em"
             textAlign="center"
             left="0.5em"
+            sx={{ fontSize: { xs: "24px", lg: "34px" } }}
           >
             ЕЛА НА ПАРТИ
           </Typography>
