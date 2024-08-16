@@ -1,6 +1,8 @@
 import Image, { StaticImageData } from "next/image";
 import { Stack, Typography } from "@mui/material";
 
+import Reveal from "./Reveal";
+
 interface SingleCardProps {
   image: StaticImageData;
   title: string;
@@ -13,7 +15,7 @@ export default function SingleCard({
   description,
 }: SingleCardProps): JSX.Element {
   return (
-    <>
+    <Reveal>
       <Stack alignItems="center">
         <Image width={48} src={image} alt="Cocktail icon" />
       </Stack>
@@ -33,6 +35,6 @@ export default function SingleCard({
           {description}
         </Typography>
       </Stack>
-    </>
+    </Reveal>
   );
 }

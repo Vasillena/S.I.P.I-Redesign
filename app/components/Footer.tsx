@@ -1,11 +1,12 @@
 import { Box, Typography } from "@mui/material";
 
+import Draw from "./Draw";
 import Image from "next/image";
 import Link from "next/link";
 import decor from "@/public/decor-18.svg";
 import icon1 from "@/public/icon-4.svg";
 import icon2 from "@/public/icon-5.svg";
-import logo from "@/public/logo3.svg";
+import logo from "@/public/logo-2.svg";
 
 export default function Footer(): JSX.Element {
   return (

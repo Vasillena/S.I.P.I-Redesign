@@ -3,7 +3,7 @@ import { Box, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import decor1 from "@/public/decor-9.svg";
 import decor2 from "@/public/decor-10.svg";
-import logo from "@/public/logo-2.svg";
+import logo from "@/public/logo-1.svg";
 
 export default function Final(): JSX.Element {
   return (
@@ -44,11 +44,10 @@ export default function Final(): JSX.Element {
               width: "110%",
               height: "100%",
               background: `url(${logo.src}) center no-repeat`,
-              // backgroundSize: "200px",
               zIndex: "-50",
               transform: { xs: "scale(0.5)", lg: "scale(1)" },
               // display: { xs: "none", sm: "none", md: "block", lg: "block" },
-              animation: "rotate 10s linear infinite", // Adding the animation here
+              animation: "rotate 10s linear infinite",
             },
             "@keyframes rotate": {
               "0%": {

@@ -6,9 +6,13 @@ import { useRef } from "react";
 
 interface MotionPageWrapperProps {
   children: React.ReactNode;
+  delay?: number;
 }
 
-export default function Bounce({ children }: MotionPageWrapperProps) {
+export default function Bounce({
+  children,
+  delay = 0.4,
+}: MotionPageWrapperProps) {
   const ref = useRef(null);
   //   const isInView = useInView(ref, { once: true });
   const isInView = useInView(ref);
@@ -17,7 +21,8 @@ export default function Bounce({ children }: MotionPageWrapperProps) {
     type: "spring",
     stiffness: 100,
     damping: 10,
-    delay: 0.4,
+    // delay: 0.4,
+    delay: delay,
     // repeat: Infinity,
   };
 

@@ -1,7 +1,9 @@
 import { Box, Grid, Typography } from "@mui/material";
 
+import Bounce from "./Bounce";
 import Divider from "./Divider";
 import Image from "next/image";
+import Reveal from "./Reveal";
 import decor1 from "@/public/decor-15.svg";
 import decor2 from "@/public/decor-16.svg";
 import decor3 from "@/public/decor-6.svg";
@@ -21,7 +23,7 @@ export default function Menu(): JSX.Element {
         justifyContent="center"
         marginBottom={2}
       >
-        <Grid item xs={10} textAlign="center" marginBottom={5}>
+        <Grid item xs={10} textAlign="center" marginBottom={21}>
           <Typography
             variant="h4"
             sx={{ fontSize: { xs: "24px", lg: "34px" } }}
@@ -31,7 +33,46 @@ export default function Menu(): JSX.Element {
             компанията на твоите хора.
           </Typography>
         </Grid>
-        <Grid item xs={9} justifyContent="flex-end" textAlign="right">
+        <Grid
+          item
+          xs={9}
+          // justifyContent="flex-end"
+          textAlign="center"
+          marginBottom={4}
+        >
+          <Box
+            sx={{
+              position: "relative",
+              width: "100%",
+              height: "100%",
+              "&::before": {
+                content: '""',
+                position: "absolute",
+                top: { xs: "-3.2em", lg: "-4.2em" },
+                left: "0",
+                width: "100%",
+                height: "400%",
+                background: `url(${decor3.src}) center no-repeat`,
+                borderRadius: "50%",
+                filter: "drop-shadow(0px 2px 2px #CCCCCC)",
+                transform: { xs: "scale(0.8)", lg: "scale(1)" },
+              },
+            }}
+          >
+            <Reveal>
+              <Typography
+                variant="h5"
+                // position="relative"
+                // top="5.2em"
+                // left="-2.3em"
+                sx={{ fontSize: { xs: "24px", lg: "34px" } }}
+              >
+                НАШИТЕ ПРЕДЛОЖЕНИЯ
+              </Typography>
+            </Reveal>
+          </Box>
+        </Grid>
+        <Grid item xs={9} textAlign="center">
           <Box
             sx={{
               position: "relative",
@@ -68,43 +109,18 @@ export default function Menu(): JSX.Element {
               }}
             >
               <Box
-                sx={{
-                  position: "relative",
-                  width: "100%",
-                  height: "100%",
-                  "&::before": {
-                    content: '""',
-                    position: "absolute",
-                    top: "-8em",
-                    left: "25em",
-                    width: "100%",
-                    height: "100%",
-                    background: `url(${decor3.src}) center no-repeat`,
-                    borderRadius: "50%",
-                    filter: "drop-shadow(0px 2px 2px #2E2E2E)",
-                    transform: { xs: "scale(0.8)", lg: "scale(1)" },
-                  },
-                }}
+                display={{ xs: "hidden", md: "flex" }}
+                justifyContent="flex-end"
               >
-                <Typography
-                  variant="h5"
-                  position="relative"
-                  top="6.2em"
-                  left="-3.9em"
-                  sx={{ fontSize: { xs: "24px", lg: "34px" } }}
-                >
-                  МЕНЮ
-                </Typography>
-                <Box display={{ xs: "hidden", md: "block" }}>
-                  <Image
-                    width={600}
-                    src={image1}
-                    alt="Bartender image"
-                    style={{ marginTop: "148px" }}
-                  />
-                </Box>
+                <Image
+                  width={600}
+                  src={image1}
+                  alt="Bartender image"
+                  style={{ marginTop: "148px" }}
+                />
+              </Box>
 
-                {/* <Box
+              {/* <Box
                   width={{ sm: "400px", md: "500px", lg: "600px" }}
                   height={{ sm: "200px", md: "300px", lg: "400px" }}
                   // width="600px"
@@ -120,7 +136,7 @@ export default function Menu(): JSX.Element {
                     style={{ marginTop: "60px", marginLeft: { sm: "260px" } }}
                   />
                 </Box> */}
-              </Box>
+              {/* </Box> */}
             </Box>
           </Box>
         </Grid>
@@ -183,33 +199,39 @@ export default function Menu(): JSX.Element {
               }}
               marginBottom={2}
             >
-              <Image
-                width={140}
-                height={140}
-                src={image2}
-                alt="Cocktail image"
-                style={{
-                  borderRadius: "50%",
-                }}
-              />
-              <Image
-                width={140}
-                height={140}
-                src={image3}
-                alt="Cocktail image"
-                style={{
-                  borderRadius: "50%",
-                }}
-              />
-              <Image
-                width={140}
-                height={140}
-                src={image4}
-                alt="Cocktail image"
-                style={{
-                  borderRadius: "50%",
-                }}
-              />
+              <Bounce>
+                <Image
+                  width={140}
+                  height={140}
+                  src={image2}
+                  alt="Cocktail image"
+                  style={{
+                    borderRadius: "50%",
+                  }}
+                />
+              </Bounce>
+              <Bounce delay={0.6}>
+                <Image
+                  width={140}
+                  height={140}
+                  src={image3}
+                  alt="Cocktail image"
+                  style={{
+                    borderRadius: "50%",
+                  }}
+                />
+              </Bounce>
+              <Bounce delay={0.8}>
+                <Image
+                  width={140}
+                  height={140}
+                  src={image4}
+                  alt="Cocktail image"
+                  style={{
+                    borderRadius: "50%",
+                  }}
+                />
+              </Bounce>
             </Box>
             <Box
               sx={{

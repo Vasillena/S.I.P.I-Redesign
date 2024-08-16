@@ -2,6 +2,7 @@ import { Box, Grid, Stack, Typography } from "@mui/material";
 
 import Divider from "./Divider";
 import Image from "next/image";
+import Reveal from "./Reveal";
 import decor1 from "@/public/decor-6.svg";
 import decor2 from "@/public/decor-7.svg";
 import decor3 from "@/public/decor-8.svg";
@@ -65,152 +66,158 @@ export default function Events(): JSX.Element {
         </Grid>
 
         <Grid item xs={12} lg={4}>
-          <Box
-            sx={{
-              position: "relative",
-              width: "100%",
-              height: "100%",
-              "&::before": {
-                content: '""',
-                position: "absolute",
-                top: "-17em",
-                left: "-6em",
-                width: "100%",
-                height: "100%",
-                background: `url(${decor2.src}) center no-repeat`,
-              },
-            }}
-          >
-            <Stack
-              width={300}
-              border="1px solid #CCCCCC"
-              borderRadius="40px 0 40px 0"
-              textAlign="center"
-              paddingY={4}
-              marginX="auto"
-              marginBottom={4}
-            >
-              <Typography
-                variant="h4"
-                sx={{ fontSize: { xs: "24px", lg: "34px" } }}
-              >
-                31/05
-              </Typography>
-              <Typography
-                variant="h4"
-                sx={{ fontSize: { xs: "24px", lg: "34px" } }}
-              >
-                Lil Patriarch
-              </Typography>
-            </Stack>
-            <Stack alignItems="center">
-              <Image
-                width={300}
-                src={image1}
-                alt="Event image"
-                style={{ borderRadius: "40px 0 40px 0" }}
-              />
-            </Stack>
-          </Box>
-        </Grid>
-        <Grid item xs={12} lg={4}>
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: "column",
-              alignItems: "center",
-            }}
-          >
+          <Reveal>
             <Box
               sx={{
-                order: { xs: 2, lg: 1 },
-                display: "flex",
-                justifyContent: "center",
-                marginTop: { xs: 4, lg: 0 },
-              }}
-            >
-              <Image
-                width={300}
-                src={image1}
-                alt="Event image"
-                style={{ borderRadius: "40px" }}
-              />
-            </Box>
-            <Stack
-              sx={{
-                width: 300,
-                border: "1px solid #CCCCCC",
-                borderRadius: "40px",
-                textAlign: "center",
-                paddingY: 4,
-                marginX: "auto",
-                marginTop: { xs: 0, lg: 4 },
-                order: { xs: 1, lg: 2 },
-              }}
-            >
-              <Typography
-                variant="h4"
-                sx={{ fontSize: { xs: "24px", lg: "34px" } }}
-              >
-                31/05
-              </Typography>
-              <Typography
-                variant="h4"
-                sx={{ fontSize: { xs: "24px", lg: "34px" } }}
-              >
-                Lil Patriarch
-              </Typography>
-            </Stack>
-          </Box>
-        </Grid>
-        <Grid item xs={12} lg={4}>
-          <Box
-            sx={{
-              position: "relative",
-              width: "100%",
-              height: "100%",
-              "&::before": {
-                content: '""',
-                position: "absolute",
-                top: "17em",
-                right: "-6em",
+                position: "relative",
                 width: "100%",
                 height: "100%",
-                background: `url(${decor3.src}) center no-repeat`,
-              },
-            }}
-          >
-            <Stack
-              width={300}
-              border="1px solid #CCCCCC"
-              borderRadius="0 40px 0 40px "
-              textAlign="center"
-              paddingY={4}
-              marginX="auto"
-              marginBottom={4}
+                "&::before": {
+                  content: '""',
+                  position: "absolute",
+                  top: "-17em",
+                  left: "-6em",
+                  width: "100%",
+                  height: "100%",
+                  background: `url(${decor2.src}) center no-repeat`,
+                },
+              }}
             >
-              <Typography
-                variant="h4"
-                sx={{ fontSize: { xs: "24px", lg: "34px" } }}
-              >
-                31/05
-              </Typography>
-              <Typography
-                variant="h4"
-                sx={{ fontSize: { xs: "24px", lg: "34px" } }}
-              >
-                Lil Patriarch
-              </Typography>
-            </Stack>
-            <Stack alignItems="center">
-              <Image
+              <Stack
                 width={300}
-                src={image1}
-                alt="Event image"
-                style={{ borderRadius: "0 40px 0 40px " }}
-              />
-            </Stack>
-          </Box>
+                border="1px solid #CCCCCC"
+                borderRadius="40px 0 40px 0"
+                textAlign="center"
+                paddingY={4}
+                marginX="auto"
+                marginBottom={4}
+              >
+                <Typography
+                  variant="h4"
+                  sx={{ fontSize: { xs: "24px", lg: "34px" } }}
+                >
+                  31/05
+                </Typography>
+                <Typography
+                  variant="h4"
+                  sx={{ fontSize: { xs: "24px", lg: "34px" } }}
+                >
+                  Lil Patriarch
+                </Typography>
+              </Stack>
+              <Stack alignItems="center">
+                <Image
+                  width={300}
+                  src={image1}
+                  alt="Event image"
+                  style={{ borderRadius: "40px 0 40px 0" }}
+                />
+              </Stack>
+            </Box>
+          </Reveal>
+        </Grid>
+        <Grid item xs={12} lg={4}>
+          <Reveal>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "center",
+              }}
+            >
+              <Box
+                sx={{
+                  order: { xs: 2, lg: 1 },
+                  display: "flex",
+                  justifyContent: "center",
+                  marginTop: { xs: 4, lg: 0 },
+                }}
+              >
+                <Image
+                  width={300}
+                  src={image1}
+                  alt="Event image"
+                  style={{ borderRadius: "40px" }}
+                />
+              </Box>
+              <Stack
+                sx={{
+                  width: 300,
+                  border: "1px solid #CCCCCC",
+                  borderRadius: "40px",
+                  textAlign: "center",
+                  paddingY: 4,
+                  marginX: "auto",
+                  marginTop: { xs: 0, lg: 4 },
+                  order: { xs: 1, lg: 2 },
+                }}
+              >
+                <Typography
+                  variant="h4"
+                  sx={{ fontSize: { xs: "24px", lg: "34px" } }}
+                >
+                  31/05
+                </Typography>
+                <Typography
+                  variant="h4"
+                  sx={{ fontSize: { xs: "24px", lg: "34px" } }}
+                >
+                  Lil Patriarch
+                </Typography>
+              </Stack>
+            </Box>
+          </Reveal>
+        </Grid>
+        <Grid item xs={12} lg={4}>
+          <Reveal>
+            <Box
+              sx={{
+                position: "relative",
+                width: "100%",
+                height: "100%",
+                "&::before": {
+                  content: '""',
+                  position: "absolute",
+                  top: "17em",
+                  right: "-6em",
+                  width: "100%",
+                  height: "100%",
+                  background: `url(${decor3.src}) center no-repeat`,
+                },
+              }}
+            >
+              <Stack
+                width={300}
+                border="1px solid #CCCCCC"
+                borderRadius="0 40px 0 40px "
+                textAlign="center"
+                paddingY={4}
+                marginX="auto"
+                marginBottom={4}
+              >
+                <Typography
+                  variant="h4"
+                  sx={{ fontSize: { xs: "24px", lg: "34px" } }}
+                >
+                  31/05
+                </Typography>
+                <Typography
+                  variant="h4"
+                  sx={{ fontSize: { xs: "24px", lg: "34px" } }}
+                >
+                  Lil Patriarch
+                </Typography>
+              </Stack>
+              <Stack alignItems="center">
+                <Image
+                  width={300}
+                  src={image1}
+                  alt="Event image"
+                  style={{ borderRadius: "0 40px 0 40px " }}
+                />
+              </Stack>
+            </Box>
+          </Reveal>
         </Grid>
       </Grid>
       <Divider styleProp={{ transform: "scaleY(-1)" }} />

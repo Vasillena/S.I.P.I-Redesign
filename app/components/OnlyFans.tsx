@@ -5,6 +5,7 @@ import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Divider from "./Divider";
 import Image from "next/image";
 import ImageChange from "./ImageChange";
+import Reveal from "./Reveal";
 import decor1 from "@/public/decor-13.svg";
 import decor2 from "@/public/decor-6.svg";
 import decor3 from "@/public/decor-14.svg";
@@ -43,14 +44,16 @@ export default function OnlyFans(): JSX.Element {
           },
         }}
       >
-        <Typography
-          variant="h4"
-          sx={{ fontSize: { xs: "24px", lg: "34px" } }}
-          position="relative"
-          zIndex={100}
-        >
-          !!ONLY FANS!!
-        </Typography>
+        <Reveal>
+          <Typography
+            variant="h4"
+            sx={{ fontSize: { xs: "24px", lg: "34px" } }}
+            position="relative"
+            zIndex={100}
+          >
+            !!ONLY FANS!!
+          </Typography>
+        </Reveal>
       </Box>
       <Box
         width="100vw"
