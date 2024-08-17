@@ -1,19 +1,24 @@
-import Image from "next/image";
-import loading from "@/public/loading.gif";
-import { Box } from "@mui/material";
+"use client";
 
-export default function LoadingPage() {
+import { Box } from "@mui/material";
+import Lottie from "react-lottie-player";
+import loading from "@/public/loading.json";
+
+export default function Loading() {
   return (
     <Box
-      sx={{
-        minHeight: "calc(100vh - 69px)",
-        width: "100vw",
-        marginTop: "50vh",
-        display: "flex",
-        justifyContent: "center",
-      }}
+      width="100vw"
+      height="100vh"
+      display="flex"
+      justifyContent="center"
+      alignItems="center"
     >
-      <Image src={loading} alt="Loading" />
+      <Lottie
+        animationData={loading}
+        play
+        loop
+        style={{ width: "400px", height: "auto" }}
+      />
     </Box>
   );
 }

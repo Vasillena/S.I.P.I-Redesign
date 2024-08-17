@@ -43,7 +43,7 @@ export default function Welcome(): JSX.Element {
           >
             <Typography
               width={432}
-              variant="h2"
+              variant="h1"
               marginBottom={8}
               sx={{ fontSize: { xs: "40px", sm: "60px" } }}
               textAlign={{ xs: "center", md: "left" }}

@@ -25,13 +25,13 @@ export function Switch() {
       <Box
         sx={{
           position: "fixed",
-          bottom: isLanguageOpen ? 0 : "-3.5em",
+          bottom: isLanguageOpen ? 0 : "-3.8em",
           right: "2.2em",
           display: "flex",
           flexDirection: "column",
           gap: "4px",
           alignItems: "center",
-          padding: "1em 0.5em 0 0.5em",
+          padding: "6px 1px 0 1px",
           borderRadius: "0.5em 0 0 0",
           backgroundColor: "rgba(91, 73, 102, 0.5)",
           zIndex: "90",
@@ -44,7 +44,7 @@ export function Switch() {
         //   isLanguageOpen ? classes["language-open"] : ""
         // }`}
       >
-        <IconButton sx={{ all: "unset" }} onClick={toggleLanguage}>
+        <IconButton onClick={toggleLanguage}>
           <Image src={language} alt="Globe" width={20} />
         </IconButton>
         <label>

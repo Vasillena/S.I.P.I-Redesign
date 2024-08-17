@@ -4,11 +4,11 @@ import { motion, useInView } from "framer-motion";
 
 import { useRef } from "react";
 
-interface MotionPageWrapperProps {
+interface RevealProps {
   children: React.ReactNode;
 }
 
-export default function Reveal({ children }: MotionPageWrapperProps) {
+export default function Reveal({ children }: RevealProps) {
   const ref = useRef(null);
   //   const isInView = useInView(ref, { once: true });
   const isInView = useInView(ref);

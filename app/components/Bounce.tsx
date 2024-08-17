@@ -4,15 +4,12 @@ import { motion, useInView } from "framer-motion";
 
 import { useRef } from "react";
 
-interface MotionPageWrapperProps {
+interface BounceProps {
   children: React.ReactNode;
   delay?: number;
 }
 
-export default function Bounce({
-  children,
-  delay = 0.4,
-}: MotionPageWrapperProps) {
+export default function Bounce({ children, delay = 0.4 }: BounceProps) {
   const ref = useRef(null);
   //   const isInView = useInView(ref, { once: true });
   const isInView = useInView(ref);

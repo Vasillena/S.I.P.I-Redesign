@@ -1,20 +1,12 @@
 "use client";
 
-import { Box, IconButton, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import { useCurrentLocale, useI18n } from "@/locales/client";
 
-import Image from "next/image";
-import image1 from "@/public/menu-5.svg";
-import image2 from "@/public/menu-5.svg";
-import image3 from "@/public/menu-5.svg";
-import image4 from "@/public/menu-5.svg";
-import image5 from "@/public/menu-5.svg";
-import image6 from "@/public/menu-5.svg";
+import MenuCard from "./MenuCard";
 import menuListBG from "../menuList/menuListBG.json";
 import menuListEN from "../menuList/menuList.json";
 import { useState } from "react";
-
-// import classes from "./Menu.module.css";
 
 export default function Menu() {
   const t = useI18n();
@@ -74,78 +66,104 @@ export default function Menu() {
 
     if (selectedCategory && categoryNameObj && categoryName) {
       return (
-        <Box>
-          <Typography variant="h2">{categoryName}</Typography>
+        <Box marginBottom={10}>
+          <Typography variant="h2" textAlign="center">
+            {categoryName}
+          </Typography>
           {selectedCategory.map((item) => (
-            <Box key={item.id}>
+            <Box
+              maxWidth={800}
+              width={{ xs: "90vw", lg: "50vw" }}
+              mx="auto"
+              display="flex"
+              flexDirection="column"
+              key={item.id}
+            >
               {item["semi-category"] && (
-                <Typography>{item["semi-category"]}</Typography>
+                <Typography variant="h5" textAlign="center">
+                  {item["semi-category"]}
+                </Typography>
               )}
-              <Box>
-                <Typography>{item.name}</Typography>
-                <Typography>{`${item.price} / ${item.quantity}`}</Typography>
+              <Box display="flex" alignItems="center">
+                <Typography variant="h6" fontWeight="bold">
+                  {item.name}
+                </Typography>
+                <Box
+                  component="span"
+                  sx={{
+                    flexGrow: 1,
+                    borderBottom: "1px dotted",
+                    mx: 2,
+                    pt: 1.5,
+                  }}
+                />
+                <Typography variant="h6" fontWeight="bold">
+                  {`${item.price} / ${item.quantity}`}
+                </Typography>
               </Box>
-              {item.description && <Typography>{item.description}</Typography>}
+              {/* <Box display="flex" justifyContent="space-between">
+                <Typography variant="h6" fontWeight="bold">
+                  {item.name}
+                </Typography>
+                <Typography
+                  variant="h6"
+                  fontWeight="bold"
+                >{`${item.price} / ${item.quantity}`}</Typography>
+              </Box> */}
+              {item.description && (
+                <Typography
+                  alignSelf="flex-start"
+                  textAlign="left"
+                  paddingRight="40%"
+                >
+                  {item.description}
+                </Typography>
+              )}
             </Box>
           ))}
         </Box>
       );
     } else {
-      return <Box></Box>;
+      return <Box />;
     }
   };
 
   return (
     <>
-      <Box>
-        <Typography variant="h1">Test</Typography>
-        <Box>
-          <Box>
-            <IconButton onClick={() => setSelectedTab("Hot Drinks")}>
-              <Image width={100} height={100} src={image1} alt="Coffee icon" />
-            </IconButton>
-            <Typography textAlign="center">Hot</Typography>
-          </Box>
-          <Box>
-            <IconButton onClick={() => setSelectedTab("Soft Drinks")}>
-              <Image
-                width={100}
-                height={100}
-                src={image2}
-                alt="Soft drinks icon"
-              />
-            </IconButton>
-            <Typography>Soft</Typography>
-          </Box>
-          <Box>
-            <IconButton onClick={() => setSelectedTab("Mixed Drinks")}>
-              <Image
-                width={100}
-                height={100}
-                src={image3}
-                alt="Cocktail icon"
-              />
-            </IconButton>
-            <Typography>cocktails</Typography>
-          </Box>
-          <Box>
-            <IconButton onClick={() => setSelectedTab("Wine")}>
-              <Image width={100} height={100} src={image4} alt="Wine icon" />
-            </IconButton>
-            <Typography>wine</Typography>
-          </Box>
-          <Box>
-            <IconButton onClick={() => setSelectedTab("Alcohol")}>
-              <Image width={100} height={100} src={image5} alt="Alcohol icon" />
-            </IconButton>
-            <Typography>alcohol</Typography>
-          </Box>
-          <Box>
-            <IconButton onClick={() => setSelectedTab("Beer")}>
-              <Image width={100} height={100} src={image6} alt="Beer icon" />
-            </IconButton>
-            <Typography>beer</Typography>
-          </Box>
+      <Box display="flex" flexDirection="column" alignItems="center" mt={20}>
+        <Typography
+          variant="h1"
+          marginBottom={4}
+          sx={{ fontSize: { xs: "40px", sm: "60px" } }}
+        >
+          OUR MENU
+        </Typography>
+        <Box
+          display="flex"
+          flexWrap="wrap"
+          justifyContent="center"
+          alignItems="center"
+        >
+          <MenuCard
+            text1={"Hot"}
+            text2={"drinks"}
+            onClick={() => setSelectedTab("Hot Drinks")}
+          />
+          <MenuCard
+            text1={"Soft"}
+            text2={"drinks"}
+            onClick={() => setSelectedTab("Soft Drinks")}
+          />
+          <MenuCard
+            text1={"Cocktails"}
+            onClick={() => setSelectedTab("Mixed Drinks")}
+          />
+          <MenuCard text1={"Wine"} onClick={() => setSelectedTab("Wine")} />
+          <MenuCard
+            text1={"Alcohol"}
+            onClick={() => setSelectedTab("Alcohol")}
+          />
+          <MenuCard text1={"Beer"} onClick={() => setSelectedTab("Beer")} />
         </Box>
         {renderMenu()}
       </Box>

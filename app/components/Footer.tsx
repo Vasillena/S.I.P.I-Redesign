@@ -49,13 +49,20 @@ export default function Footer(): JSX.Element {
           >
             Капана / Братя Пулиеви 1
           </Typography>
-          <Typography
-            variant="h5"
-            textAlign="center"
-            sx={{ fontSize: { xs: "18px", lg: "24px" } }}
+          <Link
+            href="tel:+359885673337"
+            rel="nofollow noopener"
+            aria-label="Phone"
           >
-            0885 67 33 37
-          </Typography>
+            <Typography
+              variant="h5"
+              textAlign="center"
+              sx={{ fontSize: { xs: "18px", lg: "24px" } }}
+            >
+              0885 67 33 37
+            </Typography>
+          </Link>
+
           <Typography
             variant="h5"
             textAlign="center"

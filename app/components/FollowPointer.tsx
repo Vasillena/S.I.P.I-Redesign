@@ -25,7 +25,7 @@ export default function FollowPointer() {
   }, []);
 
   if (isTouchDevice) {
-    return null; // Don't render the component on touch devices
+    return null;
   }
 
   return (

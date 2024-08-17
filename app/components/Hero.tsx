@@ -7,7 +7,7 @@ import Lottie from "react-lottie-player";
 import button from "@/public/arrow-button.json";
 import heroImg from "@/public/hero.png";
 
-export default async function Hero() {
+export default function Hero() {
   return (
     <>
       <Box
