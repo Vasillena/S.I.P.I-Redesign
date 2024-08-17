@@ -38,8 +38,6 @@ const slides = [
 ];
 
 export default function Slider(): JSX.Element {
-  // Duplicate the slides array to ensure seamless looping
-  const duplicatedSlides = [...slides, ...slides];
   const { mobile } = useBreakpoints();
 
   return (

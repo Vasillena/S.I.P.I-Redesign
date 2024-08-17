@@ -58,7 +58,6 @@ export default function Navbar(): JSX.Element {
     };
 
     if (open && "ontouchstart" in window) {
-      // Only add listener for touch devices
       document.addEventListener("touchstart", handleClickOutside);
     } else {
       document.removeEventListener("touchstart", handleClickOutside);
@@ -86,6 +85,7 @@ export default function Navbar(): JSX.Element {
       <AppBar>
         <Box
           width="100vw"
+          height={{ xs: "300px", md: "auto" }}
           display="flex"
           flexDirection="column"
           justifyContent="center"
@@ -102,19 +102,19 @@ export default function Navbar(): JSX.Element {
         >
           <IconButton
             onClick={() => setOpen(!open)}
+            disableRipple
             sx={{
               backdropFilter: "blur(10px)",
-              backgroundColor: isScrolled
-                ? "rgba(91, 73, 102, 0.5)"
-                : "transparent",
-              boxShadow: "0 4px 15px rgba(0, 0, 0, 0.3)",
+              backgroundColor:
+                isScrolled && !open ? "rgba(91, 73, 102, 0.5)" : "transparent",
+              boxShadow: !open ? "0 4px 15px rgba(0, 0, 0, 0.3)" : "none",
             }}
           >
             <Image
               src={open ? image6 : image5}
               alt="Menu image"
-              width={32}
-              height={32}
+              width={open ? 20 : 32}
+              height={open ? 20 : 32}
             />
           </IconButton>
           {open && (

@@ -7,6 +7,7 @@ import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
 import { Poiret_One } from "next/font/google";
 import { Provider } from "./provider";
+import { Switch } from "./switch";
 // import Script from "next/script";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "./theme";
@@ -126,6 +127,7 @@ export default function RootLayout({
             <Provider locale={locale}>
               <Navbar />
               {children}
+              <Switch />
               <Footer />
             </Provider>
           </ThemeProvider>

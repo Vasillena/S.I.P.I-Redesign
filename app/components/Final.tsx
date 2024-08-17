@@ -31,48 +31,48 @@ export default function Final(): JSX.Element {
         <Grid item xs={12} lg={3} textAlign="end">
           <Image src={decor2} alt="Decor" />
         </Grid>
-        <Box
-          sx={{
-            position: "relative",
-            width: "300px",
-            height: "300px",
-            "&::before": {
-              content: '""',
-              position: "absolute",
-              top: "0",
-              left: "0",
-              width: "110%",
-              height: "100%",
-              background: `url(${logo.src}) center no-repeat`,
-              zIndex: "-50",
-              transform: { xs: "scale(0.5)", lg: "scale(1)" },
-              // display: { xs: "none", sm: "none", md: "block", lg: "block" },
-              animation: "rotate 10s linear infinite",
-            },
-            "@keyframes rotate": {
-              "0%": {
-                transform: "rotate(0deg)",
+        <Grid item xs={12}>
+          <Box
+            sx={{
+              position: "relative",
+              width: "300px",
+              height: "300px",
+              margin: "0 auto",
+              "&::before": {
+                content: '""',
+                position: "absolute",
+                top: "0",
+                left: "0",
+                width: "110%",
+                height: "100%",
+                background: `url(${logo.src}) center no-repeat`,
+                zIndex: "-50",
+                animation: "rotate 10s linear infinite",
               },
-              "50%": {
-                transform: "rotate(180deg)",
+              "@keyframes rotate": {
+                "0%": {
+                  transform: "rotate(0deg)",
+                },
+                "50%": {
+                  transform: "rotate(180deg)",
+                },
+                "100%": {
+                  transform: "rotate(360deg)",
+                },
               },
-              "100%": {
-                transform: "rotate(360deg)",
-              },
-            },
-          }}
-        >
-          <Typography
-            variant="h4"
-            position="relative"
-            top="3.8em"
-            textAlign="center"
-            left="0.5em"
-            sx={{ fontSize: { xs: "24px", lg: "34px" } }}
+            }}
           >
-            ЕЛА НА ПАРТИ
-          </Typography>
-          {/* <Typography
+            <Typography
+              variant="h4"
+              position="relative"
+              top="3.8em"
+              textAlign="center"
+              left="0.5em"
+              // sx={{ fontSize: { xs: "24px", lg: "34px" } }}
+            >
+              ЕЛА НА ПАРТИ
+            </Typography>
+            {/* <Typography
             variant="h5"
             position="relative"
             top="6.2em"
@@ -81,7 +81,8 @@ export default function Final(): JSX.Element {
           >
             Стани част от нашата история! Очакваме те в Капана!
           </Typography> */}
-        </Box>
+          </Box>
+        </Grid>
       </Grid>
     </>
   );

@@ -13,22 +13,31 @@ export default function MainNav(): JSX.Element {
   const t = useI18n();
 
   const links = [
-    { href: "/", label: t("nav.home"), active: pathname === `/${locale}` },
+    { href: "/", label: "HOME", active: pathname === `/${locale}` },
     {
-      href: "/portfolio",
-      label: t("nav.portfolio"),
-      active:
-        pathname === `/${locale}/portfolio` || pathname.includes("/portfolio/"),
+      href: "/events",
+      label: "EVENTS",
+      active: pathname === `/${locale}/events`,
     },
     {
-      href: "/about",
-      label: t("nav.about"),
-      active: pathname === `/${locale}/about`,
+      href: "/our-place",
+      label: "OUR PLACE",
+      active: pathname === `/${locale}/our-place`,
     },
     {
-      href: "/contacts",
-      label: t("nav.contacts"),
-      active: pathname === `/${locale}/contacts`,
+      href: "/murch",
+      label: "MURCH",
+      active: pathname === `/${locale}/murch`,
+    },
+    {
+      href: "/menu",
+      label: "MENU",
+      active: pathname === `/${locale}/menu`,
+    },
+    {
+      href: "/contact",
+      label: "CONTACT",
+      active: pathname === `/${locale}/contact`,
     },
   ];
 
