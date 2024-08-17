@@ -98,13 +98,13 @@ export default function Menu() {
   return (
     <>
       <Box>
-        <Typography variant="h1">{t("title")}</Typography>
+        <Typography variant="h1">Test</Typography>
         <Box>
           <Box>
             <IconButton onClick={() => setSelectedTab("Hot Drinks")}>
               <Image width={100} height={100} src={image1} alt="Coffee icon" />
             </IconButton>
-            <Typography textAlign="center">{t("hot-drinks")}</Typography>
+            <Typography textAlign="center">Hot</Typography>
           </Box>
           <Box>
             <IconButton onClick={() => setSelectedTab("Soft Drinks")}>
@@ -115,7 +115,7 @@ export default function Menu() {
                 alt="Soft drinks icon"
               />
             </IconButton>
-            <Typography>{t("soft-drinks")}</Typography>
+            <Typography>Soft</Typography>
           </Box>
           <Box>
             <IconButton onClick={() => setSelectedTab("Mixed Drinks")}>
@@ -126,25 +126,25 @@ export default function Menu() {
                 alt="Cocktail icon"
               />
             </IconButton>
-            <Typography>{t("cocktails")}</Typography>
+            <Typography>cocktails</Typography>
           </Box>
           <Box>
             <IconButton onClick={() => setSelectedTab("Wine")}>
               <Image width={100} height={100} src={image4} alt="Wine icon" />
             </IconButton>
-            <Typography>{t("wine")}</Typography>
+            <Typography>wine</Typography>
           </Box>
           <Box>
             <IconButton onClick={() => setSelectedTab("Alcohol")}>
               <Image width={100} height={100} src={image5} alt="Alcohol icon" />
             </IconButton>
-            <Typography>{t("alcohol")}</Typography>
+            <Typography>alcohol</Typography>
           </Box>
           <Box>
             <IconButton onClick={() => setSelectedTab("Beer")}>
               <Image width={100} height={100} src={image6} alt="Beer icon" />
             </IconButton>
-            <Typography>{t("beer")}</Typography>
+            <Typography>beer</Typography>
           </Box>
         </Box>
         {renderMenu()}
