@@ -67,25 +67,37 @@ export default function Menu() {
     if (selectedCategory && categoryNameObj && categoryName) {
       return (
         <Box marginBottom={10}>
-          <Typography variant="h2" textAlign="center">
+          <Typography
+            variant="h2"
+            textAlign="center"
+            sx={{ fontSize: { xs: "36px", md: "44px" } }}
+          >
             {categoryName}
           </Typography>
           {selectedCategory.map((item) => (
             <Box
               maxWidth={800}
-              width={{ xs: "90vw", lg: "50vw" }}
+              width={{ xs: "90vw", lg: "70vw" }}
               mx="auto"
               display="flex"
               flexDirection="column"
               key={item.id}
             >
               {item["semi-category"] && (
-                <Typography variant="h5" textAlign="center">
+                <Typography
+                  variant="h5"
+                  textAlign="center"
+                  sx={{ fontSize: { xs: "20px", md: "24px" } }}
+                >
                   {item["semi-category"]}
                 </Typography>
               )}
               <Box display="flex" alignItems="center">
-                <Typography variant="h6" fontWeight="bold">
+                <Typography
+                  variant="h6"
+                  fontWeight="bold"
+                  sx={{ fontSize: { xs: "16px", md: "20px" } }}
+                >
                   {item.name}
                 </Typography>
                 <Box
@@ -97,7 +109,11 @@ export default function Menu() {
                     pt: 1.5,
                   }}
                 />
-                <Typography variant="h6" fontWeight="bold">
+                <Typography
+                  variant="h6"
+                  fontWeight="bold"
+                  sx={{ fontSize: { xs: "16px", md: "20px" } }}
+                >
                   {`${item.price} / ${item.quantity}`}
                 </Typography>
               </Box>
@@ -115,6 +131,7 @@ export default function Menu() {
                   alignSelf="flex-start"
                   textAlign="left"
                   paddingRight="40%"
+                  sx={{ fontSize: { xs: "14px", md: "16px" } }}
                 >
                   {item.description}
                 </Typography>
@@ -130,7 +147,12 @@ export default function Menu() {
 
   return (
     <>
-      <Box display="flex" flexDirection="column" alignItems="center" mt={20}>
+      <Box
+        display="flex"
+        flexDirection="column"
+        alignItems="center"
+        mt={{ xs: 10, sm: 20 }}
+      >
         <Typography
           variant="h1"
           marginBottom={4}
@@ -143,6 +165,7 @@ export default function Menu() {
           flexWrap="wrap"
           justifyContent="center"
           alignItems="center"
+          gap={2}
         >
           <MenuCard
             text1={"Hot"}

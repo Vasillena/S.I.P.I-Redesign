@@ -85,6 +85,7 @@ export default function Footer(): JSX.Element {
         <Typography
           variant="h6"
           textAlign="center"
+          px={1}
           sx={{ fontSize: { xs: "16px", lg: "20px" } }}
         >
           Copyright © 2024 С.И.П.И. Всички права запазени | Създадено от
