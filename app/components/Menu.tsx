@@ -70,6 +70,7 @@ export default function Menu() {
           <Typography
             variant="h2"
             textAlign="center"
+            mt={4}
             sx={{ fontSize: { xs: "36px", md: "44px" } }}
           >
             {categoryName}
@@ -87,6 +88,7 @@ export default function Menu() {
                 <Typography
                   variant="h5"
                   textAlign="center"
+                  mt={2}
                   sx={{ fontSize: { xs: "20px", md: "24px" } }}
                 >
                   {item["semi-category"]}
@@ -112,7 +114,7 @@ export default function Menu() {
                 <Typography
                   variant="h6"
                   fontWeight="bold"
-                  sx={{ fontSize: { xs: "16px", md: "20px" } }}
+                  sx={{ fontSize: { xs: "14px", md: "20px" } }}
                 >
                   {`${item.price} / ${item.quantity}`}
                 </Typography>

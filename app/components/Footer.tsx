@@ -89,7 +89,11 @@ export default function Footer(): JSX.Element {
           sx={{ fontSize: { xs: "16px", lg: "20px" } }}
         >
           Copyright © 2024 С.И.П.И. Всички права запазени | Създадено от
-          <Link href="https://github.com/Vasillena" target="_blank">
+          <Link
+            href="https://github.com/Vasillena"
+            target="_blank"
+            color="#5B4966"
+          >
             {" "}
             VY
           </Link>
