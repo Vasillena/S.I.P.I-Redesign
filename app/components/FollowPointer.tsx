@@ -1,16 +1,32 @@
 "use client";
 
+import { useEffect, useState } from "react";
+
 import { motion } from "framer-motion";
 import { useFollowPointer } from "../utils/useFollowPointer";
 import { useRef } from "react";
 
-// interface FollowPointerProps {
-//   children: React.ReactNode;
-// }
-
 export default function FollowPointer() {
   const ref = useRef(null);
   const { x, y } = useFollowPointer(ref);
+  const [isTouchDevice, setIsTouchDevice] = useState(false);
+
+  useEffect(() => {
+    const checkIfTouchDevice = () => {
+      if (
+        "ontouchstart" in window ||
+        window.matchMedia("(pointer: coarse)").matches
+      ) {
+        setIsTouchDevice(true);
+      }
+    };
+
+    checkIfTouchDevice();
+  }, []);
+
+  if (isTouchDevice) {
+    return null; // Don't render the component on touch devices
+  }
 
   return (
     <motion.div

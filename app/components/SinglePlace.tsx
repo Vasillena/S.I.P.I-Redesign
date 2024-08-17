@@ -29,7 +29,7 @@ export default function SinglePlace({
         marginBottom={4}
         marginX="auto"
         textAlign="center"
-        sx={{ fontSize: { xs: "16px", lg: "24px" } }}
+        sx={{ fontSize: { xs: "18px", lg: "24px" } }}
       >
         {description}
       </Typography>
@@ -44,7 +44,7 @@ export default function SinglePlace({
         textAlign="center"
         marginX="auto"
       >
-        <Typography variant="h5" sx={{ fontSize: { xs: "16px", lg: "24px" } }}>
+        <Typography variant="h5" sx={{ fontSize: { xs: "18px", lg: "24px" } }}>
           {capacityNumber} <br />
           {capacityText}
         </Typography>

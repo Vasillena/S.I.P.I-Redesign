@@ -67,7 +67,7 @@ export default function Cocktails(): JSX.Element {
                 // left="-2.3em"
                 sx={{ fontSize: { xs: "24px", lg: "34px" } }}
               >
-                НАШИТЕ ПРЕДЛОЖЕНИЯ
+                COCKTAILS FIRST
               </Typography>
             </Reveal>
           </Box>
@@ -168,10 +168,9 @@ export default function Cocktails(): JSX.Element {
               variant="h5"
               textAlign="center"
               color="white"
-              sx={{ fontSize: { xs: "16px", lg: "24px" } }}
+              sx={{ fontSize: { xs: "18px", lg: "24px" } }}
             >
-              Cocktail’s first, because no great story ever started with a glass
-              of water 
+              ...because no great story ever started with a glass of water 
             </Typography>
           </Box>
           <Box

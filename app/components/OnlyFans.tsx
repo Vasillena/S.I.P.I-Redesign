@@ -81,7 +81,7 @@ export default function OnlyFans(): JSX.Element {
               color="white"
               marginX="auto"
               marginTop={{ xs: 12, lg: 0 }}
-              sx={{ fontSize: { xs: "16px", lg: "24px" } }}
+              sx={{ fontSize: { xs: "18px", lg: "24px" } }}
             >
               За истинските ентусиасти, които искат да носят частица от нашата
               жизнена атмосфера със себе си, където и да отидат. Посетете нашия

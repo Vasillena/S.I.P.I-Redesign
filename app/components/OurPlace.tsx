@@ -56,7 +56,7 @@ export default function OurPlace(): JSX.Element {
             variant="h5"
             lineHeight={1}
             textAlign="center"
-            sx={{ fontSize: { xs: "16px", lg: "24px" } }}
+            sx={{ fontSize: { xs: "18px", lg: "24px" } }}
             marginTop={{ xs: 8, lg: 0 }}
           >
             Празнувай специални моменти в С.И.П.И. Довери ни се за своето
@@ -123,7 +123,7 @@ export default function OurPlace(): JSX.Element {
               marginBottom={2}
               marginX="auto"
               textAlign="center"
-              sx={{ fontSize: { xs: "16px", lg: "24px" } }}
+              sx={{ fontSize: { xs: "18px", lg: "24px" } }}
             >
               Ще те посрещнем с шотове и авторски коктейли в приятелска
               атмосфера и #party обстановка. Нашата вътрешна зала е сърцето на
@@ -254,7 +254,7 @@ export default function OurPlace(): JSX.Element {
             marginBottom={2}
             marginX="auto"
             textAlign="center"
-            sx={{ fontSize: { xs: "16px", lg: "24px" } }}
+            sx={{ fontSize: { xs: "18px", lg: "24px" } }}
           >
             За онези, които търсят изключителност и уединение, предлагаме две
             отделни тераси на ниво 2. Всяка от тях може да бъде наета отделно и

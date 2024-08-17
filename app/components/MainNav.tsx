@@ -15,17 +15,17 @@ export default function MainNav(): JSX.Element {
   const links = [
     { href: "/", label: "HOME", active: pathname === `/${locale}` },
     {
-      href: "/events",
+      href: "/#events",
       label: "EVENTS",
       active: pathname === `/${locale}/events`,
     },
     {
-      href: "/our-place",
+      href: "/#our-place",
       label: "OUR PLACE",
       active: pathname === `/${locale}/our-place`,
     },
     {
-      href: "/murch",
+      href: "/#murch",
       label: "MURCH",
       active: pathname === `/${locale}/murch`,
     },
@@ -35,7 +35,7 @@ export default function MainNav(): JSX.Element {
       active: pathname === `/${locale}/menu`,
     },
     {
-      href: "/contact",
+      href: "/#contact",
       label: "CONTACT",
       active: pathname === `/${locale}/contact`,
     },
@@ -50,9 +50,9 @@ export default function MainNav(): JSX.Element {
         alignItems: "center",
         mx: 2,
         my: { xs: 4, sm: 0 },
-        ml: { xs: 3, sm: 1 },
-        mt: { xs: 6, sm: 0 },
-        gap: { xs: 2, sm: 4, lg: 6 },
+        // ml: { xs: 3, sm: 1 },
+        // mt: { xs: 6, sm: 0 },
+        gap: { xs: 4, lg: 6 },
       }}
     >
       {links.map((link) => (

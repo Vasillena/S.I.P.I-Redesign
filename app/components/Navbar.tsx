@@ -85,7 +85,7 @@ export default function Navbar(): JSX.Element {
       <AppBar>
         <Box
           width="100vw"
-          height={{ xs: "300px", md: "auto" }}
+          height={{ xs: open ? "400px" : "auto", sm: "auto" }}
           display="flex"
           flexDirection="column"
           justifyContent="center"
@@ -100,36 +100,46 @@ export default function Navbar(): JSX.Element {
             transition: "background-color 0.3s ease, padding 0.3s ease", // Add transition
           }}
         >
-          <IconButton
-            onClick={() => setOpen(!open)}
-            disableRipple
-            sx={{
-              backdropFilter: "blur(10px)",
-              backgroundColor:
-                isScrolled && !open ? "rgba(91, 73, 102, 0.5)" : "transparent",
-              boxShadow: !open ? "0 4px 15px rgba(0, 0, 0, 0.3)" : "none",
-            }}
+          <Box
+            display="flex"
+            flexDirection="column"
+            justifyContent="center"
+            alignItems="center"
           >
-            <Image
-              src={open ? image6 : image5}
-              alt="Menu image"
-              width={open ? 20 : 32}
-              height={open ? 20 : 32}
-            />
-          </IconButton>
-          {open && (
-            <Toolbar
+            <IconButton
+              onClick={() => setOpen(!open)}
+              disableRipple
               sx={{
-                display: "flex",
-                justifyContent: "space-between",
-                height: "64px",
-                transition: "opacity 0.3s ease", // Smooth transition for opacity
-                opacity: open ? 1 : 0, // Toggle opacity based on open state
+                marginTop: open ? 2 : 0,
+                backdropFilter: "blur(10px)",
+                backgroundColor:
+                  isScrolled && !open
+                    ? "rgba(91, 73, 102, 0.5)"
+                    : "transparent",
+                boxShadow: !open ? "0 4px 15px rgba(0, 0, 0, 0.3)" : "none",
               }}
             >
-              <MainNav />
-            </Toolbar>
-          )}
+              <Image
+                src={open ? image6 : image5}
+                alt="Menu image"
+                width={open ? 20 : 32}
+                height={open ? 20 : 32}
+              />
+            </IconButton>
+            {open && (
+              <Toolbar
+                sx={{
+                  display: "flex",
+                  justifyContent: "space-between",
+                  height: "auto",
+                  transition: "opacity 0.3s ease",
+                  opacity: open ? 1 : 0,
+                }}
+              >
+                <MainNav />
+              </Toolbar>
+            )}
+          </Box>
         </Box>
       </AppBar>
     </Box>

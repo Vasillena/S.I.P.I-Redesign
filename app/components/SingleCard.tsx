@@ -30,7 +30,7 @@ export default function SingleCard({
           variant="h6"
           lineHeight={1}
           textAlign="center"
-          sx={{ fontSize: { xs: "16px", sm: "20px" } }}
+          sx={{ fontSize: { xs: "18px", sm: "20px" } }}
         >
           {description}
         </Typography>
