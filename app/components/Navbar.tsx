@@ -112,10 +112,9 @@ export default function Navbar(): JSX.Element {
               sx={{
                 marginTop: open ? 2 : 0,
                 backdropFilter: "blur(10px)",
-                backgroundColor:
-                  isScrolled && !open
-                    ? "rgba(91, 73, 102, 0.5)"
-                    : "transparent",
+                backgroundColor: !open
+                  ? "rgba(91, 73, 102, 0.5)"
+                  : "transparent",
                 boxShadow: !open ? "0 4px 15px rgba(0, 0, 0, 0.3)" : "none",
               }}
             >

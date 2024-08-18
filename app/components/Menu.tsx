@@ -163,7 +163,7 @@ export default function Menu() {
         display="flex"
         flexDirection="column"
         alignItems="center"
-        mt={{ xs: 10, sm: 20 }}
+        mt={{ xs: 16, sm: 20 }}
       >
         <Typography
           variant="h1"
