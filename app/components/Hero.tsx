@@ -8,9 +8,17 @@ import button from "@/public/arrow-button.json";
 import heroImg from "@/public/hero.png";
 
 export default function Hero() {
+  const handleScroll = () => {
+    const element = document.getElementById("welcome");
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <>
       <Box
+        id="home"
         sx={{
           position: "relative",
           width: "100%",
@@ -53,7 +61,7 @@ export default function Hero() {
             }}
           /> */}
         <Box>
-          <IconButton>
+          <IconButton onClick={handleScroll}>
             <Lottie
               animationData={button}
               play

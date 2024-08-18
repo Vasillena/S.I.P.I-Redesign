@@ -12,6 +12,7 @@ export default function Events(): JSX.Element {
   return (
     <>
       <Grid
+        id="events"
         container
         maxWidth={1440}
         spacing={{ xs: 12, lg: 2 }}

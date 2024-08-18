@@ -11,6 +11,7 @@ import logo from "@/public/logo-2.svg";
 export default function Footer(): JSX.Element {
   return (
     <Box
+      id="contact"
       width="100%"
       height={{ xs: "400px", lg: "556px" }}
       bgcolor="#2E2E2E"

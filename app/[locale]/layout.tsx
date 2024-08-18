@@ -29,7 +29,7 @@ export async function generateMetadata({
     description =
       "Добре дошли в С.И.П.И - мястото за бар ентусиасти! При нас ще се наслаждавате на авторски коктейли, парти обстановка и музикални изживявания. Бар С.И.П.И е повече от място за напитки; това е преживяване, където парти хората се събират, за да споделят обичта си към музиката.";
     keywords = [
-      "S.I.P.I.",
+      "S.I.P.I",
       "СИПИ",
       "бар СИПИ",
       "СИПИ Пловдив",
@@ -58,11 +58,11 @@ export async function generateMetadata({
       "nightlife",
     ];
   } else if (locale === "en") {
-    title = "Bar S.I.P.I. | sipi.bg";
+    title = "Bar S.I.P.I | sipi.bg";
     description =
-      "Welcome to S.I.P.I. – a destination for bar enthusiasts! With us you will enjoy signature cocktails, party atmosphere and musical experiences. S.I.P.I. Bar is more than a place for drinks; it's an experience where party people come together to share their love of music";
+      "Welcome to S.I.P.I – a destination for bar enthusiasts! With us you will enjoy signature cocktails, party atmosphere and musical experiences. S.I.P.I Bar is more than a place for drinks; it's an experience where party people come together to share their love of music";
     keywords = [
-      "S.I.P.I.",
+      "S.I.P.I",
       "СИПИ",
       "бар СИПИ",
       "СИПИ Пловдив",

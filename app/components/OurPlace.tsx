@@ -23,6 +23,7 @@ export default function OurPlace(): JSX.Element {
   return (
     <>
       <Grid
+        id="our-place"
         container
         maxWidth={1440}
         spacing={{ xs: 12, lg: 2 }}

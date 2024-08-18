@@ -13,6 +13,7 @@ export default function Welcome(): JSX.Element {
   return (
     <>
       <Grid
+        id="welcome"
         container
         maxWidth={1440}
         // spacing={{ xs: 4, lg: 2 }}

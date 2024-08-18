@@ -8,10 +8,20 @@ import menuListBG from "../menuList/menuListBG.json";
 import menuListEN from "../menuList/menuList.json";
 import { useState } from "react";
 
+type ViewType =
+  | ""
+  | "Hot Drinks"
+  | "Soft Drinks"
+  | "Mixed Drinks"
+  | "Wine"
+  | "Alcohol"
+  | "Beer";
+
 export default function Menu() {
   const t = useI18n();
   const locale = useCurrentLocale();
   const [selectedTab, setSelectedTab] = useState("");
+  const [view, setView] = useState<ViewType>("");
 
   const menuList = locale === "bg" ? menuListBG : menuListEN;
 
@@ -164,31 +174,44 @@ export default function Menu() {
         </Typography>
         <Box
           display="flex"
+          flexDirection={{ xs: "column", md: "row" }}
           flexWrap="wrap"
           justifyContent="center"
           alignItems="center"
-          gap={2}
+          gap={{ xs: 0, md: 2 }}
         >
           <MenuCard
             text1={"Hot"}
             text2={"drinks"}
             onClick={() => setSelectedTab("Hot Drinks")}
+            active={selectedTab === "Hot Drinks"}
           />
           <MenuCard
             text1={"Soft"}
             text2={"drinks"}
             onClick={() => setSelectedTab("Soft Drinks")}
+            active={selectedTab === "Soft Drinks"}
           />
           <MenuCard
             text1={"Cocktails"}
             onClick={() => setSelectedTab("Mixed Drinks")}
+            active={selectedTab === "Mixed Drinks"}
           />
-          <MenuCard text1={"Wine"} onClick={() => setSelectedTab("Wine")} />
+          <MenuCard
+            text1={"Wine"}
+            onClick={() => setSelectedTab("Wine")}
+            active={selectedTab === "Wine"}
+          />
           <MenuCard
             text1={"Alcohol"}
             onClick={() => setSelectedTab("Alcohol")}
+            active={selectedTab === "Alcohol"}
           />
-          <MenuCard text1={"Beer"} onClick={() => setSelectedTab("Beer")} />
+          <MenuCard
+            text1={"Beer"}
+            onClick={() => setSelectedTab("Beer")}
+            active={selectedTab === "Beer"}
+          />
         </Box>
         {renderMenu()}
       </Box>

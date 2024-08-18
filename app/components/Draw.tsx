@@ -42,6 +42,7 @@ export default function Draw() {
         width: "100%",
         height: "60vh",
         backdropFilter: "blur(10px)",
+        WebkitBackdropFilter: "blur(10px)",
         backgroundColor: "rgba(0, 0, 0, 0.2)",
         borderRadius: "15px",
         boxShadow: "0 4px 15px rgba(0, 0, 0, 0.3)",
