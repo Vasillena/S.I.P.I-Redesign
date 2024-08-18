@@ -19,11 +19,11 @@ export default function Cocktails(): JSX.Element {
       <Grid
         container
         maxWidth={1440}
-        spacing={{ xs: 12, lg: 2 }}
+        spacing={{ lg: 2 }}
         justifyContent="center"
         marginBottom={2}
       >
-        <Grid item xs={10} textAlign="center" marginBottom={{ xs: 6, md: 21 }}>
+        <Grid item xs={10} textAlign="center" marginBottom={{ xs: 12, md: 21 }}>
           <Typography
             variant="h4"
             sx={{ fontSize: { xs: "24px", lg: "34px" } }}
@@ -157,7 +157,7 @@ export default function Cocktails(): JSX.Element {
         >
           <Box
             width={240}
-            height={240}
+            height={{ xs: 120, md: 240 }}
             bgcolor="#2E2E2E"
             borderRadius="0 40px 0 40px"
             display="flex"

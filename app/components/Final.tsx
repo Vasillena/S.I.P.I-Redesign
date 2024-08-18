@@ -38,16 +38,19 @@ export default function Final(): JSX.Element {
               width: "300px",
               height: "300px",
               margin: "0 auto",
+              display: "flex",
+              justifyContent: "center",
               "&::before": {
                 content: '""',
                 position: "absolute",
                 top: "0",
                 left: "0",
-                width: "110%",
+                width: "100%",
                 height: "100%",
                 background: `url(${logo.src}) center no-repeat`,
                 zIndex: "-50",
                 animation: "rotate 10s linear infinite",
+                scale: { xs: "0.5", md: "1" },
               },
               "@keyframes rotate": {
                 "0%": {
@@ -67,7 +70,7 @@ export default function Final(): JSX.Element {
               position="relative"
               top="3.8em"
               textAlign="center"
-              left="0.5em"
+              // left="0.5em"
               // sx={{ fontSize: { xs: "24px", lg: "34px" } }}
             >
               ЕЛА НА ПАРТИ

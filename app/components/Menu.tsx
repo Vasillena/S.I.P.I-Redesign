@@ -116,7 +116,10 @@ export default function Menu() {
                   component="span"
                   sx={{
                     flexGrow: 1,
-                    borderBottom: "1px dotted",
+                    borderBottom: {
+                      xs: "1px dotted #f0f0f0",
+                      sm: "1px dotted black",
+                    },
                     mx: 2,
                     pt: 1.5,
                   }}

@@ -4,7 +4,9 @@ import { Box, Grid } from "@mui/material";
 
 import SingleCard from "./SingleCard";
 import decor from "@/public/decor-3.svg";
-import image from "@/public/icon.svg";
+import image1 from "@/public/icon-1.svg";
+import image2 from "@/public/icon-2.svg";
+import image3 from "@/public/icon-3.svg";
 
 export default function Cards(): JSX.Element {
   return (
@@ -33,7 +35,7 @@ export default function Cards(): JSX.Element {
           }}
         >
           <SingleCard
-            image={image}
+            image={image1}
             title={"Авторски коктейли"}
             description={
               "Отдайте се на нашите експертно изработени коктейли, всеки един шедьовър на вкусове и представяне"
@@ -43,7 +45,7 @@ export default function Cards(): JSX.Element {
       </Grid>
       <Grid item xs={12} lg={4}>
         <SingleCard
-          image={image}
+          image={image2}
           title={"Гост бармани"}
           description={
             "Насладете се на нови преживявания и вкусове в компанията на редовно гостуващите ни гост бармани"
@@ -59,7 +61,7 @@ export default function Cards(): JSX.Element {
             "&::after": {
               content: '""',
               position: "absolute",
-              top: { xs: "-3em", md: "-3em", lg: "-3em", xl: "-3em" },
+              top: { xs: "-3.5em", md: "-3em", lg: "-3em", xl: "-3em" },
               left: 0,
               width: "100%",
               height: "100%",
@@ -68,7 +70,7 @@ export default function Cards(): JSX.Element {
           }}
         >
           <SingleCard
-            image={image}
+            image={image3}
             title={"Изпълнения на живо"}
             description={
               "Забавлявайте се със завладяващи изпълнения на живо и танцувайте до зори"
