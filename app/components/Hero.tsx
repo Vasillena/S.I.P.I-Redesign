@@ -6,6 +6,7 @@ import Draw from "../components/Draw";
 import Lottie from "react-lottie-player";
 import button from "@/public/arrow-button.json";
 import heroImg from "@/public/hero.png";
+import { useBreakpoints } from "../utils/useBreakpoints";
 
 export default function Hero() {
   const handleScroll = () => {
@@ -35,7 +36,10 @@ export default function Hero() {
             left: 0,
             width: "100%",
             height: "100%",
-            background: `url(${heroImg.src}) center/cover no-repeat fixed`,
+            background: {
+              xs: `url(${heroImg.src}) center/cover no-repeat`,
+              sm: `url(${heroImg.src}) center/cover no-repeat fixed`,
+            },
             // background: {
             //   xs: `url(${logo3.src}) center/17em no-repeat fixed`,
             //   md: `url(${logo3.src}) center/60em no-repeat fixed`,

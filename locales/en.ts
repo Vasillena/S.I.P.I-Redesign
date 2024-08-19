@@ -8,7 +8,7 @@ export default {
   hero: {
     title: "Welcome",
     "title-2": "to Bar S.I.P.I.",
-    text: "The oasis of Hip Hop music in the heart of Kapana. We are inspired by the energy and unique style of the Hip Hop scene. Here, you'll enjoy signature cocktails, a party atmosphere, and musical experiences. Bar S.I.P.I. is more than just a place for drinks; it's an experience where partygoers gather every weekend to share their love for music.",
+    text: "The oasis of Hip Hop music in the heart of Kapana. We are inspired by the energy and unique style of the Hip Hop scene. Here, you'll enjoy signature cocktails, a party atmosphere, and musical experiences. Bar S.I.P.I. is more than just a place for drinks; it's an experience where partygoers gather to share their love for music.",
   },
   card: {
     "card-1-title": "Signature Cocktails",
@@ -35,7 +35,7 @@ export default {
       "Celebrate special moments at S.I.P.I. Trust us for your corporate party, birthday, or private event that will be the talk of the town.",
     "place-1-title": "Indoor Hall",
     "place-1-text":
-      "We'll welcome you with shots and signature cocktails in a friendly atmosphere and #party setting. Our indoor hall is the heart of nightlife, the perfect place for evening meetings, wild parties, and special events where light and music create an unforgettable atmosphere.",
+      "Our indoor hall is the heart of nightlife, the perfect place for evening meetings, wild parties, and special events where light and music create an unforgettable atmosphere.",
     "place-1-places": "places",
     "place-2-title": "Summer Garden",
     "place-2-text":

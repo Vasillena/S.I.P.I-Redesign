@@ -6,10 +6,11 @@ import Image from "next/image";
 import decor1 from "@/public/decor-4.svg";
 import image1 from "@/public/fixed-1.png";
 import image2 from "@/public/fixed-2.png";
-import { useBreakpoints } from "../utils/useBreakpoints";
+
+// import { useBreakpoints } from "../utils/useBreakpoints";
 
 export default function FixedImage(): JSX.Element {
-  const { mobile } = useBreakpoints();
+  // const { mobile } = useBreakpoints();
 
   return (
     <>
@@ -41,9 +42,10 @@ export default function FixedImage(): JSX.Element {
             width: "100%",
             height: "100%",
             // background: `url(${image.src}) center/100% no-repeat fixed`,
-            background: mobile
-              ? `url(${image2.src}) center/100% no-repeat`
-              : `url(${image1.src}) center/100% no-repeat fixed`,
+            background: {
+              xs: `url(${image2.src}) center/100% no-repeat`,
+              sm: `url(${image1.src}) center/100% no-repeat fixed`,
+            },
             //             backgroundPosition: "center",
             //   backgroundSize: "100%",
             //   backgroundRepeat: "no-repeat",
