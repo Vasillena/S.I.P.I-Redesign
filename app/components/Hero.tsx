@@ -9,10 +9,24 @@ import heroImg from "@/public/hero.png";
 import { useBreakpoints } from "../utils/useBreakpoints";
 
 export default function Hero() {
+  // const handleScroll = () => {
+  //   const element = document.getElementById("welcome");
+  //   if (element) {
+  //     element.scrollIntoView({ behavior: "smooth" });
+  //   }
+  // };
+
   const handleScroll = () => {
     const element = document.getElementById("welcome");
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
+
+      setTimeout(() => {
+        window.scrollBy({
+          top: 40,
+          behavior: "smooth",
+        });
+      }, 500);
     }
   };
 
@@ -26,9 +40,9 @@ export default function Hero() {
           height: { xs: "100svh", sm: "100vh" },
           display: "flex",
           flexDirection: "column",
-          justifyContent: "center",
+          justifyContent: "flex-end",
           alignItems: "center",
-          // gap: 30,
+          gap: 18,
           "&::after": {
             content: '""',
             position: "absolute",
@@ -51,7 +65,10 @@ export default function Hero() {
           },
         }}
       >
-        <Box width="100vw" justifySelf="center" alignSelf="center">
+        <Box
+          width="100vw"
+          // justifySelf="center" alignSelf="center"
+        >
           <Draw />
         </Box>
 

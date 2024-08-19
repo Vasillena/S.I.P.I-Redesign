@@ -30,40 +30,43 @@ export default function Navbar(): JSX.Element {
   const theme = useTheme();
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
-  const [isScrolled, setIsScrolled] = useState(false);
+  // const [isScrolled, setIsScrolled] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
   const matchesSm = useMediaQuery(theme.breakpoints.up("sm"));
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 1);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setIsScrolled(window.scrollY > 1);
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   const closeMenu = () => {
     setOpen(false);
   };
 
   useEffect(() => {
-    const handleClickOutside = (event: TouchEvent) => {
+    const handleClickOutside = (event: MouseEvent | TouchEvent) => {
       if (menuRef.current && !menuRef.current.contains(event.target as Node)) {
         closeMenu();
       }
     };
 
-    if (open && "ontouchstart" in window) {
+    if (open) {
+      document.addEventListener("mousedown", handleClickOutside);
       document.addEventListener("touchstart", handleClickOutside);
     } else {
+      document.removeEventListener("mousedown", handleClickOutside);
       document.removeEventListener("touchstart", handleClickOutside);
     }
 
     return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
       document.removeEventListener("touchstart", handleClickOutside);
     };
   }, [open]);
@@ -74,6 +77,7 @@ export default function Navbar(): JSX.Element {
 
   return (
     <Box
+      ref={menuRef}
       width="100vw"
       display="flex"
       justifyContent="center"
@@ -127,7 +131,7 @@ export default function Navbar(): JSX.Element {
             </IconButton>
             {open && (
               <Toolbar
-                ref={menuRef}
+                // ref={menuRef}
                 sx={{
                   display: "flex",
                   justifyContent: "space-between",
@@ -136,7 +140,7 @@ export default function Navbar(): JSX.Element {
                   opacity: open ? 1 : 0,
                 }}
               >
-                <MainNav />
+                <MainNav closeMenu={closeMenu} />
               </Toolbar>
             )}
           </Box>

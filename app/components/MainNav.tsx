@@ -8,7 +8,11 @@ import { Box } from "@mui/material";
 import Link from "next/link";
 import { Switch } from "@/app/[locale]/switch";
 
-export default function MainNav(): JSX.Element {
+export default function MainNav({
+  closeMenu,
+}: {
+  closeMenu: () => void;
+}): JSX.Element {
   const pathname = usePathname();
   const router = useRouter();
   const locale = useCurrentLocale();
@@ -25,22 +29,16 @@ export default function MainNav(): JSX.Element {
     { href: "/#contact", label: "CONTACT", id: "contact" },
   ];
 
-  // const handleScroll = (id: string, href: string) => {
-  //   const element = document.getElementById(id);
-  //   if (element) {
-  //     element.scrollIntoView({ behavior: "smooth" });
-  //     router.push(href, { scroll: false });
-  //   } else {
-  //     scrollTargetRef.current = id;
-  //     router.push(href);
-  //   }
-  // };
-
   const handleScroll = (id: string, href: string) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      router.replace(href, { scroll: false });
+      router.push(href);
+      closeMenu();
+      // router.replace(
+      //   href
+      //   // , { scroll: false }
+      // );
     } else {
       scrollTargetRef.current = id;
       router.push(href);
@@ -73,9 +71,14 @@ export default function MainNav(): JSX.Element {
         <Box
           key={link.href}
           component="span"
-          onClick={() =>
-            link.id ? handleScroll(link.id, link.href) : router.push(link.href)
-          }
+          onClick={() => {
+            if (link.id) {
+              handleScroll(link.id, link.href);
+            } else {
+              router.push(link.href);
+              closeMenu(); // Close the menu after navigation
+            }
+          }}
           sx={{ cursor: "pointer" }}
         >
           {link.label}

@@ -42,6 +42,7 @@ export default async function Home() {
       <Slider />
       {/* <GoogleMaps /> */}
       <iframe
+        id="contact"
         src="https://snazzymaps.com/embed/632466"
         width="100%"
         height="500px"
