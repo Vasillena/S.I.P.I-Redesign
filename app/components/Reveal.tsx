@@ -10,8 +10,7 @@ interface RevealProps {
 
 export default function Reveal({ children }: RevealProps) {
   const ref = useRef(null);
-  //   const isInView = useInView(ref, { once: true });
-  const isInView = useInView(ref);
+  const isInView = useInView(ref, { once: true });
 
   return (
     <div ref={ref}>

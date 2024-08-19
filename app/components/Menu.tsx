@@ -21,7 +21,6 @@ export default function Menu() {
   const t = useI18n();
   const locale = useCurrentLocale();
   const [selectedTab, setSelectedTab] = useState("");
-  const [view, setView] = useState<ViewType>("");
 
   const menuList = locale === "bg" ? menuListBG : menuListEN;
 
@@ -173,7 +172,7 @@ export default function Menu() {
           marginBottom={4}
           sx={{ fontSize: { xs: "40px", sm: "60px" } }}
         >
-          OUR MENU
+          {t("menu.menu-2")}
         </Typography>
         <Box
           display="flex"
@@ -184,34 +183,34 @@ export default function Menu() {
           gap={{ xs: 0, md: 2 }}
         >
           <MenuCard
-            text1={"Hot"}
-            text2={"drinks"}
+            text1={t("menu.hotDrinks-1")}
+            text2={t("menu.hotDrinks-2")}
             onClick={() => setSelectedTab("Hot Drinks")}
             active={selectedTab === "Hot Drinks"}
           />
           <MenuCard
-            text1={"Soft"}
-            text2={"drinks"}
+            text1={t("menu.softDrinks-1")}
+            text2={t("menu.softDrinks-2")}
             onClick={() => setSelectedTab("Soft Drinks")}
             active={selectedTab === "Soft Drinks"}
           />
           <MenuCard
-            text1={"Cocktails"}
+            text1={t("menu.mixedDrinks")}
             onClick={() => setSelectedTab("Mixed Drinks")}
             active={selectedTab === "Mixed Drinks"}
           />
           <MenuCard
-            text1={"Wine"}
+            text1={t("menu.wine")}
             onClick={() => setSelectedTab("Wine")}
             active={selectedTab === "Wine"}
           />
           <MenuCard
-            text1={"Alcohol"}
+            text1={t("menu.alcohol")}
             onClick={() => setSelectedTab("Alcohol")}
             active={selectedTab === "Alcohol"}
           />
           <MenuCard
-            text1={"Beer"}
+            text1={t("menu.beer")}
             onClick={() => setSelectedTab("Beer")}
             active={selectedTab === "Beer"}
           />

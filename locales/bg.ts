@@ -56,6 +56,15 @@ export default {
     "title-2": "ПЪРВО КОКТЕЙЛИ",
     text: "...защото нито една велика история не е започвала с чаша вода",
     menu: "МЕНЮ",
+    "menu-2": "НАШЕТО МЕНЮ",
+    "hotDrinks-1": "ГОРЕЩИ",
+    "hotDrinks-2": "НАПИТКИ",
+    "softDrinks-1": "БЕЗАЛКОХОЛНИ",
+    "softDrinks-2": "НАПИТКИ",
+    mixedDrinks: "КОКТЕЙЛИ",
+    wine: "ВИНO",
+    alcohol: "АЛКОХОЛ",
+    beer: "БИРА",
   },
   final: {
     title:
