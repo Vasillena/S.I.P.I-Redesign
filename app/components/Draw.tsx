@@ -44,7 +44,7 @@ export default function Draw() {
         backdropFilter: "blur(10px)",
         WebkitBackdropFilter: "blur(10px)",
         backgroundColor: "rgba(0, 0, 0, 0.2)",
-        borderRadius: "15px",
+        // borderRadius: "15px",
         boxShadow: "0 4px 15px rgba(0, 0, 0, 0.3)",
         overflow: "hidden",
       }}

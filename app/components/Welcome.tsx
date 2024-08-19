@@ -24,8 +24,8 @@ export default function Welcome(): JSX.Element {
           <Box
             display="flex"
             flexDirection="column"
-            justifyContent={{ xs: "center" }}
-            alignItems={{ xs: "center", lg: "flex-start" }}
+            justifyContent="center"
+            alignItems="center"
             sx={{
               position: "relative",
               width: "100%",
@@ -34,7 +34,7 @@ export default function Welcome(): JSX.Element {
                 content: '""',
                 position: "absolute",
                 top: "-7.5em",
-                left: { md: "-2em", lg: "-5.5em" },
+                left: { md: "-2em", lg: "-2em" },
                 width: "100%",
                 height: "100%",
                 background: `url(${decor.src}) center no-repeat`,

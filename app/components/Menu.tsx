@@ -80,7 +80,7 @@ export default function Menu() {
           <Typography
             variant="h2"
             textAlign="center"
-            mt={4}
+            my={4}
             sx={{ fontSize: { xs: "36px", md: "44px" } }}
           >
             {categoryName}

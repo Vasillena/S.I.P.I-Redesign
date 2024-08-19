@@ -3,6 +3,7 @@ import { Box, Grid, Typography } from "@mui/material";
 import Bounce from "./Bounce";
 import Divider from "./Divider";
 import Image from "next/image";
+import Link from "next/link";
 import Reveal from "./Reveal";
 import decor1 from "@/public/decor-15.svg";
 import decor2 from "@/public/decor-16.svg";
@@ -54,7 +55,10 @@ export default function Cocktails(): JSX.Element {
                 height: "400%",
                 background: `url(${decor3.src}) center no-repeat`,
                 borderRadius: "50%",
-                filter: "drop-shadow(0px 2px 2px #CCCCCC)",
+                filter: {
+                  xs: "drop-shadow(0px 2px 2px #2E2E2E)",
+                  md: "drop-shadow(0px 2px 2px #CCCCCC)",
+                },
                 transform: { xs: "scale(0.8)", lg: "scale(1)" },
               },
             }}
@@ -146,6 +150,7 @@ export default function Cocktails(): JSX.Element {
           textAlign="right"
           display="flex"
           flexDirection={{ xs: "column", md: "row" }}
+          marginTop={{ md: 4 }}
           alignItems={{
             xs: "center",
             md: "flex-end",
@@ -157,12 +162,14 @@ export default function Cocktails(): JSX.Element {
         >
           <Box
             width={240}
-            height={{ xs: 120, md: 240 }}
+            height={{ xs: 160, md: 240 }}
             bgcolor="#2E2E2E"
             borderRadius="0 40px 0 40px"
             display="flex"
+            flexDirection="column"
             justifyContent="center"
             alignItems="center"
+            gap={2}
           >
             <Typography
               variant="h5"
@@ -172,6 +179,19 @@ export default function Cocktails(): JSX.Element {
             >
               ...because no great story ever started with a glass of water 
             </Typography>
+            <Link href="/menu">
+              <Typography
+                textAlign="center"
+                color="white"
+                sx={{
+                  "&:hover": {
+                    color: "#CCCCCC",
+                  },
+                }}
+              >
+                VIEW MENU
+              </Typography>
+            </Link>
           </Box>
           <Box
             width="70%"

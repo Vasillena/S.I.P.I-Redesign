@@ -52,10 +52,11 @@ export default function MenuCard({
           }}
         >
           <Typography variant="h6" color="black">
-            {text1}{" "}
+            {text1}
           </Typography>
           {text2 && (
             <Typography variant="h6" color="black">
+              &nbsp;
               {text2}
             </Typography>
           )}

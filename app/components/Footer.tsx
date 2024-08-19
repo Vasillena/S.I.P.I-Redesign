@@ -82,7 +82,7 @@ export default function Footer(): JSX.Element {
           <Image src={icon2} alt="Instagram Icon" />
         </Link>
       </Box>
-      <Box>
+      <Box marginBottom={2}>
         <Typography
           variant="h6"
           textAlign="center"
@@ -90,13 +90,20 @@ export default function Footer(): JSX.Element {
           sx={{ fontSize: { xs: "16px", lg: "20px" } }}
         >
           Copyright © 2024 С.И.П.И. Всички права запазени | Създадено от
-          <Link
-            href="https://github.com/Vasillena"
-            target="_blank"
-            color="#5B4966"
-          >
-            {" "}
-            VY
+          <Link href="https://github.com/Vasillena" target="_blank">
+            <Typography
+              display="inline"
+              variant="h6"
+              sx={{
+                fontSize: { xs: "16px", lg: "20px" },
+                "&:hover": {
+                  color: "#CCCCCC",
+                },
+              }}
+            >
+              {" "}
+              VY
+            </Typography>
           </Link>
         </Typography>
       </Box>
