@@ -3,9 +3,11 @@ import { Box, Grid, Typography } from "@mui/material";
 import Image from "next/image";
 import decor1 from "@/public/decor-9.svg";
 import decor2 from "@/public/decor-10.svg";
+import { getI18n } from "@/locales/server";
 import logo from "@/public/logo-1.svg";
 
-export default function Final(): JSX.Element {
+export default async function Final(): Promise<JSX.Element> {
+  const t = await getI18n();
   return (
     <>
       <Grid
@@ -23,9 +25,7 @@ export default function Final(): JSX.Element {
             variant="h4"
             sx={{ fontSize: { xs: "24px", lg: "34px" } }}
           >
-            Ние вярваме, че музиката е езикът, който ни обединява, и затова не
-            просто сме създали място за срещи и напитки - създали сме истински
-            оазис, където хората се събират, за да изразят себе си.
+            {t("final.title")}
           </Typography>
         </Grid>
         <Grid item xs={12} lg={3} textAlign="end">
@@ -73,7 +73,7 @@ export default function Final(): JSX.Element {
               // left="0.5em"
               // sx={{ fontSize: { xs: "24px", lg: "34px" } }}
             >
-              ЕЛА НА ПАРТИ
+              {t("final.text")}
             </Typography>
             {/* <Typography
             variant="h5"

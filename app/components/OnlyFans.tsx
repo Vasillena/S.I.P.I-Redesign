@@ -1,7 +1,5 @@
 import { Box, Grid, IconButton, Typography } from "@mui/material";
 
-import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
-import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Divider from "./Divider";
 import Image from "next/image";
 import ImageChange from "./ImageChange";
@@ -9,8 +7,10 @@ import Reveal from "./Reveal";
 import decor1 from "@/public/decor-13.svg";
 import decor2 from "@/public/decor-6.svg";
 import decor3 from "@/public/decor-14.svg";
+import { getI18n } from "@/locales/server";
 
-export default function OnlyFans(): JSX.Element {
+export default async function OnlyFans(): Promise<JSX.Element> {
+  const t = await getI18n();
   return (
     <>
       <Box position="relative" marginRight="auto" width={0} height={0}>
@@ -52,7 +52,7 @@ export default function OnlyFans(): JSX.Element {
             position="relative"
             zIndex={100}
           >
-            !!ONLY FANS!!
+            {t("fans.title")}
           </Typography>
         </Reveal>
       </Box>
@@ -84,11 +84,7 @@ export default function OnlyFans(): JSX.Element {
               marginTop={{ xs: 12, lg: 0 }}
               sx={{ fontSize: { xs: "18px", lg: "24px" } }}
             >
-              За истинските ентусиасти, които искат да носят частица от нашата
-              жизнена атмосфера със себе си, където и да отидат. Посетете нашия
-              бар и попитайте за нашите тениски. Перфектни за подарък или лично
-              удоволствие, те са чудесен начин да покажете подкрепата си и да
-              бъдете стилни.
+              {t("fans.text")}
             </Typography>
           </Grid>
           <Grid item xs={11} lg={6}>

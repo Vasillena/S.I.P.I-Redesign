@@ -6,9 +6,11 @@ import Reveal from "./Reveal";
 import decor1 from "@/public/decor-6.svg";
 import decor2 from "@/public/decor-7.svg";
 import decor3 from "@/public/decor-8.svg";
+import { getI18n } from "@/locales/server";
 import image1 from "@/public/event-1.jpg";
 
-export default function Events(): JSX.Element {
+export default async function Events(): Promise<JSX.Element> {
+  const t = await getI18n();
   return (
     <>
       <Grid
@@ -29,9 +31,7 @@ export default function Events(): JSX.Element {
             variant="h4"
             sx={{ fontSize: { xs: "24px", md: "34px" } }}
           >
-            Всяка седмица се наслаждаваме на гостувания от известни диджеи от
-            Hip Hop сцената на България, както и на тематични партита, които
-            трансформират клуба в сцена с разнообразни концепции.
+            {t("events.title-1")}
           </Typography>
         </Grid>
         <Grid item xs={9} textAlign="center" marginBottom={4}>
@@ -61,7 +61,7 @@ export default function Events(): JSX.Element {
               variant="h4"
               sx={{ fontSize: { xs: "24px", lg: "34px" } }}
             >
-              UPCOMING EVENTS
+              {t("events.title-2")}
             </Typography>
           </Box>
         </Grid>

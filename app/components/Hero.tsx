@@ -9,6 +9,7 @@ import heroImg from "@/public/hero.png";
 import { useBreakpoints } from "../utils/useBreakpoints";
 
 export default function Hero() {
+  const { mobile } = useBreakpoints();
   // const handleScroll = () => {
   //   const element = document.getElementById("welcome");
   //   if (element) {
@@ -23,10 +24,10 @@ export default function Hero() {
 
       setTimeout(() => {
         window.scrollBy({
-          top: 40,
+          top: mobile ? -20 : 40,
           behavior: "smooth",
         });
-      }, 500);
+      }, 400);
     }
   };
 
@@ -42,7 +43,7 @@ export default function Hero() {
           flexDirection: "column",
           justifyContent: "flex-end",
           alignItems: "center",
-          gap: 18,
+          gap: { xs: 3, sm: 18 },
           "&::after": {
             content: '""',
             position: "absolute",

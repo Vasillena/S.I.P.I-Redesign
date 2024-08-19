@@ -5,11 +5,13 @@ import Divider from "./Divider";
 import ImageLayout from "./ImageLayout";
 import Reveal from "./Reveal";
 import decor from "@/public/decor-1.svg";
+import { getI18n } from "@/locales/server";
 import image1 from "@/public/welcome-1.png";
 import image2 from "@/public/welcome-2.png";
 import image3 from "@/public/welcome-3.png";
 
-export default function Welcome(): JSX.Element {
+export default async function Welcome(): Promise<JSX.Element> {
+  const t = await getI18n();
   return (
     <>
       <Grid
@@ -49,7 +51,7 @@ export default function Welcome(): JSX.Element {
               sx={{ fontSize: { xs: "40px", sm: "60px" } }}
               textAlign={{ xs: "center", md: "left" }}
             >
-              Добре дошли <br />в Бар С.И.П.И
+              {t("hero.title")} <br /> {t("hero.title-2")}
             </Typography>
             <Typography
               width={{ xs: 300, sm: 472 }}
@@ -59,12 +61,7 @@ export default function Welcome(): JSX.Element {
               textAlign={{ xs: "center", md: "left" }}
               sx={{ fontSize: { xs: "18px", sm: "24px" } }}
             >
-              Oазисът на Hip Hop музиката в сърцето на Капана. Ние сме
-              вдъхновени от енергията и неповторимия стил на Hip Hop сцената.
-              При нас ще се наслаждавате на авторски коктейли, парти обстановка
-              и музикални изживявания. Бар С.И.П.И е повече от място за напитки;
-              това е преживяване, където парти хората се събират всеки уикенд,
-              за да споделят обичта си към музиката.
+              {t("hero.text")}
             </Typography>
           </Box>
         </Grid>

@@ -9,12 +9,14 @@ import decor1 from "@/public/decor-15.svg";
 import decor2 from "@/public/decor-16.svg";
 import decor3 from "@/public/decor-6.svg";
 import decor4 from "@/public/decor-17.svg";
+import { getI18n } from "@/locales/server";
 import image1 from "@/public/menu-1.jpg";
 import image2 from "@/public/menu-2.png";
 import image3 from "@/public/menu-3.png";
 import image4 from "@/public/menu-4.png";
 
-export default function Cocktails(): JSX.Element {
+export default async function Cocktails(): Promise<JSX.Element> {
+  const t = await getI18n();
   return (
     <>
       <Grid
@@ -29,9 +31,7 @@ export default function Cocktails(): JSX.Element {
             variant="h4"
             sx={{ fontSize: { xs: "24px", lg: "34px" } }}
           >
-            Ние се грижим за музиката, храната и напитките според твоите
-            предпочитания, а ти се наслаждаваш на доброто настроение и
-            компанията на твоите хора.
+            {t("menu.title")}
           </Typography>
         </Grid>
         <Grid
@@ -71,7 +71,7 @@ export default function Cocktails(): JSX.Element {
                 // left="-2.3em"
                 sx={{ fontSize: { xs: "24px", lg: "34px" } }}
               >
-                COCKTAILS FIRST
+                {t("menu.title-2")}
               </Typography>
             </Reveal>
           </Box>
@@ -177,7 +177,7 @@ export default function Cocktails(): JSX.Element {
               color="white"
               sx={{ fontSize: { xs: "18px", lg: "24px" } }}
             >
-              ...because no great story ever started with a glass of water 
+              {t("menu.text")}
             </Typography>
             <Link href="/menu">
               <Typography
@@ -189,7 +189,7 @@ export default function Cocktails(): JSX.Element {
                   },
                 }}
               >
-                VIEW MENU
+                {t("menu.menu")}
               </Typography>
             </Link>
           </Box>

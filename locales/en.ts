@@ -1,9 +1,11 @@
 export default {
   nav: {
-    home: "Home",
-    portfolio: "Portfolio",
-    about: "About",
-    contacts: "Contacts",
+    home: "HOME",
+    events: "EVENTS",
+    ourPlace: "OUR PLACE",
+    murch: "MURCH",
+    menu: "MENU",
+    contact: "CONTACT",
   },
   hero: {
     title: "Welcome",
@@ -45,14 +47,15 @@ export default {
       "For those seeking exclusivity and privacy, we offer two separate terraces on the second level. Each can be rented individually and provides a unique party experience. Our terraces are the perfect place for private events, special celebrations, or simply enjoying nightlife with friends.",
   },
   fans: {
-    title: "FOR TRUE FANS",
+    title: "!!ONLY FANS!!",
     text: "For the true enthusiasts who want to carry a piece of our vibrant atmosphere with them wherever they go. Visit our bar and ask about our t-shirts. Perfect as a gift or personal treat, they are a great way to show your support and stay stylish.",
   },
   menu: {
     title:
       "We take care of the music, food, and drinks according to your preferences, while you enjoy the good mood and the company of your friends.",
-    menu: "MENU",
-    text: "The cocktail comes first because no great story ever started with a glass of water.",
+    "title-2": "COCKTAILS FIRST",
+    text: "...because no great story ever started with a glass of water.",
+    menu: "VIEW MENU",
   },
   final: {
     title:

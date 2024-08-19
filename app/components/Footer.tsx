@@ -4,11 +4,13 @@ import Draw from "./Draw";
 import Image from "next/image";
 import Link from "next/link";
 import decor from "@/public/decor-18.svg";
+import { getI18n } from "@/locales/server";
 import icon1 from "@/public/icon-4.svg";
 import icon2 from "@/public/icon-5.svg";
 import logo from "@/public/logo-2.svg";
 
-export default function Footer(): JSX.Element {
+export default async function Footer(): Promise<JSX.Element> {
+  const t = await getI18n();
   return (
     <Box
       width="100%"
@@ -47,7 +49,7 @@ export default function Footer(): JSX.Element {
             textAlign="center"
             sx={{ fontSize: { xs: "18px", lg: "24px" } }}
           >
-            Капана / Братя Пулиеви 1
+            {t("footer.text-1")}
           </Typography>
           <Link
             href="tel:+359885673337"
@@ -68,7 +70,7 @@ export default function Footer(): JSX.Element {
             textAlign="center"
             sx={{ fontSize: { xs: "18px", lg: "24px" } }}
           >
-            Вторник - Неделя: 18:00 - 03:00ч
+            {t("footer.text-2")}
           </Typography>
         </Box>
       </Box>
@@ -88,7 +90,7 @@ export default function Footer(): JSX.Element {
           px={1}
           sx={{ fontSize: { xs: "16px", lg: "20px" } }}
         >
-          Copyright © 2024 С.И.П.И. Всички права запазени | Създадено от
+          {t("footer.text-3")}
           <Link href="https://github.com/Vasillena" target="_blank">
             <Typography
               display="inline"

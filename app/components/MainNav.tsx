@@ -15,18 +15,17 @@ export default function MainNav({
 }): JSX.Element {
   const pathname = usePathname();
   const router = useRouter();
-  const locale = useCurrentLocale();
   const t = useI18n();
 
   const scrollTargetRef = useRef<string | null>(null);
 
   const links = [
-    { href: "/", label: "HOME", id: "home" },
-    { href: "/#events", label: "EVENTS", id: "events" },
-    { href: "/#our-place", label: "OUR PLACE", id: "our-place" },
-    { href: "/#murch", label: "MURCH", id: "murch" },
-    { href: "/menu", label: "MENU" },
-    { href: "/#contact", label: "CONTACT", id: "contact" },
+    { href: "/", label: t("nav.home"), id: "home" },
+    { href: "/#events", label: t("nav.events"), id: "events" },
+    { href: "/#our-place", label: t("nav.ourPlace"), id: "our-place" },
+    { href: "/#murch", label: t("nav.murch"), id: "murch" },
+    { href: "/menu", label: t("nav.menu") },
+    { href: "/#contact", label: t("nav.contact"), id: "contact" },
   ];
 
   const handleScroll = (id: string, href: string) => {

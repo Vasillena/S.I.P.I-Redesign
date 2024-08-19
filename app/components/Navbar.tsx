@@ -131,7 +131,6 @@ export default function Navbar(): JSX.Element {
             </IconButton>
             {open && (
               <Toolbar
-                // ref={menuRef}
                 sx={{
                   display: "flex",
                   justifyContent: "space-between",

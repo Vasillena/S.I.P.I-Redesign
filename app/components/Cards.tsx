@@ -1,14 +1,16 @@
-"use client";
-
 import { Box, Grid } from "@mui/material";
 
 import SingleCard from "./SingleCard";
 import decor from "@/public/decor-3.svg";
+import { getI18n } from "@/locales/server";
 import image1 from "@/public/icon-1.svg";
 import image2 from "@/public/icon-2.svg";
 import image3 from "@/public/icon-3.svg";
+import { useI18n } from "@/locales/client";
 
-export default function Cards(): JSX.Element {
+export default async function Cards(): Promise<JSX.Element> {
+  // const t = useI18n();
+  const t = await getI18n();
   return (
     <Grid
       container
@@ -36,20 +38,16 @@ export default function Cards(): JSX.Element {
         >
           <SingleCard
             image={image1}
-            title={"Авторски коктейли"}
-            description={
-              "Отдайте се на нашите експертно изработени коктейли, всеки един шедьовър на вкусове и представяне"
-            }
+            title={t("card.card-1-title")}
+            description={t("card.card-1-text")}
           />
         </Box>
       </Grid>
       <Grid item xs={12} lg={4}>
         <SingleCard
           image={image2}
-          title={"Гост бармани"}
-          description={
-            "Насладете се на нови преживявания и вкусове в компанията на редовно гостуващите ни гост бармани"
-          }
+          title={t("card.card-2-title")}
+          description={t("card.card-2-text")}
         />
       </Grid>
       <Grid item xs={12} lg={4}>
@@ -71,10 +69,8 @@ export default function Cards(): JSX.Element {
         >
           <SingleCard
             image={image3}
-            title={"Изпълнения на живо"}
-            description={
-              "Забавлявайте се със завладяващи изпълнения на живо и танцувайте до зори"
-            }
+            title={t("card.card-3-title")}
+            description={t("card.card-3-text")}
           />
         </Box>
       </Grid>

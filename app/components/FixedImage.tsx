@@ -6,11 +6,13 @@ import Image from "next/image";
 import decor1 from "@/public/decor-4.svg";
 import image1 from "@/public/fixed-1.png";
 import image2 from "@/public/fixed-2.png";
+import { useI18n } from "@/locales/client";
 
 // import { useBreakpoints } from "../utils/useBreakpoints";
 
 export default function FixedImage(): JSX.Element {
   // const { mobile } = useBreakpoints();
+  const t = useI18n();
 
   return (
     <>
@@ -65,10 +67,7 @@ export default function FixedImage(): JSX.Element {
               padding="60px 20px"
               sx={{ fontSize: { xs: "18px", sm: "24px" } }}
             >
-              Отдай се на специалните моменти в С.И.П.И и се забавлявай с твоите
-              хора в компанията на най-добрата музика от любимите ти български
-              DJ. Ще те посрещнем с шотове и авторски коктейли в приятелска
-              атмосфера и #party обстановка, в която ще се забавляваш до зори.
+              {t("fixed.text")}
             </Typography>
           </Box>
         </Box>

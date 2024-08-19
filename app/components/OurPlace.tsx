@@ -9,6 +9,7 @@ import decor1 from "@/public/decor-9.svg";
 import decor2 from "@/public/decor-10.svg";
 import decor3 from "@/public/decor-11.svg";
 import decor4 from "@/public/decor-12.svg";
+import { getI18n } from "@/locales/server";
 import ourPlace1 from "@/public/our-place-1.png";
 import ourPlace2 from "@/public/our-place-2.png";
 import ourPlace3 from "@/public/our-place-3.png";
@@ -19,7 +20,8 @@ import ourPlace7 from "@/public/our-place-7.png";
 import ourPlace8 from "@/public/our-place-8.png";
 import ourPlace9 from "@/public/our-place-9.png";
 
-export default function OurPlace(): JSX.Element {
+export default async function OurPlace(): Promise<JSX.Element> {
+  const t = await getI18n();
   return (
     <>
       <Grid
@@ -38,7 +40,7 @@ export default function OurPlace(): JSX.Element {
             variant="h4"
             sx={{ fontSize: { xs: "24px", lg: "34px" } }}
           >
-            Имаш фирмено или специално събитие и не знаеш къде да отидеш
+            {t("place.title-1")}
           </Typography>
         </Grid>
         <Grid item xs={12} lg={3} textAlign="end">
@@ -60,9 +62,7 @@ export default function OurPlace(): JSX.Element {
             sx={{ fontSize: { xs: "18px", lg: "24px" } }}
             marginTop={{ xs: 8, lg: 0 }}
           >
-            Празнувай специални моменти в С.И.П.И. Довери ни се за своето
-            фирмено парти, рожден ден или частно събитие, за което ще се
-            разказват истории.
+            {t("place.title-2")}
           </Typography>
         </Grid>
       </Grid>
@@ -103,12 +103,10 @@ export default function OurPlace(): JSX.Element {
             }}
           >
             <SinglePlace
-              title={"Вътрешна зала"}
-              description={
-                "Нашата вътрешна зала е сърцето на нощния живот, идеалното място за вечерни срещи, бурни партита и специални събития, където светлината и музиката създават неповторима атмосфера."
-              }
+              title={t("place.place-1-title")}
+              description={t("place.place-1-text")}
               capacityNumber={"60"}
-              capacityText="места"
+              capacityText={t("place.place-1-places")}
             />
             {/* <Typography
               variant="h4"
@@ -178,12 +176,10 @@ export default function OurPlace(): JSX.Element {
       >
         <Grid item xs={11} lg={6} textAlign="center" order={{ xs: 2, lg: 1 }}>
           <SinglePlace
-            title={"Лятна градина"}
-            description={
-              "Разкошната и просторна вътрешна лятна градина е оазис на свежест и енергия. Със собствен бар и приятна декорация, тя е перфектното място за топлите нощи под открито небе. Зеленина и приглушени светлини превръщат градината ни в идеалната сцена за летни партита и тематични вечери."
-            }
+            title={t("place.place-2-title")}
+            description={t("place.place-2-text")}
             capacityNumber={"80"}
-            capacityText="места"
+            capacityText={t("place.place-1-places")}
           />
         </Grid>
         <Grid
@@ -234,12 +230,10 @@ export default function OurPlace(): JSX.Element {
         </Grid>
         <Grid item xs={11} lg={6} textAlign="center">
           <SinglePlace
-            title={"Тераси"}
-            description={
-              "За онези, които търсят изключителност и уединение, предлагаме две отделни тераси на ниво 2. Всяка от тях може да бъде наета отделно и предоставя уникално парти изживяване. Терасите ни са идеалното място за частни събития, специални празненства или просто за наслада от нощния живот с приятели."
-            }
+            title={t("place.place-3-title")}
+            description={t("place.place-3-text")}
             capacityNumber={"80"}
-            capacityText="места"
+            capacityText={t("place.place-1-places")}
           />
           {/* <Typography
             variant="h4"
