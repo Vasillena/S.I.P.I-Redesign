@@ -1,7 +1,6 @@
 import "./globals.css";
 
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
-import FollowPointer from "../components/FollowPointer";
 import Footer from "../components/Footer";
 import type { Metadata } from "next";
 import Navbar from "../components/Navbar";

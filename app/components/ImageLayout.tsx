@@ -2,9 +2,9 @@
 
 import Image, { StaticImageData } from "next/image";
 
-import Bounce from "./Bounce";
+import Bounce from "./Animations/Bounce";
 import { Box } from "@mui/material";
-import Reveal from "./Reveal";
+import Reveal from "./Animations/Reveal";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import decor from "@/public/decor-2.svg";
 import { useBreakpoints } from "../utils/useBreakpoints";

@@ -4,7 +4,7 @@ import Cocktails from "../components/Cocktails";
 import Events from "../components/Events";
 import Final from "../components/Final";
 import FixedImage from "../components/FixedImage";
-import FollowPointer from "../components/FollowPointer";
+import FollowPointer from "../components/Animations/FollowPointer";
 import Hero from "../components/Hero";
 import OnlyFans from "../components/OnlyFans";
 import OurPlace from "../components/OurPlace";

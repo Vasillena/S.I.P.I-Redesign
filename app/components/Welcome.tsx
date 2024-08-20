@@ -1,9 +1,9 @@
 import { Box, Grid, Stack, Typography } from "@mui/material";
 
-import Bounce from "./Bounce";
+import Bounce from "./Animations/Bounce";
 import Divider from "./Divider";
 import ImageLayout from "./ImageLayout";
-import Reveal from "./Reveal";
+import Reveal from "./Animations/Reveal";
 import decor from "@/public/decor-1.svg";
 import { getI18n } from "@/locales/server";
 import image1 from "@/public/welcome-1.png";

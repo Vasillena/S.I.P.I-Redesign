@@ -2,7 +2,7 @@
 
 import { Box, IconButton } from "@mui/material";
 
-import Draw from "../components/Draw";
+import Draw from "./Animations/Draw";
 import Lottie from "react-lottie-player";
 import button from "@/public/arrow-button.json";
 import heroImg from "@/public/hero.png";
@@ -24,7 +24,7 @@ export default function Hero() {
 
       setTimeout(() => {
         window.scrollBy({
-          top: mobile ? -20 : 40,
+          top: mobile ? -20 : 260,
           behavior: "smooth",
         });
       }, 400);

@@ -32,12 +32,8 @@ export default function MainNav({
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
-      router.push(href);
+      router.push(href, { scroll: false });
       closeMenu();
-      // router.replace(
-      //   href
-      //   // , { scroll: false }
-      // );
     } else {
       scrollTargetRef.current = id;
       router.push(href);

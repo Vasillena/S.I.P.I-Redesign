@@ -2,7 +2,7 @@ import { Box, Grid, Stack, Typography } from "@mui/material";
 
 import Divider from "./Divider";
 import Image from "next/image";
-import Reveal from "./Reveal";
+import Reveal from "./Animations/Reveal";
 import decor1 from "@/public/decor-6.svg";
 import decor2 from "@/public/decor-7.svg";
 import decor3 from "@/public/decor-8.svg";

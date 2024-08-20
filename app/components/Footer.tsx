@@ -1,6 +1,6 @@
 import { Box, Typography } from "@mui/material";
 
-import Draw from "./Draw";
+import Draw from "./Animations/Draw";
 import Image from "next/image";
 import Link from "next/link";
 import decor from "@/public/decor-18.svg";

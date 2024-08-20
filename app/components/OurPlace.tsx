@@ -1,7 +1,7 @@
 import { Box, Grid, Typography } from "@mui/material";
 
 import Divider from "./Divider";
-import Draw from "./Draw";
+import Draw from "./Animations/Draw";
 import Image from "next/image";
 import ImageLayout from "./ImageLayout";
 import SinglePlace from "./SinglePlace";

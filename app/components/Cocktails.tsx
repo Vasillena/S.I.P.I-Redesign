@@ -1,10 +1,10 @@
 import { Box, Grid, Typography } from "@mui/material";
 
-import Bounce from "./Bounce";
+import Bounce from "./Animations/Bounce";
 import Divider from "./Divider";
 import Image from "next/image";
 import Link from "next/link";
-import Reveal from "./Reveal";
+import Reveal from "./Animations/Reveal";
 import decor1 from "@/public/decor-15.svg";
 import decor2 from "@/public/decor-16.svg";
 import decor3 from "@/public/decor-6.svg";
@@ -169,13 +169,15 @@ export default async function Cocktails(): Promise<JSX.Element> {
             flexDirection="column"
             justifyContent="center"
             alignItems="center"
+            paddingTop={{ xs: 1, sm: 0 }}
             gap={2}
           >
             <Typography
               variant="h5"
               textAlign="center"
               color="white"
-              sx={{ fontSize: { xs: "18px", lg: "24px" } }}
+              paddingX={1}
+              sx={{ fontSize: { xs: "18px", lg: "20px" } }}
             >
               {t("menu.text")}
             </Typography>

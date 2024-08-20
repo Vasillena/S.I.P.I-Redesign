@@ -2,7 +2,7 @@
 
 import { motion, useInView } from "framer-motion";
 
-import { useBreakpoints } from "../utils/useBreakpoints";
+import { useBreakpoints } from "../../utils/useBreakpoints";
 import { useRef } from "react";
 
 const draw = {

@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 
 import { motion } from "framer-motion";
-import { useFollowPointer } from "../utils/useFollowPointer";
+import { useFollowPointer } from "../../utils/useFollowPointer";
 import { useRef } from "react";
 
 export default function FollowPointer() {

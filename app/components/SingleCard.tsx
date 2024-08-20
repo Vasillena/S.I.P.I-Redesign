@@ -1,7 +1,7 @@
 import Image, { StaticImageData } from "next/image";
 import { Stack, Typography } from "@mui/material";
 
-import Reveal from "./Reveal";
+import Reveal from "./Animations/Reveal";
 
 interface SingleCardProps {
   image: StaticImageData;

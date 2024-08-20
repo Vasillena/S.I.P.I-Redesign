@@ -2,11 +2,13 @@
 
 import { Box, Button, Divider, Typography } from "@mui/material";
 
-import { useState } from "react";
+import { useBreakpoints } from "../utils/useBreakpoints";
+import { useCurrentLocale } from "@/locales/client";
 
 interface MenuCardProps {
   text1: string;
-  text2?: string;
+  text2?: string | null;
+  text3?: string;
   onClick: () => void;
   active?: boolean;
 }
@@ -14,9 +16,12 @@ interface MenuCardProps {
 export default function MenuCard({
   text1,
   text2,
+  text3,
   onClick,
   active,
 }: MenuCardProps) {
+  const locale = useCurrentLocale();
+  const { desktop } = useBreakpoints();
   return (
     <>
       <Button
@@ -36,7 +41,7 @@ export default function MenuCard({
       >
         <Box
           sx={{
-            minWidth: { xs: "80vw", md: 120 },
+            minWidth: { xs: "80vw", md: 140 },
             display: "flex",
             flexDirection: { xs: "row", md: "column" },
             justifyContent: "center",
@@ -56,8 +61,13 @@ export default function MenuCard({
           </Typography>
           {text2 && (
             <Typography variant="h6" color="black">
-              &nbsp;
               {text2}
+            </Typography>
+          )}
+          {text3 && (
+            <Typography variant="h6" color="black">
+              {desktop ? "" : "\u00A0"}
+              {text3}
             </Typography>
           )}
         </Box>

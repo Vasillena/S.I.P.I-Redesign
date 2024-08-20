@@ -184,13 +184,14 @@ export default function Menu() {
         >
           <MenuCard
             text1={t("menu.hotDrinks-1")}
-            text2={t("menu.hotDrinks-2")}
+            text3={t("menu.hotDrinks-2")}
             onClick={() => setSelectedTab("Hot Drinks")}
             active={selectedTab === "Hot Drinks"}
           />
           <MenuCard
             text1={t("menu.softDrinks-1")}
-            text2={t("menu.softDrinks-2")}
+            text2={locale === "bg" ? t("menu.softDrinks-2") : null}
+            text3={t("menu.softDrinks-3")}
             onClick={() => setSelectedTab("Soft Drinks")}
             active={selectedTab === "Soft Drinks"}
           />
