@@ -1,6 +1,6 @@
 "use client";
 
-import { Box, Button, IconButton } from "@mui/material";
+import { Box, FormControlLabel, IconButton, Radio } from "@mui/material";
 import { useChangeLocale, useCurrentLocale } from "../../locales/client";
 
 import Image from "next/image";
@@ -9,7 +9,7 @@ import flagEN from "@/public/flagEN.png";
 import language from "@/public/language.svg";
 import { useState } from "react";
 
-// import { cn } from "@/lib/utils";
+// Import your images
 
 export function Switch() {
   const changeLocale = useChangeLocale();
@@ -21,75 +21,52 @@ export function Switch() {
   };
 
   return (
-    <>
-      <Box
-        sx={{
-          position: "fixed",
-          bottom: isLanguageOpen ? 0 : "-3.8em",
-          right: "2.2em",
-          display: "flex",
-          flexDirection: "column",
-          gap: "4px",
-          alignItems: "center",
-          padding: "6px 1px 0 1px",
-          borderRadius: "0.5em 0 0 0",
-          backgroundColor: "rgba(91, 73, 102, 0.5)",
-          zIndex: "90",
-          backdropFilter: "blur(10px)",
-          boxShadow: "0 4px 15px rgba(0, 0, 0, 0.3)",
-          transition: "bottom 1s ease-out",
-          cursor: "pointer",
-        }}
-        // className={`${classes.language} ${
-        //   isLanguageOpen ? classes["language-open"] : ""
-        // }`}
-      >
-        <IconButton onClick={toggleLanguage}>
-          <Image src={language} alt="Globe" width={20} />
-        </IconButton>
-        <label>
-          <input
-            type="radio"
-            name="language"
-            value="bg"
-            onChange={() => changeLocale("bg")}
+    <Box
+      sx={{
+        position: "fixed",
+        bottom: isLanguageOpen ? 0 : "-3.8em",
+        right: "2.2em",
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        padding: "6px 1px 0 1px",
+        borderRadius: "0.5em 0 0 0",
+        backgroundColor: "rgba(91, 73, 102, 0.5)",
+        zIndex: "90",
+        backdropFilter: "blur(10px)",
+        boxShadow: "0 4px 15px rgba(0, 0, 0, 0.3)",
+        transition: "bottom 1s ease-out",
+        cursor: "pointer",
+        gap: "4px",
+      }}
+    >
+      <IconButton onClick={toggleLanguage}>
+        <Image src={language} alt="Globe" width={24} />
+      </IconButton>
+
+      <FormControlLabel
+        control={
+          <Radio
             checked={locale === "bg"}
-            style={{ display: "none" }}
+            onChange={() => changeLocale("bg")}
+            sx={{ display: "none" }}
           />
-          <Image src={flagBG} alt="BG flag" width={24} />
-        </label>
-        <label>
-          <input
-            type="radio"
-            name="language"
-            value="en"
-            onChange={() => changeLocale("en")}
+        }
+        label={<Image src={flagBG} alt="BG flag" width={24} />}
+        sx={{ margin: 0, cursor: "pointer" }}
+      />
+
+      <FormControlLabel
+        control={
+          <Radio
             checked={locale === "en"}
-            style={{ display: "none" }}
+            onChange={() => changeLocale("en")}
+            sx={{ display: "none" }}
           />
-          <Image src={flagEN} alt="EN flag" width={24} />
-        </label>
-      </Box>
-      {/* <button
-        className="w-[50px] h=[35px] drop-shadow-sm text-xl bg-[#F7F4F1]"
-        // myFont.className,
-        // locale === "en" && "hidden"
-
-        type="button"
-        onClick={() => changeLocale("en")}
-      >
-        EN
-      </button>
-      <button
-        className="w-[50px] h=[35px] drop-shadow-sm text-xl bg-[#F7F4F1]"
-        // myFont.className,
-        // locale === "bg" && "hidden"
-
-        type="button"
-        onClick={() => changeLocale("bg")}
-      >
-        BG
-      </button> */}
-    </>
+        }
+        label={<Image src={flagEN} alt="EN flag" width={24} />}
+        sx={{ margin: 0, cursor: "pointer" }}
+      />
+    </Box>
   );
 }

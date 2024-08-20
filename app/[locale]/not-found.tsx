@@ -4,29 +4,17 @@ export default function NotFound() {
   return (
     <Box
       sx={{
-        minHeight: "calc(100vh - 69px)",
+        minHeight: "100vh",
         width: "100vw",
-        marginTop: "50vh",
         display: "flex",
         flexDirection: "column",
+        justifyContent: "center",
         alignItems: "center",
       }}
     >
-      <Typography
-        variant="h1"
-        sx={{
-          fontSize: "4vw",
-        }}
-      >
-        404
-      </Typography>
-      <Typography
-        variant="h1"
-        sx={{
-          fontSize: "4vw",
-        }}
-      >
-        NOT FOUND
+      <Typography variant="h1">404</Typography>
+      <Typography variant="h4">
+        The page you are looking for doesn’t exist
       </Typography>
     </Box>
   );

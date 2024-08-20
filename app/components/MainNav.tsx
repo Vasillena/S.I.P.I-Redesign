@@ -28,15 +28,33 @@ export default function MainNav({
     { href: "/#contact", label: t("nav.contact"), id: "contact" },
   ];
 
+  // const handleScroll = (id: string, href: string) => {
+  //   const element = document.getElementById(id);
+  //   if (element) {
+  //     element.scrollIntoView({ behavior: "smooth" });
+  //     router.push(href, { scroll: false });
+  //     closeMenu();
+  //   } else {
+  //     scrollTargetRef.current = id;
+  //     router.push(href);
+  //   }
+  // };
+
   const handleScroll = (id: string, href: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      router.push(href, { scroll: false });
-      closeMenu();
+    const isSamePage = pathname === "/" && href.startsWith("/");
+    if (isSamePage) {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+        closeMenu();
+      } else {
+        scrollTargetRef.current = id;
+        router.push(href);
+      }
     } else {
       scrollTargetRef.current = id;
       router.push(href);
+      closeMenu();
     }
   };
 

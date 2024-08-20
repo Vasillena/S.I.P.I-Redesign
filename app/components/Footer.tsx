@@ -83,7 +83,7 @@ export default async function Footer(): Promise<JSX.Element> {
           <Image src={icon2} alt="Instagram Icon" />
         </Link>
       </Box>
-      <Box marginBottom={2}>
+      <Box marginBottom={3}>
         <Typography
           variant="h6"
           textAlign="center"
