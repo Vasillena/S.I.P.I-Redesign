@@ -14,13 +14,13 @@ export default async function Welcome(): Promise<JSX.Element> {
   const t = await getI18n();
   return (
     <>
+      <Box id="welcome" />
       <Grid
-        id="welcome"
         container
         maxWidth={1440}
         // spacing={{ xs: 4, lg: 2 }}
         justifyContent="center"
-        marginTop={18}
+        marginTop={20}
       >
         <Grid item xs={11} lg={5}>
           <Box

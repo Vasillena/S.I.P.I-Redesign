@@ -22,12 +22,12 @@ export default function Hero() {
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
 
-      setTimeout(() => {
-        window.scrollBy({
-          top: mobile ? -20 : 260,
-          behavior: "smooth",
-        });
-      }, 400);
+      // setTimeout(() => {
+      //   window.scrollBy({
+      //     top: mobile ? -20 : 260,
+      //     behavior: "smooth",
+      //   });
+      // }, 400);
     }
   };
 
@@ -43,7 +43,7 @@ export default function Hero() {
           flexDirection: "column",
           justifyContent: "flex-end",
           alignItems: "center",
-          gap: { xs: 3, sm: 18 },
+          gap: { xs: 10, sm: 18 },
           "&::after": {
             content: '""',
             position: "absolute",

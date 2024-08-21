@@ -44,7 +44,7 @@ export default function Draw() {
         justifyContent: "center",
         alignItems: "center",
         width: "100%",
-        height: "60vh",
+        height: mobile ? "40vh" : "60vh",
         backdropFilter: "blur(10px)",
         WebkitBackdropFilter: "blur(10px)",
         backgroundColor: "rgba(0, 0, 0, 0.2)",
