@@ -221,7 +221,9 @@ export default async function Events(): Promise<JSX.Element> {
           </Reveal>
         </Grid>
       </Grid>
-      <Divider styleProp={{ transform: "scaleY(-1)" }} />
+      <Box id="our-place">
+        <Divider styleProp={{ transform: "scaleY(-1)" }} />
+      </Box>
     </>
   );
 }

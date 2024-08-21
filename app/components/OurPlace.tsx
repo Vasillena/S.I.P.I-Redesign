@@ -25,7 +25,7 @@ export default async function OurPlace(): Promise<JSX.Element> {
   return (
     <>
       <Grid
-        id="our-place"
+        // id="our-place"
         container
         maxWidth={1440}
         spacing={{ xs: 12, lg: 2 }}
@@ -289,7 +289,9 @@ export default async function OurPlace(): Promise<JSX.Element> {
           }}
         />
       </Box>
-      <Divider />
+      <Box id="murch">
+        <Divider />
+      </Box>
     </>
   );
 }

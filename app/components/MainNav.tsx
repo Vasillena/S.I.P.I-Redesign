@@ -28,43 +28,58 @@ export default function MainNav({
     { href: "/#contact", label: t("nav.contact"), id: "contact" },
   ];
 
-  // const handleScroll = (id: string, href: string) => {
-  //   const element = document.getElementById(id);
-  //   if (element) {
-  //     element.scrollIntoView({ behavior: "smooth" });
-  //     router.push(href, { scroll: false });
-  //     closeMenu();
-  //   } else {
-  //     scrollTargetRef.current = id;
-  //     router.push(href);
-  //   }
-  // };
-
   const handleScroll = (id: string, href: string) => {
-    const isSamePage = pathname === "/" && href.startsWith("/");
-    if (isSamePage) {
-      const element = document.getElementById(id);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-        closeMenu();
-      } else {
-        scrollTargetRef.current = id;
-        router.push(href);
-      }
+    const element = document.getElementById(id);
+    if (element) {
+      element.scrollIntoView({ behavior: "smooth" });
+      router.push(href, { scroll: false });
+      closeMenu();
     } else {
       scrollTargetRef.current = id;
       router.push(href);
-      closeMenu();
     }
   };
 
+  // const handleScroll = (id: string, href: string) => {
+  //   const isSamePage = pathname === "/" && href.startsWith("/");
+  //   if (isSamePage) {
+  //     const element = document.getElementById(id);
+  //     if (element) {
+  //       element.scrollIntoView({ behavior: "smooth" });
+  //       closeMenu();
+  //     } else {
+  //       scrollTargetRef.current = id;
+  //       router.push(href);
+  //     }
+  //   } else {
+  //     scrollTargetRef.current = id;
+  //     router.push(href);
+  //     closeMenu();
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   if (scrollTargetRef.current) {
+  //     const element = document.getElementById(scrollTargetRef.current);
+  //     if (element) {
+  //       element.scrollIntoView({ behavior: "smooth" });
+  //     }
+  //     scrollTargetRef.current = null;
+  //   }
+  // }, [pathname]);
   useEffect(() => {
     if (scrollTargetRef.current) {
-      const element = document.getElementById(scrollTargetRef.current);
-      if (element) {
-        element.scrollIntoView({ behavior: "smooth" });
-      }
-      scrollTargetRef.current = null;
+      const targetId = scrollTargetRef.current;
+      const scrollToElement = () => {
+        const element = document.getElementById(targetId);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+          scrollTargetRef.current = null;
+        } else {
+          setTimeout(scrollToElement, 100);
+        }
+      };
+      scrollToElement();
     }
   }, [pathname]);
 

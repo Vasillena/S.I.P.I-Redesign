@@ -24,12 +24,12 @@ export function Switch() {
     <Box
       sx={{
         position: "fixed",
-        bottom: isLanguageOpen ? 0 : "-3.8em",
+        bottom: isLanguageOpen ? 0 : "-4.2em",
         right: "2.2em",
         display: "flex",
         flexDirection: "column",
         alignItems: "center",
-        padding: "6px 1px 0 1px",
+        padding: "2px 1px 0 1px",
         borderRadius: "0.5em 0 0 0",
         backgroundColor: "rgba(91, 73, 102, 0.5)",
         zIndex: "90",
