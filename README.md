@@ -1,5 +1,5 @@
 <div align="center">
-<h1 align="center">S.I.P.I.</h1>
+<h1 align="center">S.I.P.I</h1>
   🍸🎧🍸
   <br/>
  Your Ultimate Bar Experience
@@ -8,7 +8,7 @@
 
 ## ⭐️  Introduction
 
-Welcome to S.I.P.I. – a destination for bar enthusiasts! S.I.P.I. is your go-to place for exploring, discovering unique drinks, and immersing yourself in the vibrant world of socializing. Whether you're a cocktail connoisseur or a casual drinker, S.I.P.I. is here to elevate your bar-hopping experience. Join us on this exciting journey as we celebrate the art of mixology and the joy of good company. Cheers to S.I.P.I. – where the drinks are real, and the fun is limitless!
+Welcome to S.I.P.I – a destination for bar enthusiasts! S.I.P.I is your go-to place for exploring, discovering unique drinks, and immersing yourself in the vibrant world of socializing. Whether you're a cocktail connoisseur or a casual drinker, S.I.P.I. is here to elevate your bar-hopping experience. Join us on this exciting journey as we celebrate the art of mixology and the joy of good company. Cheers to S.I.P.I – where the drinks are real, and the fun is limitless!
 This project is built with Next.js
 
 View project at: https://barsipi.vercel.app
