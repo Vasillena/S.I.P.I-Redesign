@@ -9,7 +9,7 @@ export default {
   },
   hero: {
     title: "Welcome",
-    "title-2": "to Bar S.I.P.I.",
+    "title-2": "to Bar S.I.P.I",
     text: "The oasis of Hip Hop music in the heart of Kapana. We are inspired by the energy and unique style of the Hip Hop scene. Here, you'll enjoy signature cocktails, a party atmosphere, and musical experiences. Bar S.I.P.I. is more than just a place for drinks; it's an experience where partygoers gather to share their love for music.",
   },
   card: {
