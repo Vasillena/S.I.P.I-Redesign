@@ -129,9 +129,10 @@ Welcome to the repository for My Project! Below is the structure of the project 
 <div align="center">
   
 ## 📷 Screenshots
- <br/>
+
 
 -----Mobile Version-----
+  <br/>
 ![Screenshot 01](https://github.com/user-attachments/assets/56501ba4-34ac-457a-8e6f-32ba54c1faaf)
 ![Screenshot 02](https://github.com/user-attachments/assets/9768bba7-f483-46f7-a646-1353f5d900d3)
 
