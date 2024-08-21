@@ -1,4 +1,4 @@
-import { Box, Grid, IconButton, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 
 import Divider from "./Divider";
 import Image from "next/image";
@@ -22,7 +22,6 @@ export default async function OnlyFans(): Promise<JSX.Element> {
         />
       </Box>
       <Box
-        // id="murch"
         paddingY={5}
         textAlign="center"
         marginBottom={-4}
@@ -67,11 +66,9 @@ export default async function OnlyFans(): Promise<JSX.Element> {
         <Grid
           container
           maxWidth={1440}
-          // height={496}
           spacing={{ xs: 12, lg: 2 }}
           justifyContent="center"
           alignItems="center"
-          //   bgcolor="#2E2E2E"
         >
           <Grid item xs={11} lg={6}>
             <Typography
@@ -106,25 +103,6 @@ export default async function OnlyFans(): Promise<JSX.Element> {
               }}
             >
               <ImageChange />
-              {/* <Box
-                width={528}
-                height={680}
-                bgcolor="white"
-                sx={{ opacity: "0.8" }}
-                display="flex"
-                justifyContent="center"
-                alignItems="center"
-                borderRadius="40px 0 40px 0"
-                marginX={{ xs: "auto", lg: 0 }}
-              >
-                <IconButton>
-                  <ArrowBackIosNewIcon />
-                </IconButton>
-                <Image width={452} src={image1} alt="T-shirt" />
-                <IconButton>
-                  <ArrowForwardIosIcon />
-                </IconButton>
-              </Box> */}
             </Box>
           </Grid>
         </Grid>

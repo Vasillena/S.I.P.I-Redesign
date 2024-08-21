@@ -70,20 +70,9 @@ export default async function Final(): Promise<JSX.Element> {
               position="relative"
               top="3.8em"
               textAlign="center"
-              // left="0.5em"
-              // sx={{ fontSize: { xs: "24px", lg: "34px" } }}
             >
               {t("final.text")}
             </Typography>
-            {/* <Typography
-            variant="h5"
-            position="relative"
-            top="6.2em"
-            textAlign="center"
-            // left="-3.9em"
-          >
-            Стани част от нашата история! Очакваме те в Капана!
-          </Typography> */}
           </Box>
         </Grid>
       </Grid>

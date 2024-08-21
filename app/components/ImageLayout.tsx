@@ -1,17 +1,11 @@
 "use client";
 
-import Image, { StaticImageData } from "next/image";
-
 import Bounce from "./Animations/Bounce";
 import { Box } from "@mui/material";
-import Reveal from "./Animations/Reveal";
+import Image from "next/image";
 import { StaticImport } from "next/dist/shared/lib/get-img-props";
 import decor from "@/public/decor-2.svg";
 import { useBreakpoints } from "../utils/useBreakpoints";
-
-// import image1 from "@/public/1.png";
-// import image2 from "@/public/2.png";
-// import image3 from "@/public/3.png";
 
 interface ImageLayoutProps {
   styleProp?: string;

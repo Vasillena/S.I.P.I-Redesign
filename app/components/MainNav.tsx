@@ -1,12 +1,11 @@
 "use client";
 
-import { useCurrentLocale, useI18n } from "@/locales/client";
 import { useEffect, useRef } from "react";
 import { usePathname, useRouter } from "next/navigation";
 
 import { Box } from "@mui/material";
-import Link from "next/link";
 import { Switch } from "@/app/[locale]/switch";
+import { useI18n } from "@/locales/client";
 
 export default function MainNav({
   closeMenu,
@@ -40,33 +39,6 @@ export default function MainNav({
     }
   };
 
-  // const handleScroll = (id: string, href: string) => {
-  //   const isSamePage = pathname === "/" && href.startsWith("/");
-  //   if (isSamePage) {
-  //     const element = document.getElementById(id);
-  //     if (element) {
-  //       element.scrollIntoView({ behavior: "smooth" });
-  //       closeMenu();
-  //     } else {
-  //       scrollTargetRef.current = id;
-  //       router.push(href);
-  //     }
-  //   } else {
-  //     scrollTargetRef.current = id;
-  //     router.push(href);
-  //     closeMenu();
-  //   }
-  // };
-
-  // useEffect(() => {
-  //   if (scrollTargetRef.current) {
-  //     const element = document.getElementById(scrollTargetRef.current);
-  //     if (element) {
-  //       element.scrollIntoView({ behavior: "smooth" });
-  //     }
-  //     scrollTargetRef.current = null;
-  //   }
-  // }, [pathname]);
   useEffect(() => {
     if (scrollTargetRef.current) {
       const targetId = scrollTargetRef.current;
@@ -104,7 +76,7 @@ export default function MainNav({
               handleScroll(link.id, link.href);
             } else {
               router.push(link.href);
-              closeMenu(); // Close the menu after navigation
+              closeMenu();
             }
           }}
           sx={{ cursor: "pointer" }}

@@ -1,6 +1,5 @@
 import { Box, Typography } from "@mui/material";
 
-import Draw from "./Animations/Draw";
 import Image from "next/image";
 import Link from "next/link";
 import decor from "@/public/decor-18.svg";
@@ -37,9 +36,6 @@ export default async function Footer(): Promise<JSX.Element> {
             background: `url(${logo.src}) center no-repeat`,
             opacity: 0.1,
             transform: { xs: "scale(0.5)", lg: "scale(1)" },
-            // backgroundSize: "200px",
-            // zIndex: "-50",
-            // display: { xs: "none", sm: "none", md: "block", lg: "block" },
           },
         }}
       >

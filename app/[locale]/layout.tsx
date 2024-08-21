@@ -2,7 +2,6 @@ import "./globals.css";
 
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v13-appRouter";
 import Footer from "../components/Footer";
-import type { Metadata } from "next";
 import Navbar from "../components/Navbar";
 import { Poiret_One } from "next/font/google";
 import { Provider } from "./provider";
@@ -120,7 +119,6 @@ export default function RootLayout({
   return (
     <html lang={locale}>
       <body className={poiretOneFont.className}>
-        {/* <FollowPointer /> */}
         <AppRouterCacheProvider>
           <ThemeProvider theme={theme}>
             <Provider locale={locale}>

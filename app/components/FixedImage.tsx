@@ -8,10 +8,7 @@ import image1 from "@/public/fixed-1.png";
 import image2 from "@/public/fixed-2.png";
 import { useI18n } from "@/locales/client";
 
-// import { useBreakpoints } from "../utils/useBreakpoints";
-
 export default function FixedImage(): JSX.Element {
-  // const { mobile } = useBreakpoints();
   const t = useI18n();
 
   return (
@@ -31,7 +28,6 @@ export default function FixedImage(): JSX.Element {
           top: "1em",
           width: "100%",
           height: "600px",
-          //   height: "100vh",
 
           display: "flex",
           justifyContent: "center",
@@ -43,15 +39,10 @@ export default function FixedImage(): JSX.Element {
             left: 0,
             width: "100%",
             height: "100%",
-            // background: `url(${image.src}) center/100% no-repeat fixed`,
             background: {
               xs: `url(${image2.src}) center/100% no-repeat`,
               sm: `url(${image1.src}) center/100% no-repeat fixed`,
             },
-            //             backgroundPosition: "center",
-            //   backgroundSize: "100%",
-            //   backgroundRepeat: "no-repeat",
-            //   backgroundAttachment: "fixed",
             opacity: "0.6",
             zIndex: "-1",
           },

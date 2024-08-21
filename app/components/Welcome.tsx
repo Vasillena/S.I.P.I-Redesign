@@ -1,9 +1,7 @@
-import { Box, Grid, Stack, Typography } from "@mui/material";
+import { Box, Grid, Typography } from "@mui/material";
 
-import Bounce from "./Animations/Bounce";
 import Divider from "./Divider";
 import ImageLayout from "./ImageLayout";
-import Reveal from "./Animations/Reveal";
 import decor from "@/public/decor-1.svg";
 import { getI18n } from "@/locales/server";
 import image1 from "@/public/welcome-1.png";
@@ -15,13 +13,7 @@ export default async function Welcome(): Promise<JSX.Element> {
   return (
     <>
       <Box id="welcome" />
-      <Grid
-        container
-        maxWidth={1440}
-        // spacing={{ xs: 4, lg: 2 }}
-        justifyContent="center"
-        marginTop={20}
-      >
+      <Grid container maxWidth={1440} justifyContent="center" marginTop={20}>
         <Grid item xs={11} lg={5}>
           <Box
             display="flex"
@@ -73,9 +65,7 @@ export default async function Welcome(): Promise<JSX.Element> {
           justifyContent={{ xs: "center" }}
           marginTop={{ xs: 8, lg: 0 }}
         >
-          {/* <Box display="flex" justifyContent="center"> */}
           <ImageLayout image1={image1} image2={image2} image3={image3} />
-          {/* </Box> */}
         </Grid>
       </Grid>
 

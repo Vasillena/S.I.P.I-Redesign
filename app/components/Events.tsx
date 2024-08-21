@@ -37,7 +37,6 @@ export default async function Events(): Promise<JSX.Element> {
         <Grid item xs={9} textAlign="center" marginBottom={4}>
           <Box
             paddingY={5}
-            // marginBottom={4}
             sx={{
               position: "relative",
               width: "100%",

@@ -6,10 +6,8 @@ import { getI18n } from "@/locales/server";
 import image1 from "@/public/icon-1.svg";
 import image2 from "@/public/icon-2.svg";
 import image3 from "@/public/icon-3.svg";
-import { useI18n } from "@/locales/client";
 
 export default async function Cards(): Promise<JSX.Element> {
-  // const t = useI18n();
   const t = await getI18n();
   return (
     <Grid

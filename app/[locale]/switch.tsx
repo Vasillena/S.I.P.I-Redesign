@@ -9,8 +9,6 @@ import flagEN from "@/public/flagEN.png";
 import language from "@/public/language.svg";
 import { useState } from "react";
 
-// Import your images
-
 export function Switch() {
   const changeLocale = useChangeLocale();
   const locale = useCurrentLocale();

@@ -1,7 +1,6 @@
 import { Box, Grid, Typography } from "@mui/material";
 
 import Divider from "./Divider";
-import Draw from "./Animations/Draw";
 import Image from "next/image";
 import ImageLayout from "./ImageLayout";
 import SinglePlace from "./SinglePlace";
@@ -25,7 +24,6 @@ export default async function OurPlace(): Promise<JSX.Element> {
   return (
     <>
       <Grid
-        // id="our-place"
         container
         maxWidth={1440}
         spacing={{ xs: 12, lg: 2 }}
@@ -108,47 +106,6 @@ export default async function OurPlace(): Promise<JSX.Element> {
               capacityNumber={"60"}
               capacityText={t("place.place-1-places")}
             />
-            {/* <Typography
-              variant="h4"
-              marginBottom={1}
-              sx={{ fontSize: { xs: "20px", lg: "34px" } }}
-            >
-              Вътрешна зала
-            </Typography>
-            <Typography
-              variant="h5"
-              width={{ xs: "100%", lg: 520 }}
-              lineHeight={1}
-              marginBottom={2}
-              marginX="auto"
-              textAlign="center"
-              sx={{ fontSize: { xs: "18px", lg: "24px" } }}
-            >
-              Ще те посрещнем с шотове и авторски коктейли в приятелска
-              атмосфера и #party обстановка. Нашата вътрешна зала е сърцето на
-              нощния живот, идеалното място за вечерни срещи, бурни партита и
-              специални събития, където светлината и музиката създават
-              неповторима атмосфера.
-            </Typography>
-            <Box
-              width={120}
-              height={120}
-              border="1px solid #CCCCCC"
-              borderRadius="50%"
-              display="flex"
-              justifyContent="center"
-              alignItems="center"
-              textAlign="center"
-              marginX="auto"
-            >
-              <Typography
-                variant="h5"
-                sx={{ fontSize: { xs: "20px", lg: "34px" } }}
-              >
-                60 <br />
-                места
-              </Typography>
-            </Box> */}
           </Box>
         </Grid>
       </Grid>
@@ -235,44 +192,6 @@ export default async function OurPlace(): Promise<JSX.Element> {
             capacityNumber={"80"}
             capacityText={t("place.place-1-places")}
           />
-          {/* <Typography
-            variant="h4"
-            marginBottom={1}
-            sx={{ fontSize: { xs: "20px", lg: "34px" } }}
-          >
-            Тераси
-          </Typography>
-          <Typography
-            variant="h5"
-            width={520}
-            lineHeight={1}
-            marginBottom={2}
-            marginX="auto"
-            textAlign="center"
-            sx={{ fontSize: { xs: "18px", lg: "24px" } }}
-          >
-            За онези, които търсят изключителност и уединение, предлагаме две
-            отделни тераси на ниво 2. Всяка от тях може да бъде наета отделно и
-            предоставя уникално парти изживяване. Терасите ни са идеалното място
-            за частни събития, специални празненства или просто за наслада от
-            нощния живот с приятели.
-          </Typography>
-          <Box
-            width={120}
-            height={120}
-            border="1px solid #CCCCCC"
-            borderRadius="50%"
-            display="flex"
-            justifyContent="center"
-            alignItems="center"
-            textAlign="center"
-            marginX="auto"
-          >
-            <Typography variant="h5">
-              80 <br />
-              места
-            </Typography>
-          </Box> */}
         </Grid>
       </Grid>
       <Box

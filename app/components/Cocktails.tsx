@@ -34,13 +34,7 @@ export default async function Cocktails(): Promise<JSX.Element> {
             {t("menu.title")}
           </Typography>
         </Grid>
-        <Grid
-          item
-          xs={9}
-          // justifyContent="flex-end"
-          textAlign="center"
-          marginBottom={{ xs: 0, md: 4 }}
-        >
+        <Grid item xs={9} textAlign="center" marginBottom={{ xs: 0, md: 4 }}>
           <Box
             sx={{
               position: "relative",
@@ -66,9 +60,6 @@ export default async function Cocktails(): Promise<JSX.Element> {
             <Reveal>
               <Typography
                 variant="h5"
-                // position="relative"
-                // top="5.2em"
-                // left="-2.3em"
                 sx={{ fontSize: { xs: "24px", lg: "34px" } }}
               >
                 {t("menu.title-2")}
@@ -123,24 +114,6 @@ export default async function Cocktails(): Promise<JSX.Element> {
                   style={{ marginTop: "148px" }}
                 />
               </Box>
-
-              {/* <Box
-                  width={{ sm: "400px", md: "500px", lg: "600px" }}
-                  height={{ sm: "200px", md: "300px", lg: "400px" }}
-                  // width="600px"
-                  // height="400px"
-                  // marginLeft="auto"
-                  // paddingTop="120px"
-                >
-                  <Image
-                    src={image1}
-                    fill
-                    objectFit="contain"
-                    alt="Bartender image"
-                    style={{ marginTop: "60px", marginLeft: { sm: "260px" } }}
-                  />
-                </Box> */}
-              {/* </Box> */}
             </Box>
           </Box>
         </Grid>

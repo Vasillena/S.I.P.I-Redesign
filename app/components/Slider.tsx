@@ -18,7 +18,6 @@ import image6 from "@/public/6.jpg";
 import image7 from "@/public/7.jpg";
 import image8 from "@/public/8.png";
 import image9 from "@/public/9.png";
-import { useBreakpoints } from "../utils/useBreakpoints";
 
 const slides = [
   { image: image1 },
@@ -38,8 +37,6 @@ const slides = [
 ];
 
 export default function Slider(): JSX.Element {
-  const { mobile } = useBreakpoints();
-
   return (
     <Box
       sx={{
@@ -111,50 +108,6 @@ export default function Slider(): JSX.Element {
           </Box>
         ))}
       </Ticker>
-
-      {/* <motion.div
-        style={{ display: "flex" }}
-        animate={{
-          x: ["0%", "-100%"],
-          transition: {
-            ease: "linear",
-            duration: mobile ? 10 : 30,
-            repeat: Infinity,
-          },
-        }}
-      >
-        {duplicatedSlides.map((slide, index) => (
-          <Box
-            key={index}
-            sx={{
-              flexShrink: 0,
-              width: "280px",
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              height: "100%",
-            }}
-          >
-            <Box
-              sx={{
-                display: "flex",
-                alignItems: "center",
-                justifyContent: "center",
-                height: "100%",
-                // borderRadius: "40",
-              }}
-            >
-              <Image
-                src={slide.image}
-                alt="Party"
-                width={250}
-                height={250}
-                style={{ borderRadius: "40px" }}
-              />
-            </Box>
-          </Box>
-        ))}
-      </motion.div> */}
     </Box>
   );
 }

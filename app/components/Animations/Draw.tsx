@@ -1,7 +1,6 @@
 "use client";
 
-import { motion, useInView } from "framer-motion";
-
+import { motion } from "framer-motion";
 import { useBreakpoints } from "../../utils/useBreakpoints";
 import { useRef } from "react";
 
@@ -20,8 +19,6 @@ const draw = {
           type: "spring",
           duration: 6,
           bounce: 0,
-          //   repeat: Infinity,
-          //   repeatType: "loop",
         },
         opacity: { delay, duration: 0.01 },
       },
@@ -32,7 +29,6 @@ const draw = {
 export default function Draw() {
   const { mobile } = useBreakpoints();
   const ref = useRef(null);
-  // const isInView = useInView(ref, { once: false });
 
   const strokeWidth = mobile ? 4 : 3;
 
@@ -48,7 +44,6 @@ export default function Draw() {
         backdropFilter: "blur(10px)",
         WebkitBackdropFilter: "blur(10px)",
         backgroundColor: "rgba(0, 0, 0, 0.2)",
-        // borderRadius: "15px",
         boxShadow: "0 4px 15px rgba(0, 0, 0, 0.3)",
         overflow: "hidden",
       }}
@@ -57,7 +52,6 @@ export default function Draw() {
         width="80%"
         height="80%"
         viewBox="0 0 3046.2 1185.59"
-        // viewBox="0 0 width height"
         initial="hidden"
         animate="visible"
       >

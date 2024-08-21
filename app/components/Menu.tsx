@@ -8,15 +8,6 @@ import menuListBG from "../menuList/menuListBG.json";
 import menuListEN from "../menuList/menuList.json";
 import { useState } from "react";
 
-type ViewType =
-  | ""
-  | "Hot Drinks"
-  | "Soft Drinks"
-  | "Mixed Drinks"
-  | "Wine"
-  | "Alcohol"
-  | "Beer";
-
 export default function Menu() {
   const t = useI18n();
   const locale = useCurrentLocale();
@@ -131,15 +122,6 @@ export default function Menu() {
                   {`${item.price} / ${item.quantity}`}
                 </Typography>
               </Box>
-              {/* <Box display="flex" justifyContent="space-between">
-                <Typography variant="h6" fontWeight="bold">
-                  {item.name}
-                </Typography>
-                <Typography
-                  variant="h6"
-                  fontWeight="bold"
-                >{`${item.price} / ${item.quantity}`}</Typography>
-              </Box> */}
               {item.description && (
                 <Typography
                   alignSelf="flex-start"

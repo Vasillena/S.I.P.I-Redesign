@@ -17,9 +17,7 @@ export default function Bounce({ children, delay = 0.4 }: BounceProps) {
     type: "spring",
     stiffness: 100,
     damping: 10,
-    // delay: 0.4,
     delay: delay,
-    // repeat: Infinity,
   };
 
   return (
