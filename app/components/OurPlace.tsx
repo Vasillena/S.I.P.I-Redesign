@@ -188,8 +188,8 @@ export default async function OurPlace(): Promise<JSX.Element> {
         <Grid item xs={11} lg={6} textAlign="center">
           <SinglePlace
             title={t("place.place-3-title")}
-            description={t("place.place-3-text")}
-            capacityNumber={"80"}
+            description={t("place.place-3-text-temp")}
+            capacityNumber={"40"}
             capacityText={t("place.place-1-places")}
           />
         </Grid>

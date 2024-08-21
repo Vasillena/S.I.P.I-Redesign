@@ -45,6 +45,8 @@ export default {
     "place-3-title": "Terraces",
     "place-3-text":
       "For those seeking exclusivity and privacy, we offer two separate terraces on the second level. Each can be rented individually and provides a unique party experience. Our terraces are the perfect place for private events, special celebrations, or simply enjoying nightlife with friends.",
+    "place-3-text-temp":
+      "For those looking for exclusivity and privacy, we offer a terrace on level 2, which can be rented separately and provides a unique party experience. Our terrace is the perfect place for private events, special celebrations or just enjoying the nightlife with friends.",
   },
   fans: {
     title: "!!ONLY FANS!!",
