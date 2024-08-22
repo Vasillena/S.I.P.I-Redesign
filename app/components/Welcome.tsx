@@ -4,9 +4,9 @@ import Divider from "./Divider";
 import ImageLayout from "./ImageLayout";
 import decor from "@/public/decor-1.svg";
 import { getI18n } from "@/locales/server";
-import image1 from "@/public/welcome-1.png";
-import image2 from "@/public/welcome-2.png";
-import image3 from "@/public/welcome-3.png";
+import image1 from "@/public/welcome-1.webp";
+import image2 from "@/public/welcome-2.webp";
+import image3 from "@/public/welcome-3.webp";
 
 export default async function Welcome(): Promise<JSX.Element> {
   const t = await getI18n();
@@ -47,7 +47,7 @@ export default async function Welcome(): Promise<JSX.Element> {
             </Typography>
             <Typography
               width={{ xs: 300, sm: 472 }}
-              variant="h5"
+              variant="body1"
               lineHeight={1}
               paddingLeft={{ xs: 0, md: 5 }}
               textAlign={{ xs: "center", md: "left" }}

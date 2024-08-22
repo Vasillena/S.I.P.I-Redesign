@@ -20,14 +20,17 @@ export default function SingleCard({
         <Image width={48} src={image} alt="Cocktail icon" />
       </Stack>
       <Stack alignItems="center" paddingTop={2}>
-        <Typography variant="h5" sx={{ fontSize: { xs: "20px", sm: "24px" } }}>
+        <Typography
+          variant="body1"
+          sx={{ fontSize: { xs: "20px", sm: "24px" } }}
+        >
           {title}
         </Typography>
       </Stack>
       <Stack alignItems="center" paddingTop={5}>
         <Typography
           width={340}
-          variant="h6"
+          variant="body1"
           lineHeight={1}
           textAlign="center"
           sx={{ fontSize: { xs: "18px", sm: "20px" } }}

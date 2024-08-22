@@ -22,7 +22,7 @@ export default async function Final(): Promise<JSX.Element> {
         </Grid>
         <Grid item xs={10} lg={6} textAlign="center" marginBottom={5}>
           <Typography
-            variant="h4"
+            variant="h2"
             sx={{ fontSize: { xs: "24px", lg: "34px" } }}
           >
             {t("final.title")}
@@ -66,10 +66,11 @@ export default async function Final(): Promise<JSX.Element> {
             }}
           >
             <Typography
-              variant="h4"
+              variant="body1"
               position="relative"
               top="3.8em"
               textAlign="center"
+              sx={{ fontSize: { xs: "24px", lg: "34px" } }}
             >
               {t("final.text")}
             </Typography>

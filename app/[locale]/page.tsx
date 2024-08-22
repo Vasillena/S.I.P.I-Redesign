@@ -6,6 +6,7 @@ import Final from "../components/Final";
 import FixedImage from "../components/FixedImage";
 import FollowPointer from "../components/Animations/FollowPointer";
 import Hero from "../components/Hero";
+import MapIframe from "../components/MapIframe";
 import OnlyFans from "../components/OnlyFans";
 import OurPlace from "../components/OurPlace";
 import Slider from "../components/Slider";
@@ -31,14 +32,7 @@ export default async function Home() {
       <Cocktails />
       <Final />
       <Slider />
-      {/* <GoogleMaps /> */}
-      <iframe
-        id="contact"
-        src="https://snazzymaps.com/embed/632466"
-        width="100%"
-        height="500px"
-        style={{ border: "none" }}
-      />
+      <MapIframe />
     </Box>
   );
 }

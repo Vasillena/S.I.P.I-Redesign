@@ -6,15 +6,16 @@ import React, { useState } from "react";
 import ArrowBackIosNewIcon from "@mui/icons-material/ArrowBackIosNew";
 import ArrowForwardIosIcon from "@mui/icons-material/ArrowForwardIos";
 import Image from "next/image";
-import image1 from "@/public/murch-1.jpg";
-import image2 from "@/public/murch-2.jpg";
-import image3 from "@/public/murch-3.jpg";
+import image1 from "@/public/murch-1.webp";
+import image2 from "@/public/murch-2.webp";
 import { useBreakpoints } from "../utils/useBreakpoints";
+
+// import image3 from "@/public/murch-3.webp";
 
 const images = [
   { src: image1, alt: "T-shirt" },
   { src: image2, alt: "T-shirt" },
-  { src: image3, alt: "T-shirt" },
+  // { src: image3, alt: "T-shirt" },
 ];
 
 export default function ImageChange() {
@@ -47,7 +48,7 @@ export default function ImageChange() {
       marginBottom={{ xs: 12, lg: 0 }}
       zIndex={100}
     >
-      <IconButton onClick={handlePrevClick}>
+      <IconButton onClick={handlePrevClick} aria-label="Previous">
         <ArrowBackIosNewIcon sx={{ color: mobile ? "white" : "inherit" }} />
       </IconButton>
       <Image
@@ -60,7 +61,7 @@ export default function ImageChange() {
           borderRadius: mobile ? "40px 0 40px 0" : "0",
         }}
       />
-      <IconButton onClick={handleNextClick}>
+      <IconButton onClick={handleNextClick} aria-label="Next">
         <ArrowForwardIosIcon sx={{ color: mobile ? "white" : "inherit" }} />
       </IconButton>
     </Box>

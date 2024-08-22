@@ -7,9 +7,9 @@ import decor1 from "@/public/decor-6.svg";
 import decor2 from "@/public/decor-7.svg";
 import decor3 from "@/public/decor-8.svg";
 import { getI18n } from "@/locales/server";
-import image1 from "@/public/event-1.png";
-import image2 from "@/public/event-2.png";
-import image3 from "@/public/event-3.png";
+import image1 from "@/public/event-1.webp";
+import image2 from "@/public/event-2.webp";
+import image3 from "@/public/event-3.webp";
 
 export default async function Events(): Promise<JSX.Element> {
   const t = await getI18n();
@@ -30,7 +30,7 @@ export default async function Events(): Promise<JSX.Element> {
           textAlign="center"
         >
           <Typography
-            variant="h4"
+            variant="h2"
             sx={{ fontSize: { xs: "24px", md: "34px" } }}
           >
             {t("events.title-1")}
@@ -59,7 +59,7 @@ export default async function Events(): Promise<JSX.Element> {
             }}
           >
             <Typography
-              variant="h4"
+              variant="body1"
               sx={{ fontSize: { xs: "24px", lg: "34px" } }}
             >
               {t("events.title-2")}
@@ -95,13 +95,13 @@ export default async function Events(): Promise<JSX.Element> {
                 marginBottom={4}
               >
                 <Typography
-                  variant="h4"
+                  variant="body1"
                   sx={{ fontSize: { xs: "24px", lg: "34px" } }}
                 >
                   22/08 - 21:00
                 </Typography>
                 <Typography
-                  variant="h4"
+                  variant="body1"
                   sx={{ fontSize: { xs: "24px", lg: "34px" } }}
                 >
                   Mikey Flex
@@ -110,9 +110,6 @@ export default async function Events(): Promise<JSX.Element> {
               <Stack alignItems="center">
                 <Image
                   width={300}
-                  height={375}
-                  // fill
-                  objectFit="fill"
                   src={image1}
                   alt="Event image"
                   style={{ borderRadius: "40px 0 40px 0" }}
@@ -158,13 +155,13 @@ export default async function Events(): Promise<JSX.Element> {
                 }}
               >
                 <Typography
-                  variant="h4"
+                  variant="body1"
                   sx={{ fontSize: { xs: "24px", lg: "34px" } }}
                 >
                   23.08 - 21:00
                 </Typography>
                 <Typography
-                  variant="h4"
+                  variant="body1"
                   sx={{ fontSize: { xs: "24px", lg: "34px" } }}
                 >
                   Steleansky
@@ -201,13 +198,13 @@ export default async function Events(): Promise<JSX.Element> {
                 marginBottom={4}
               >
                 <Typography
-                  variant="h4"
+                  variant="body1"
                   sx={{ fontSize: { xs: "24px", lg: "34px" } }}
                 >
                   24.08 - 21:00
                 </Typography>
                 <Typography
-                  variant="h4"
+                  variant="body1"
                   sx={{ fontSize: { xs: "24px", lg: "34px" } }}
                 >
                   Coztof

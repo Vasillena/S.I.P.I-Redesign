@@ -68,7 +68,7 @@ export default function Menu() {
       return (
         <Box marginBottom={10}>
           <Typography
-            variant="h2"
+            variant="body1"
             textAlign="center"
             my={4}
             sx={{ fontSize: { xs: "36px", md: "44px" } }}
@@ -86,7 +86,7 @@ export default function Menu() {
             >
               {item["semi-category"] && (
                 <Typography
-                  variant="h5"
+                  variant="body1"
                   textAlign="center"
                   mt={2}
                   sx={{ fontSize: { xs: "20px", md: "24px" } }}
@@ -96,7 +96,7 @@ export default function Menu() {
               )}
               <Box display="flex" alignItems="center">
                 <Typography
-                  variant="h6"
+                  variant="body1"
                   fontWeight="bold"
                   sx={{ fontSize: { xs: "16px", md: "20px" } }}
                 >
@@ -115,7 +115,7 @@ export default function Menu() {
                   }}
                 />
                 <Typography
-                  variant="h6"
+                  variant="body1"
                   fontWeight="bold"
                   sx={{ fontSize: { xs: "14px", md: "20px" } }}
                 >

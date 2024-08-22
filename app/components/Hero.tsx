@@ -5,7 +5,7 @@ import { Box, IconButton } from "@mui/material";
 import Draw from "./Animations/Draw";
 import Lottie from "react-lottie-player";
 import button from "@/public/arrow-button.json";
-import heroImg from "@/public/hero.png";
+import heroImg from "@/public/hero.webp";
 
 export default function Hero() {
   const handleScroll = () => {
@@ -47,7 +47,10 @@ export default function Hero() {
           <Draw />
         </Box>
         <Box>
-          <IconButton onClick={handleScroll}>
+          <IconButton
+            onClick={handleScroll}
+            aria-label="Scroll to next section"
+          >
             <Lottie
               animationData={button}
               play

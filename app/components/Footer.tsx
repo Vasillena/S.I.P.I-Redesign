@@ -41,7 +41,7 @@ export default async function Footer(): Promise<JSX.Element> {
       >
         <Box marginTop={{ xs: "12em", lg: "18em" }}>
           <Typography
-            variant="h5"
+            variant="body1"
             textAlign="center"
             sx={{ fontSize: { xs: "18px", lg: "24px" } }}
           >
@@ -53,7 +53,7 @@ export default async function Footer(): Promise<JSX.Element> {
             aria-label="Phone"
           >
             <Typography
-              variant="h5"
+              variant="body1"
               textAlign="center"
               sx={{ fontSize: { xs: "18px", lg: "24px" } }}
             >
@@ -62,7 +62,7 @@ export default async function Footer(): Promise<JSX.Element> {
           </Link>
 
           <Typography
-            variant="h5"
+            variant="body1"
             textAlign="center"
             sx={{ fontSize: { xs: "18px", lg: "24px" } }}
           >
@@ -81,7 +81,7 @@ export default async function Footer(): Promise<JSX.Element> {
       </Box>
       <Box marginBottom={3}>
         <Typography
-          variant="h6"
+          variant="h3"
           textAlign="center"
           px={1}
           sx={{ fontSize: { xs: "16px", lg: "20px" } }}
@@ -90,7 +90,7 @@ export default async function Footer(): Promise<JSX.Element> {
           <Link href="https://github.com/Vasillena" target="_blank">
             <Typography
               display="inline"
-              variant="h6"
+              variant="h3"
               sx={{
                 fontSize: { xs: "16px", lg: "20px" },
                 "&:hover": {

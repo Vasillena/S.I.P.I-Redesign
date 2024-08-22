@@ -38,7 +38,7 @@ export function Switch() {
         gap: "4px",
       }}
     >
-      <IconButton onClick={toggleLanguage}>
+      <IconButton onClick={toggleLanguage} aria-label="Open Languages">
         <Image src={language} alt="Globe" width={24} />
       </IconButton>
 

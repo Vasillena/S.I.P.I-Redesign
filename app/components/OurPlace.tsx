@@ -9,15 +9,15 @@ import decor2 from "@/public/decor-10.svg";
 import decor3 from "@/public/decor-11.svg";
 import decor4 from "@/public/decor-12.svg";
 import { getI18n } from "@/locales/server";
-import ourPlace1 from "@/public/our-place-1.png";
-import ourPlace2 from "@/public/our-place-2.png";
-import ourPlace3 from "@/public/our-place-3.png";
-import ourPlace4 from "@/public/our-place-4.png";
-import ourPlace5 from "@/public/our-place-5.png";
-import ourPlace6 from "@/public/our-place-6.png";
-import ourPlace7 from "@/public/our-place-7.png";
-import ourPlace8 from "@/public/our-place-8.png";
-import ourPlace9 from "@/public/our-place-9.png";
+import ourPlace1 from "@/public/our-place-1.webp";
+import ourPlace2 from "@/public/our-place-2.webp";
+import ourPlace3 from "@/public/our-place-3.webp";
+import ourPlace4 from "@/public/our-place-4.webp";
+import ourPlace5 from "@/public/our-place-5.webp";
+import ourPlace6 from "@/public/our-place-6.webp";
+import ourPlace7 from "@/public/our-place-7.webp";
+import ourPlace8 from "@/public/our-place-8.webp";
+import ourPlace9 from "@/public/our-place-9.webp";
 
 export default async function OurPlace(): Promise<JSX.Element> {
   const t = await getI18n();
@@ -35,7 +35,7 @@ export default async function OurPlace(): Promise<JSX.Element> {
         </Grid>
         <Grid item xs={10} lg={6} textAlign="center" marginBottom={5}>
           <Typography
-            variant="h4"
+            variant="h2"
             sx={{ fontSize: { xs: "24px", lg: "34px" } }}
           >
             {t("place.title-1")}
@@ -54,7 +54,7 @@ export default async function OurPlace(): Promise<JSX.Element> {
       >
         <Grid item xs={11} lg={6} textAlign="center">
           <Typography
-            variant="h5"
+            variant="body1"
             lineHeight={1}
             textAlign="center"
             sx={{ fontSize: { xs: "18px", lg: "24px" } }}

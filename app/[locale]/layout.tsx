@@ -6,9 +6,12 @@ import Navbar from "../components/Navbar";
 import { Poiret_One } from "next/font/google";
 import { Provider } from "./provider";
 import { Switch } from "./switch";
-// import Script from "next/script";
 import { ThemeProvider } from "@mui/material";
 import { theme } from "./theme";
+
+// import Script from "next/script";
+
+
 
 const poiretOneFont = Poiret_One({
   subsets: ["latin", "cyrillic"],
@@ -129,12 +132,10 @@ export default function RootLayout({
             </Provider>
           </ThemeProvider>
         </AppRouterCacheProvider>
+        {/* Cookie Script on official page 
+        Google Tag Manager on official page 
+        Google Analytics on official page */}
       </body>
-      {/* <Script
-        type="text/javascript"
-        charset="UTF-8"
-        src="//cdn.cookie-script.com/s/573dfe802bd14402d4b50415b57497c6.js"
-      ></Script> */}
     </html>
   );
 }

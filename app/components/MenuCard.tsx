@@ -20,13 +20,13 @@ export default function MenuCard({
   onClick,
   active,
 }: MenuCardProps) {
-  const locale = useCurrentLocale();
   const { desktop } = useBreakpoints();
   return (
     <>
       <Button
         disableRipple
         onClick={onClick}
+        aria-label="Category"
         sx={{
           display: "flex",
           justifyContent: "center",
@@ -56,16 +56,16 @@ export default function MenuCard({
             paddingY: { xs: 1, md: 0 },
           }}
         >
-          <Typography variant="h6" color="black">
+          <Typography variant="body1" color="black">
             {text1}
           </Typography>
           {text2 && (
-            <Typography variant="h6" color="black">
+            <Typography variant="body1" color="black">
               {text2}
             </Typography>
           )}
           {text3 && (
-            <Typography variant="h6" color="black">
+            <Typography variant="body1" color="black">
               {desktop ? "" : "\u00A0"}
               {text3}
             </Typography>

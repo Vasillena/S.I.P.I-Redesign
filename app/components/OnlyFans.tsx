@@ -46,7 +46,7 @@ export default async function OnlyFans(): Promise<JSX.Element> {
       >
         <Reveal>
           <Typography
-            variant="h4"
+            variant="body1"
             sx={{ fontSize: { xs: "24px", lg: "34px" } }}
             position="relative"
             zIndex={100}
@@ -72,7 +72,7 @@ export default async function OnlyFans(): Promise<JSX.Element> {
         >
           <Grid item xs={11} lg={6}>
             <Typography
-              variant="h5"
+              variant="body1"
               lineHeight={1}
               width={{ xs: "auto", lg: 400 }}
               textAlign="center"

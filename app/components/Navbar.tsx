@@ -81,6 +81,7 @@ export default function Navbar(): JSX.Element {
             alignItems="center"
           >
             <IconButton
+              aria-label="Open/Close menu"
               onClick={() => setOpen(!open)}
               disableRipple
               sx={{

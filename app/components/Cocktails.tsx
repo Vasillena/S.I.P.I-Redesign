@@ -10,10 +10,10 @@ import decor2 from "@/public/decor-16.svg";
 import decor3 from "@/public/decor-6.svg";
 import decor4 from "@/public/decor-17.svg";
 import { getI18n } from "@/locales/server";
-import image1 from "@/public/menu-1.jpg";
-import image2 from "@/public/menu-2.png";
-import image3 from "@/public/menu-3.png";
-import image4 from "@/public/menu-4.png";
+import image1 from "@/public/menu-1.webp";
+import image2 from "@/public/menu-2.webp";
+import image3 from "@/public/menu-3.webp";
+import image4 from "@/public/menu-4.webp";
 
 export default async function Cocktails(): Promise<JSX.Element> {
   const t = await getI18n();
@@ -28,7 +28,7 @@ export default async function Cocktails(): Promise<JSX.Element> {
       >
         <Grid item xs={10} textAlign="center" marginBottom={{ xs: 12, md: 21 }}>
           <Typography
-            variant="h4"
+            variant="h2"
             sx={{ fontSize: { xs: "24px", lg: "34px" } }}
           >
             {t("menu.title")}
@@ -59,7 +59,7 @@ export default async function Cocktails(): Promise<JSX.Element> {
           >
             <Reveal>
               <Typography
-                variant="h5"
+                variant="body1"
                 sx={{ fontSize: { xs: "24px", lg: "34px" } }}
               >
                 {t("menu.title-2")}
@@ -146,7 +146,7 @@ export default async function Cocktails(): Promise<JSX.Element> {
             gap={2}
           >
             <Typography
-              variant="h5"
+              variant="body1"
               textAlign="center"
               color="white"
               paddingX={1}

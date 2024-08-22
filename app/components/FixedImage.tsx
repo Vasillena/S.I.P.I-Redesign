@@ -4,8 +4,8 @@ import { Box, Typography } from "@mui/material";
 
 import Image from "next/image";
 import decor1 from "@/public/decor-4.svg";
-import image1 from "@/public/fixed-1.png";
-import image2 from "@/public/fixed-2.png";
+import image1 from "@/public/fixed-1.webp";
+import image2 from "@/public/fixed-2.webp";
 import { useI18n } from "@/locales/client";
 
 export default function FixedImage(): JSX.Element {
@@ -52,7 +52,7 @@ export default function FixedImage(): JSX.Element {
           <Box>
             <Typography
               width={{ xs: 300, sm: 520 }}
-              variant="h5"
+              variant="body1"
               textAlign="center"
               border="1px solid black"
               padding="60px 20px"

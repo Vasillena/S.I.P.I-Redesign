@@ -42,7 +42,7 @@ export default {
     "place-2-title": "Summer Garden",
     "place-2-text":
       "The gorgeous and spacious indoor summer garden is an oasis of freshness and energy. With its own bar and pleasant decoration, it’s the perfect place for warm nights under the open sky. Greenery and soft lighting make our garden the ideal scene for summer parties and themed evenings.",
-    "place-3-title": "Terraces",
+    "place-3-title": "Terrace",
     "place-3-text":
       "For those seeking exclusivity and privacy, we offer two separate terraces on the second level. Each can be rented individually and provides a unique party experience. Our terraces are the perfect place for private events, special celebrations, or simply enjoying nightlife with friends.",
     "place-3-text-temp":
