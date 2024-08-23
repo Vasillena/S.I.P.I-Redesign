@@ -142,7 +142,7 @@ export default async function Cocktails(): Promise<JSX.Element> {
             flexDirection="column"
             justifyContent="center"
             alignItems="center"
-            paddingTop={{ xs: 1, sm: 0 }}
+            paddingTop={{ xs: 2, sm: 0 }}
             gap={2}
           >
             <Typography

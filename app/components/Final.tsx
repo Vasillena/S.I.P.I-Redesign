@@ -68,9 +68,9 @@ export default async function Final(): Promise<JSX.Element> {
             <Typography
               variant="body1"
               position="relative"
-              top="3.8em"
+              top={{ xs: "5.5em", md: "3.6em" }}
               textAlign="center"
-              sx={{ fontSize: { xs: "24px", lg: "34px" } }}
+              sx={{ fontSize: { xs: "24px", md: "34px" } }}
             >
               {t("final.text")}
             </Typography>

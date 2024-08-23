@@ -55,7 +55,7 @@ export default function FixedImage(): JSX.Element {
               variant="body1"
               textAlign="center"
               border="1px solid black"
-              padding="60px 20px"
+              padding={{ xs: "40px 20px", sm: "60px 20px" }}
               sx={{ fontSize: { xs: "18px", sm: "24px" } }}
             >
               {t("fixed.text")}
