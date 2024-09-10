@@ -27,7 +27,7 @@ export default function Hero() {
           flexDirection: "column",
           justifyContent: "flex-end",
           alignItems: "center",
-          gap: { xs: 10, sm: 18 },
+          gap: { xs: 10, xsm: 20, sm: 10 },
           "&::after": {
             content: '""',
             position: "absolute",

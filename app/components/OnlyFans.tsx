@@ -21,40 +21,47 @@ export default async function OnlyFans(): Promise<JSX.Element> {
           style={{ position: "absolute", top: 340, left: 0 }}
         />
       </Box>
-      <Box
-        paddingY={5}
-        textAlign="center"
-        marginBottom={-4}
-        marginLeft={{ xs: 0, lg: -88 }}
-        sx={{
-          position: "relative",
-          width: "100%",
-          height: "100%",
-          "&::before": {
-            content: '""',
-            position: "absolute",
-            top: "-0.5em",
-            left: 0,
+      <Grid container maxWidth={1440}>
+        <Grid
+          item
+          xs={11}
+          lg={6}
+          mx="auto"
+          paddingY={5}
+          textAlign="center"
+          marginBottom={-4}
+          sx={{
+            position: "relative",
             width: "100%",
-            height: "110%",
-            background: `url(${decor2.src}) center no-repeat`,
-            borderRadius: "50%",
-            filter: "drop-shadow(0px 2px 2px #2E2E2E)",
-            transform: { xs: "scale(0.8)", lg: "scale(1)" },
-          },
-        }}
-      >
-        <Reveal>
-          <Typography
-            variant="body1"
-            sx={{ fontSize: { xs: "24px", lg: "34px" } }}
-            position="relative"
-            zIndex={100}
-          >
-            {t("fans.title")}
-          </Typography>
-        </Reveal>
-      </Box>
+            height: "100%",
+            "&::before": {
+              content: '""',
+              position: "absolute",
+              top: "-0.5em",
+              left: 0,
+              width: "100%",
+              height: "110%",
+              background: `url(${decor2.src}) center no-repeat`,
+              borderRadius: "50%",
+              filter: "drop-shadow(0px 2px 2px #2E2E2E)",
+              transform: { xs: "scale(0.8)", lg: "scale(1)" },
+            },
+          }}
+        >
+          <Reveal>
+            <Typography
+              variant="body1"
+              sx={{ fontSize: { xs: "24px", sm: "34px" } }}
+              position="relative"
+              zIndex={100}
+            >
+              {t("fans.title")}
+            </Typography>
+          </Reveal>
+        </Grid>
+        <Grid item xs={11} lg={6} />
+      </Grid>
+
       <Box
         width="100vw"
         height={{ xs: "auto", lg: 496 }}
@@ -74,12 +81,12 @@ export default async function OnlyFans(): Promise<JSX.Element> {
             <Typography
               variant="body1"
               lineHeight={1}
-              width={{ xs: "auto", lg: 400 }}
+              maxWidth={{ xs: 520, lg: 400 }}
               textAlign="center"
               color="white"
               marginX="auto"
               marginTop={{ xs: 12, lg: 0 }}
-              sx={{ fontSize: { xs: "18px", lg: "24px" } }}
+              sx={{ fontSize: { xs: "18px", sm: "24px" } }}
             >
               {t("fans.text")}
             </Typography>
@@ -107,7 +114,9 @@ export default async function OnlyFans(): Promise<JSX.Element> {
           </Grid>
         </Grid>
       </Box>
-      <Divider styleProp={{ transform: "scaleY(-1)" }} />
+      <Box marginTop={{ xs: 8, lg: 10 }} marginBottom={{ xs: 4, lg: 0 }}>
+        <Divider styleProp={{ transform: "scaleY(-1)" }} />
+      </Box>
     </>
   );
 }

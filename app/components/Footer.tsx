@@ -43,7 +43,7 @@ export default async function Footer(): Promise<JSX.Element> {
           <Typography
             variant="body1"
             textAlign="center"
-            sx={{ fontSize: { xs: "18px", lg: "24px" } }}
+            sx={{ fontSize: { xs: "18px", sm: "24px" } }}
           >
             {t("footer.text-1")}
           </Typography>
@@ -55,7 +55,7 @@ export default async function Footer(): Promise<JSX.Element> {
             <Typography
               variant="body1"
               textAlign="center"
-              sx={{ fontSize: { xs: "18px", lg: "24px" } }}
+              sx={{ fontSize: { xs: "18px", sm: "24px" } }}
             >
               0885 67 33 37
             </Typography>
@@ -64,7 +64,7 @@ export default async function Footer(): Promise<JSX.Element> {
           <Typography
             variant="body1"
             textAlign="center"
-            sx={{ fontSize: { xs: "18px", lg: "24px" } }}
+            sx={{ fontSize: { xs: "18px", sm: "24px" } }}
           >
             {t("footer.text-2")}
           </Typography>
@@ -84,7 +84,7 @@ export default async function Footer(): Promise<JSX.Element> {
           variant="h3"
           textAlign="center"
           px={1}
-          sx={{ fontSize: { xs: "16px", lg: "20px" } }}
+          sx={{ fontSize: { xs: "16px", sm: "20px" } }}
         >
           {t("footer.text-3")}
           <Link href="https://github.com/Vasillena" target="_blank">
@@ -92,7 +92,7 @@ export default async function Footer(): Promise<JSX.Element> {
               display="inline"
               variant="h3"
               sx={{
-                fontSize: { xs: "16px", lg: "20px" },
+                fontSize: { xs: "16px", sm: "20px" },
                 "&:hover": {
                   color: "#CCCCCC",
                 },

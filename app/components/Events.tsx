@@ -9,10 +9,29 @@ import decor3 from "@/public/decor-8.svg";
 import { getI18n } from "@/locales/server";
 import image1 from "@/public/event-1.webp";
 import image2 from "@/public/event-2.webp";
-import image3 from "@/public/event-3.webp";
+import image3 from "@/public/event-4.webp";
 
 export default async function Events(): Promise<JSX.Element> {
   const t = await getI18n();
+
+  const events = [
+    {
+      date: "11/09 - 21:00",
+      name: "NINIO",
+      image: image2,
+    },
+    {
+      date: "12/09 - 21:00",
+      name: "MIKEY FLEX",
+      image: image1,
+    },
+    {
+      date: "13/09 - 21:00",
+      name: "STAY TUNED",
+      image: image3,
+    },
+  ];
+
   return (
     <>
       <Grid
@@ -21,6 +40,7 @@ export default async function Events(): Promise<JSX.Element> {
         maxWidth={1440}
         spacing={{ xs: 12, lg: 2 }}
         justifyContent="center"
+        marginTop={2}
       >
         <Grid
           item
@@ -31,7 +51,7 @@ export default async function Events(): Promise<JSX.Element> {
         >
           <Typography
             variant="h2"
-            sx={{ fontSize: { xs: "24px", md: "34px" } }}
+            sx={{ fontSize: { xs: "24px", sm: "34px" } }}
           >
             {t("events.title-1")}
           </Typography>
@@ -60,14 +80,14 @@ export default async function Events(): Promise<JSX.Element> {
           >
             <Typography
               variant="body1"
-              sx={{ fontSize: { xs: "24px", lg: "34px" } }}
+              sx={{ fontSize: { xs: "24px", sm: "34px" } }}
             >
               {t("events.title-2")}
             </Typography>
           </Box>
         </Grid>
 
-        <Grid item xs={12} lg={4}>
+        <Grid item xs={12} md={5} lg={4}>
           <Reveal>
             <Box
               sx={{
@@ -96,21 +116,21 @@ export default async function Events(): Promise<JSX.Element> {
               >
                 <Typography
                   variant="body1"
-                  sx={{ fontSize: { xs: "24px", lg: "34px" } }}
+                  sx={{ fontSize: { xs: "24px", sm: "34px" } }}
                 >
-                  22/08 - 21:00
+                  {events[0].date}
                 </Typography>
                 <Typography
                   variant="body1"
-                  sx={{ fontSize: { xs: "24px", lg: "34px" } }}
+                  sx={{ fontSize: { xs: "24px", sm: "34px" } }}
                 >
-                  Mikey Flex
+                  {events[0].name}
                 </Typography>
               </Stack>
               <Stack alignItems="center">
                 <Image
                   width={300}
-                  src={image1}
+                  src={events[0].image}
                   alt="Event image"
                   style={{ borderRadius: "40px 0 40px 0" }}
                 />
@@ -118,7 +138,7 @@ export default async function Events(): Promise<JSX.Element> {
             </Box>
           </Reveal>
         </Grid>
-        <Grid item xs={12} lg={4}>
+        <Grid item xs={12} md={5} lg={4}>
           <Reveal>
             <Box
               sx={{
@@ -137,7 +157,7 @@ export default async function Events(): Promise<JSX.Element> {
               >
                 <Image
                   width={300}
-                  src={image2}
+                  src={events[1].image}
                   alt="Event image"
                   style={{ borderRadius: "40px" }}
                 />
@@ -156,21 +176,21 @@ export default async function Events(): Promise<JSX.Element> {
               >
                 <Typography
                   variant="body1"
-                  sx={{ fontSize: { xs: "24px", lg: "34px" } }}
+                  sx={{ fontSize: { xs: "24px", sm: "34px" } }}
                 >
-                  23.08 - 21:00
+                  {events[1].date}
                 </Typography>
                 <Typography
                   variant="body1"
-                  sx={{ fontSize: { xs: "24px", lg: "34px" } }}
+                  sx={{ fontSize: { xs: "24px", sm: "34px" } }}
                 >
-                  Steleansky
+                  {events[1].name}
                 </Typography>
               </Stack>
             </Box>
           </Reveal>
         </Grid>
-        <Grid item xs={12} lg={4}>
+        <Grid item xs={12} md={5} lg={4}>
           <Reveal>
             <Box
               sx={{
@@ -199,21 +219,21 @@ export default async function Events(): Promise<JSX.Element> {
               >
                 <Typography
                   variant="body1"
-                  sx={{ fontSize: { xs: "24px", lg: "34px" } }}
+                  sx={{ fontSize: { xs: "24px", sm: "34px" } }}
                 >
-                  24.08 - 21:00
+                  {events[2].date}
                 </Typography>
                 <Typography
                   variant="body1"
-                  sx={{ fontSize: { xs: "24px", lg: "34px" } }}
+                  sx={{ fontSize: { xs: "24px", sm: "34px" } }}
                 >
-                  Coztof
+                  {events[2].name}
                 </Typography>
               </Stack>
               <Stack alignItems="center">
                 <Image
                   width={300}
-                  src={image3}
+                  src={events[2].image}
                   alt="Event image"
                   style={{ borderRadius: "0 40px 0 40px " }}
                 />
@@ -222,7 +242,11 @@ export default async function Events(): Promise<JSX.Element> {
           </Reveal>
         </Grid>
       </Grid>
-      <Box id="our-place">
+      <Box
+        id="our-place"
+        marginTop={{ xs: 12, lg: 0 }}
+        marginBottom={{ xs: 8, lg: 0 }}
+      >
         <Divider styleProp={{ transform: "scaleY(-1)" }} />
       </Box>
     </>

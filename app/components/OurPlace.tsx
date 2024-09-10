@@ -36,7 +36,7 @@ export default async function OurPlace(): Promise<JSX.Element> {
         <Grid item xs={10} lg={6} textAlign="center" marginBottom={5}>
           <Typography
             variant="h2"
-            sx={{ fontSize: { xs: "24px", lg: "34px" } }}
+            sx={{ fontSize: { xs: "24px", sm: "34px" } }}
           >
             {t("place.title-1")}
           </Typography>
@@ -54,11 +54,13 @@ export default async function OurPlace(): Promise<JSX.Element> {
       >
         <Grid item xs={11} lg={6} textAlign="center">
           <Typography
+            maxWidth={{ xs: 300, sm: 520 }}
+            mx="auto"
             variant="body1"
             lineHeight={1}
             textAlign="center"
-            sx={{ fontSize: { xs: "18px", lg: "24px" } }}
-            marginTop={{ xs: 8, lg: 0 }}
+            sx={{ fontSize: { xs: "18px", sm: "24px" } }}
+            marginY={{ xs: 8, lg: 0 }}
           >
             {t("place.title-2")}
           </Typography>
@@ -72,7 +74,16 @@ export default async function OurPlace(): Promise<JSX.Element> {
         display="flex"
         alignItems="center"
       >
-        <Grid item xs={12} lg={6} display="flex" justifyContent="center">
+        <Grid
+          item
+          xs={12}
+          lg={6}
+          display="flex"
+          justifyContent="center"
+          sx={{
+            transform: { sm: "scale(0.8)", lg: "scale(1)" },
+          }}
+        >
           <ImageLayout
             styleProp={"scaleX(-1)"}
             image1={ourPlace1}
@@ -146,6 +157,9 @@ export default async function OurPlace(): Promise<JSX.Element> {
           display="flex"
           justifyContent="center"
           order={{ xs: 1, lg: 2 }}
+          sx={{
+            transform: { sm: "scale(0.8)", lg: "scale(1)" },
+          }}
         >
           <ImageLayout
             image1={ourPlace4}
@@ -177,7 +191,16 @@ export default async function OurPlace(): Promise<JSX.Element> {
         display="flex"
         alignItems="center"
       >
-        <Grid item xs={12} lg={6} display="flex" justifyContent="center">
+        <Grid
+          item
+          xs={12}
+          lg={6}
+          display="flex"
+          justifyContent="center"
+          sx={{
+            transform: { sm: "scale(0.8)", lg: "scale(1)" },
+          }}
+        >
           <ImageLayout
             styleProp={"scaleX(-1)"}
             image1={ourPlace7}
@@ -196,7 +219,7 @@ export default async function OurPlace(): Promise<JSX.Element> {
       </Grid>
       <Box
         marginTop={8}
-        marginBottom={{ xs: 0, lg: 8 }}
+        marginBottom={{ xs: 6, lg: 0 }}
         sx={{ width: { xs: "100vw", lg: 1300 } }}
       >
         <Image
@@ -208,7 +231,7 @@ export default async function OurPlace(): Promise<JSX.Element> {
           }}
         />
       </Box>
-      <Box id="murch">
+      <Box id="murch" marginBottom={6}>
         <Divider />
       </Box>
     </>

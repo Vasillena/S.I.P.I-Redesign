@@ -14,7 +14,7 @@ export default async function Welcome(): Promise<JSX.Element> {
     <>
       <Box id="welcome" />
       <Grid container maxWidth={1440} justifyContent="center" marginTop={20}>
-        <Grid item xs={11} lg={5}>
+        <Grid item xs={11} md={5}>
           <Box
             display="flex"
             flexDirection="column"
@@ -32,7 +32,7 @@ export default async function Welcome(): Promise<JSX.Element> {
                 width: "100%",
                 height: "100%",
                 background: `url(${decor.src}) center no-repeat`,
-                display: { xs: "none", md: "block" },
+                display: { xs: "none", lg: "block" },
               },
             }}
           >
@@ -46,10 +46,10 @@ export default async function Welcome(): Promise<JSX.Element> {
               {t("hero.title")} <br /> {t("hero.title-2")}
             </Typography>
             <Typography
-              width={{ xs: 300, sm: 472 }}
+              maxWidth={{ xs: 300, sm: 472 }}
               variant="body1"
               lineHeight={1}
-              paddingLeft={{ xs: 0, md: 5 }}
+              paddingLeft={{ xs: 0, lg: 5 }}
               textAlign={{ xs: "center", md: "left" }}
               sx={{ fontSize: { xs: "18px", sm: "24px" } }}
             >
@@ -60,16 +60,20 @@ export default async function Welcome(): Promise<JSX.Element> {
         <Grid
           item
           xs={11}
-          lg={5}
+          md={5}
           display="flex"
           justifyContent={{ xs: "center" }}
           marginTop={{ xs: 8, lg: 0 }}
+          sx={{
+            transform: { sm: "scale(0.8)", md: "scale(0.7)", lg: "scale(1)" },
+          }}
         >
           <ImageLayout image1={image1} image2={image2} image3={image3} />
         </Grid>
       </Grid>
-
-      <Divider />
+      <Box marginBottom={{ xs: 8, lg: 0 }}>
+        <Divider />
+      </Box>
     </>
   );
 }

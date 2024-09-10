@@ -51,7 +51,7 @@ export default function FixedImage(): JSX.Element {
         <Box>
           <Box>
             <Typography
-              width={{ xs: 300, sm: 520 }}
+              maxWidth={{ xs: 300, sm: 520 }}
               variant="body1"
               textAlign="center"
               border="1px solid black"

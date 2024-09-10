@@ -29,7 +29,7 @@ export default async function Cocktails(): Promise<JSX.Element> {
         <Grid item xs={10} textAlign="center" marginBottom={{ xs: 12, md: 21 }}>
           <Typography
             variant="h2"
-            sx={{ fontSize: { xs: "24px", lg: "34px" } }}
+            sx={{ fontSize: { xs: "24px", sm: "34px" } }}
           >
             {t("menu.title")}
           </Typography>
@@ -43,7 +43,7 @@ export default async function Cocktails(): Promise<JSX.Element> {
               "&::before": {
                 content: '""',
                 position: "absolute",
-                top: { xs: "-3.2em", lg: "-4.2em" },
+                top: { xs: "-3.5em", sm: "-5em", lg: "-4.8em" },
                 left: "0",
                 width: "100%",
                 height: "400%",
@@ -60,7 +60,7 @@ export default async function Cocktails(): Promise<JSX.Element> {
             <Reveal>
               <Typography
                 variant="body1"
-                sx={{ fontSize: { xs: "24px", lg: "34px" } }}
+                sx={{ fontSize: { xs: "24px", sm: "34px" } }}
               >
                 {t("menu.title-2")}
               </Typography>
@@ -150,7 +150,7 @@ export default async function Cocktails(): Promise<JSX.Element> {
               textAlign="center"
               color="white"
               paddingX={1}
-              sx={{ fontSize: { xs: "18px", lg: "20px" } }}
+              sx={{ fontSize: { xs: "18px", sm: "20px" } }}
             >
               {t("menu.text")}
             </Typography>
@@ -248,7 +248,9 @@ export default async function Cocktails(): Promise<JSX.Element> {
           </Box>
         </Grid>
       </Grid>
-      <Divider />
+      <Box marginTop={{ xs: 6, lg: 4 }} marginBottom={{ xs: 4, lg: 0 }}>
+        <Divider />
+      </Box>
     </>
   );
 }

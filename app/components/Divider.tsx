@@ -14,8 +14,8 @@ export default function Divider({ styleProp }: DividerProps): JSX.Element {
 
   return (
     <Box
-      marginY={{ xs: 6, lg: 21 }}
-      sx={{ scale: mobile ? "0.4" : "1" }}
+      marginY={{ xs: 12, lg: 21 }}
+      sx={{ scale: mobile ? "0.8" : "1" }}
       style={styleProp}
     >
       <Image width={400} src={divider} alt="Divider" />

@@ -18,18 +18,18 @@ export default function SinglePlace({
       <Typography
         variant="body1"
         marginBottom={1}
-        sx={{ fontSize: { xs: "24px", lg: "34px" } }}
+        sx={{ fontSize: { xs: "24px", sm: "34px" } }}
       >
         {title}
       </Typography>
       <Typography
+        maxWidth={{ xs: 300, sm: 520 }}
         variant="body1"
-        width={{ xs: "100%", lg: 520 }}
         lineHeight={1}
         marginBottom={4}
         marginX="auto"
         textAlign="center"
-        sx={{ fontSize: { xs: "18px", lg: "24px" } }}
+        sx={{ fontSize: { xs: "18px", sm: "24px" } }}
       >
         {description}
       </Typography>
@@ -46,7 +46,7 @@ export default function SinglePlace({
       >
         <Typography
           variant="body1"
-          sx={{ fontSize: { xs: "18px", lg: "24px" } }}
+          sx={{ fontSize: { xs: "18px", sm: "24px" } }}
         >
           {capacityNumber} <br />
           {capacityText}

@@ -15,9 +15,8 @@ export default async function Cards(): Promise<JSX.Element> {
       maxWidth={1440}
       spacing={{ xs: 20, lg: 2 }}
       justifyContent="center"
-      marginTop={{ xs: 1, lg: 0 }}
     >
-      <Grid item xs={12} lg={4}>
+      <Grid item xs={12} md={5} lg={4}>
         <Box
           sx={{
             position: "relative",
@@ -41,14 +40,14 @@ export default async function Cards(): Promise<JSX.Element> {
           />
         </Box>
       </Grid>
-      <Grid item xs={12} lg={4}>
+      <Grid item xs={12} md={5} lg={4} order={{ xs: 2, md: 3, lg: 2 }}>
         <SingleCard
           image={image2}
           title={t("card.card-2-title")}
           description={t("card.card-2-text")}
         />
       </Grid>
-      <Grid item xs={12} lg={4}>
+      <Grid item xs={12} md={5} lg={4} order={{ xs: 3, md: 2, lg: 3 }}>
         <Box
           sx={{
             position: "relative",
