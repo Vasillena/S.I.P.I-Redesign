@@ -9,7 +9,7 @@
 ## ⭐️  Introduction
 
 Welcome to S.I.P.I – a destination for bar enthusiasts! S.I.P.I is your go-to place for exploring, discovering unique drinks, and immersing yourself in the vibrant world of socializing. Whether you're a cocktail connoisseur or a casual drinker, S.I.P.I is here to elevate your bar-hopping experience. Join us on this exciting journey as we celebrate the art of mixology and the joy of good company. Cheers to S.I.P.I – where the drinks are real, and the fun is limitless!
-This project is built with Next.js
+This project is built with Next.js, MUI and Framer Motion.
 
 View project at: https://sipi.bg
 
@@ -125,22 +125,17 @@ S.I.P.I is a real place in Plovdiv and this is it's official website. All visito
 ## 📷 Screenshots
 
 
------Mobile Version-----
-  <br/>
-![Screenshot 01](https://github.com/user-attachments/assets/56501ba4-34ac-457a-8e6f-32ba54c1faaf)
-![Screenshot 02](https://github.com/user-attachments/assets/9768bba7-f483-46f7-a646-1353f5d900d3)
-
-------------------------
-![Screenshot 1](https://github.com/user-attachments/assets/21eb2dcc-d7e4-44c8-a829-68d7cc0dffcc)
-![Screenshot 2](https://github.com/user-attachments/assets/391b91f9-ef45-4b16-9b0a-4077f8257c90)
-![Screenshot 3](https://github.com/user-attachments/assets/e1d218f9-f503-4756-b7d2-189c7e5e0e9b)
-![Screenshot 4](https://github.com/user-attachments/assets/3622a54c-5857-4673-bd44-b3e6d1e8b762)
-![Screenshot 5](https://github.com/user-attachments/assets/7802d30c-d92e-4f93-98b2-3a98c0a1216b)
-![Screenshot 6](https://github.com/user-attachments/assets/040c0f5a-413d-4f58-b3b4-f6105350736f)
-![Screenshot 7](https://github.com/user-attachments/assets/b0ed8840-a550-40c3-848f-fec4cafcd4b6)
-![Screenshot 8](https://github.com/user-attachments/assets/fca2f671-60ac-4915-afb9-3bcb85f2bcf6)
-![Screenshot 9](https://github.com/user-attachments/assets/d5e2c737-309d-4b7c-b20b-af9a805aae4d)
-![Screenshot 10](https://github.com/user-attachments/assets/b57d7d1e-1aa9-48c2-a523-898c5fff73de)
+![Screenshot 1](https://github.com/user-attachments/assets/b6da9fce-06aa-4a0b-abf1-c97acdc89823)
+![Screenshot 2](https://github.com/user-attachments/assets/50659561-961a-4478-9941-61af972a17bd)
+![Screenshot 3](https://github.com/user-attachments/assets/5fe118db-dd7c-440b-9eed-73f230c7adc2)
+![Screenshot 4](https://github.com/user-attachments/assets/7d1c0553-4e97-4868-a201-65f42010b427)
+![Screenshot 5](https://github.com/user-attachments/assets/6a6a4129-fbe7-4a35-93ef-00664dc5b7fc)
+![Screenshot 6](https://github.com/user-attachments/assets/593f3749-abc6-4f96-8004-bcd040b3e31d)
+![Screenshot 7](https://github.com/user-attachments/assets/17ac49fd-55e4-4272-9e37-789cbf963274)
+![Screenshot 8](https://github.com/user-attachments/assets/64dd4ef3-ea53-48ee-847f-b959300102f0)
+![Screenshot 9](https://github.com/user-attachments/assets/a5e40eed-2cfd-4cd5-a554-8b32716d3dcf)
+![Screenshot 10](https://github.com/user-attachments/assets/98676e22-8836-4d57-8f19-d8bbd44d39d1)
+![Screenshot 11](https://github.com/user-attachments/assets/5fd49953-1450-4401-bdc3-93f88df58d38)
 
 
 </div>
